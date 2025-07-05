@@ -60,6 +60,53 @@ function generateTeamCards(data) {
                     </div>
                 </div>
             `).join('')}
+
+            ${data.manager ? `
+            <div class="player-card ${data.cardTeamName}" draggable="true">
+                <div class="card-glow"></div>
+                <div class="card-shine"></div>
+
+                <div class="rating-badge" style="background: linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)">
+                    <div class="rating-number" style="color: #000000">${data.manager.rating}</div>
+                    <div class="rating-type" style="color: #000000">TD</div>
+                </div>
+
+                <div class="position-badge">TEKNİK DİREKTÖR</div>
+
+                <div class="player-image-container">
+                    <div class="player-image">
+                        <img src="${data.manager.image}" alt="${data.manager.name}">
+                    </div>
+                </div>
+
+                <div class="player-info">
+                    <div class="player-name">${data.manager.name}</div>
+
+                    <div class="player-stats">
+                        <div class="stat">
+                            <div class="stat-value">${data.manager.stats.tactic}</div>
+                            <div class="stat-label">TAK</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${data.manager.stats.motivation}</div>
+                            <div class="stat-label">MOT</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${data.manager.stats.leadership}</div>
+                            <div class="stat-label">LİD</div>
+                        </div>
+                    </div>
+
+                    <div class="player-details">
+                        <div>
+                            <img src="${data.manager.nationality.flag}" alt="${data.manager.nationality.name}" class="country-flag">
+                            ${data.manager.nationality.code} • ${data.manager.age} yaş
+                        </div>
+                        <div>TD</div>
+                    </div>
+                </div>
+            </div>
+            ` : ''}
         </div>
     `;
 }

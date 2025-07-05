@@ -204,18 +204,19 @@
         }
     ],
     "manager": {
-        "name": "SOLSKJAER",
+        "name": "OLE GUNNAR SOLSKJÆR",
         "rating": 82,
         "image": "assets/managers/solskjaer.png",
+        "age": 51,
         "nationality": {
-            "name": "NOR",
+            "name": "Norway",
+            "code": "NOR",
             "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/125.png"
         },
-        "age": 50,
         "stats": {
-            "TAK": 80,
-            "LİD": 79,
-            "TEK": 81
+            "tactic": 81,
+            "motivation": 84,
+            "leadership": 82
         }
     }
 } 

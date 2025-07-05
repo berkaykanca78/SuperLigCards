@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle at 50% 50%, #1a1a2e, #16213e, #0f0f23);
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #1e293b;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.league-header {
+    padding: 8px;
+    text-align: center;
+    background: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.league-header img {
+    width: 120px;
+    margin-bottom: 4px;
+}
+
+.league-header h1 {
+    color: #E60012;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.teams-list {
+    list-style: none;
+    padding: 6px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4px;
+    flex: 1;
+}
+
+.team-item {
+    border: none;
+}
+
+.team-button {
+    width: 100%;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: white;
+    font-size: 10.5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.team-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.team-button.active {
+    background: #E60012;
+    border-color: #E60012;
+    box-shadow: 0 4px 12px rgba(230, 0, 18, 0.3);
+}
+
+.team-logo {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    flex-shrink: 0;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+    overflow: hidden;
+    background: #0f172a;
+}
+
+.header {
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.team-logo {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+}
+
+.header-text {
+    text-align: right;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.lineup-button {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #1a1a2e;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.lineup-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.4);
+}
+
+.lineup-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+}
+
+.header h1 {
+    color: #FFD700;
+    font-size: 4rem;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.header p {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px 10px;
+    /* row-gap column-gap */
+    margin-top: 35px;
+    padding: 15px;
+}
+
+.player-card {
+    width: 193px;
+    height: 275px;
+    background: linear-gradient(135deg, #2c2c54 0%, #40407a 50%, #2c2c54 100%);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+.player-card.galatasaray {
+    background: linear-gradient(135deg, #8B0000 0%, #FF6B00 50%, #8B0000 100%);
+}
+
+.player-card.fenerbahce {
+    background: linear-gradient(135deg, #FFD700 0%, #0066FF 50%, #FFD700 100%);
+}
+
+.player-card.besiktas {
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 50%, #1a1a1a 100%);
+}
+
+.player-card.trabzonspor {
+    background: linear-gradient(135deg, #722F37 0%, #2E3A87 50%, #722F37 100%);
+}
+
+.player-card.kasimpasa {
+    background: linear-gradient(135deg, #0066CC 0%, #003399 50%, #0066CC 100%);
+}
+
+.player-card.konyaspor {
+    background: linear-gradient(135deg, #008000 0%, #006400 50%, #008000 100%);
+}
+
+.player-card.alanyaspor {
+    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 50%, #FFA500 100%);
+}
+
+.player-card.kayserispor {
+    background: linear-gradient(135deg, #FF0000 0%, #8B0000 50%, #FF0000 100%);
+}
+
+.player-card.gaziantepfk {
+    background: linear-gradient(135deg, #FF0000 0%, #000000 50%, #FF0000 100%);
+    color: #FFFFFF;
+    border: 2px solid #FF0000;
+}
+
+.player-card.antalyaspor {
+    background: linear-gradient(135deg, #FF0000 0%, #8B0000 50%, #FF0000 100%);
+}
+
+.player-card.kocaelispor {
+    background: linear-gradient(135deg, #008000 0%, #006400 50%, #008000 100%);
+}
+
+.player-card.genclerbirligi {
+    background: linear-gradient(135deg, #FF0000 0%, #8B0000 50%, #FF0000 100%);
+}
+
+.player-card.karagumruk {
+    background: linear-gradient(135deg, #FF0000 0%, #8B0000 50%, #FF0000 100%);
+    color: #FFFFFF;
+}
+
+.player-card.karagumruk .rating-badge {
+    background: linear-gradient(145deg, #FF0000 0%, #8B0000 100%);
+    color: #FFFFFF;
+}
+
+.player-card.karagumruk .position-badge {
+    background: #FF0000;
+    color: #FFFFFF;
+}
+
+.player-card.gaziantep {
+    background: linear-gradient(135deg, #4B0082 0%, #2E004F 50%, #4B0082 100%);
+    color: #FFFFFF;
+    border: 2px solid #6A0DAD;
+}
+
+.player-card.gaziantep .rating-badge {
+    background: linear-gradient(145deg, #4B0082 0%, #2E004F 100%);
+    color: #FFFFFF;
+}
+
+.player-card.gaziantep .position-badge {
+    background: #4B0082;
+    color: #FFFFFF;
+}
+
+.player-card.eyupspor {
+    background: linear-gradient(135deg, #800080 0%, #FFD700 50%, #800080 100%);
+    color: #FFFFFF;
+    border: 2px solid #FFD700;
+}
+
+.player-card.eyupspor .rating-badge {
+    background: linear-gradient(145deg, #800080 0%, #4B0082 100%);
+    color: #FFD700;
+}
+
+.player-card.eyupspor .position-badge {
+    background: #800080;
+    color: #FFD700;
+    border: 1px solid #FFD700;
+}
+
+.player-card.eyupspor .player-name {
+    color: #FFD700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.gaziantep {
+    background: linear-gradient(135deg, #FF0000 0%, #000000 50%, #FF0000 100%);
+    color: #FFFFFF;
+}
+
+.gaziantep .rating-badge {
+    background: linear-gradient(145deg, #FF0000 0%, #000000 100%);
+    color: #FFFFFF;
+}
+
+.gaziantep .position-badge {
+    background: #FF0000;
+    color: #FFFFFF;
+}
+
+.eyupspor {
+    background: linear-gradient(135deg, #800080 0%, #4B0082 50%, #800080 100%);
+    color: #FFFFFF;
+}
+
+.eyupspor .rating-badge {
+    background: linear-gradient(145deg, #800080 0%, #4B0082 100%);
+    color: #FFFFFF;
+}
+
+.eyupspor .position-badge {
+    background: #800080;
+    color: #FFFFFF;
+}
+
+.player-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.player-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, transparent, rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+.rating-badge {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    background: linear-gradient(145deg, #FFD700 0%, #FFA500 100%);
+    border-radius: 9px;
+    padding: 4px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.rating-number {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+}
+
+.rating-type {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #000;
+    margin-top: 2px;
+}
+
+.position-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.55rem;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.player-image-container {
+    position: relative;
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-image img {
+    height: 110%;
+    width: auto;
+    object-fit: contain;
+    transform: translateY(15%);
+}
+
+.player-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 6px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 70%, transparent 100%);
+}
+
+.player-name {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.player-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 3px 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #FFD700;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #fff;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.player-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.825rem;
+    color: #fff;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.country-flag {
+    width: 18px;
+    height: auto;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.club-logo {
+    display: none;
+}
+
+.superlig-logo {
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    z-index: 4;
+    opacity: 0.9;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.superlig-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+    z-index: 4;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    50% {
+        transform: translateX(0%) translateY(0%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+.card-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #FF6B00, #FF8F00, #FFA726, #FF6B00);
+    border-radius: 20px;
+    z-index: -2;
+    opacity: 0;
+    transition: all 0.3s ease;
+    filter: blur(15px);
+}
+
+.player-card:hover .card-glow {
+    opacity: 0.6;
+    animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% {
+        opacity: 0.4;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.card-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 8px;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #FFD700;
+    border-radius: 50%;
+    opacity: 0;
+    animation: floatUp 3s infinite ease-out;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(100%) scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20%) scale(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .league-header img {
+        width: 100px;
+    }
+
+    .team-logo {
+        width: 14px;
+        height: 14px;
+    }
+
+    .team-button {
+        padding: 3px 5px;
+        font-size: 10px;
+        height: 24px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .teams-list {
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .team-logo {
+        width: 16px;
+        height: 16px;
+    }
+
+    .team-button {
+        padding: 4px 6px;
+        font-size: 10.5px;
+        height: 28px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .teams-list {
+        grid-template-columns: 1fr;
+    }
+
+    .team-logo {
+        width: 18px;
+        height: 18px;
+    }
+
+    .team-button {
+        padding: 6px 8px;
+        font-size: 11px;
+        height: 32px;
+    }
+}
+
+.home-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #E60012, #FFFFFF);
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(230, 0, 18, 0.3);
+    z-index: 1000;
+}
+
+.home-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(230, 0, 18, 0.4);
+}
+
+.home-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(230, 0, 18, 0.2);
+}
+
+@media (max-width: 768px) {
+    .home-button {
+        bottom: 10px;
+        left: 10px;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

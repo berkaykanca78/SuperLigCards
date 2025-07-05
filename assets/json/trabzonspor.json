@@ -207,15 +207,16 @@
         "name": "FATİH TEKKE",
         "rating": 78,
         "image": "assets/managers/tekke.png",
+        "age": 46,
         "nationality": {
-            "name": "TUR",
+            "name": "Turkey",
+            "code": "TUR",
             "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
         },
-        "age": 46,
         "stats": {
-            "TAK": 79,
-            "LİD": 78,
-            "TEK": 85
+            "tactic": 77,
+            "motivation": 80,
+            "leadership": 78
         }
     }
 } 

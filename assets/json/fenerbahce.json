@@ -204,18 +204,19 @@
         }
     ],
     "manager": {
-        "name": "JOSE MOURINHO",
+        "name": "JOSÉ MOURINHO",
         "rating": 89,
         "image": "assets/managers/mourinho.png",
+        "age": 61,
         "nationality": {
-            "name": "POR",
+            "name": "Portugal",
+            "code": "POR",
             "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
         },
-        "age": 61,
         "stats": {
-            "TAK": 90,
-            "LİD": 89,
-            "TEK": 88
+            "tactic": 90,
+            "motivation": 88,
+            "leadership": 89
         }
     }
 } 

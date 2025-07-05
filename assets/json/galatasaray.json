@@ -207,15 +207,16 @@
         "name": "OKAN BURUK",
         "rating": 87,
         "image": "assets/managers/okan.png",
+        "age": 50,
         "nationality": {
-            "name": "TUR",
+            "name": "Turkey",
+            "code": "TUR",
             "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
         },
-        "age": 50,
         "stats": {
-            "TAK": 88,
-            "LİD": 87,
-            "TEK": 86
+            "tactic": 88,
+            "motivation": 87,
+            "leadership": 86
         }
     }
 } 
