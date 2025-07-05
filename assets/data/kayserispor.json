@@ -1,0 +1,223 @@
+{
+    "name": "KAYSERİSPOR",
+    "cardTeamName": "kayserispor",
+    "logo": "https://tmssl.akamaized.net/images/wappen/head/3205.png",
+    "season": "2025-2026 Sezonu",
+    "players": [
+        {
+            "name": "MIGUEL CARDOSO",
+            "position": "ST",
+            "rating": 78,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/mcardoso.png",
+            "nationality": {
+                "name": "PRT",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
+            },
+            "age": 29,
+            "number": 99,
+            "stats": {
+                "BİT": 79,
+                "ŞUT": 78,
+                "HIZ": 77
+            }
+        },
+        {
+            "name": "BILAL BAYAZIT",
+            "position": "GK",
+            "rating": 77,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/bayazit.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 25,
+            "number": 1,
+            "stats": {
+                "REF": 78,
+                "DIV": 77,
+                "POS": 76
+            }
+        },
+        {
+            "name": "CARLOS MANÉ",
+            "position": "RW",
+            "rating": 77,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/mane.png",
+            "nationality": {
+                "name": "PRT",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
+            },
+            "age": 30,
+            "number": 7,
+            "stats": {
+                "HIZ": 79,
+                "DRİB": 77,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "RAMAZAN CIVELEK",
+            "position": "RB",
+            "rating": 76,
+            "ratingPosition": "SAĞ BEK",
+            "image": "assets/players/civelek.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 28,
+            "number": 2,
+            "stats": {
+                "HIZ": 77,
+                "DEF": 76,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "LIONEL CAROLE",
+            "position": "LB",
+            "rating": 77,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/carole.png",
+            "nationality": {
+                "name": "MTQ",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/113.png"
+            },
+            "age": 32,
+            "number": 23,
+            "stats": {
+                "HIZ": 76,
+                "DEF": 77,
+                "PAS": 77
+            }
+        },
+        {
+            "name": "ANTHONY UZODIMMA",
+            "position": "CB",
+            "rating": 77,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/uzodimma.png",
+            "nationality": {
+                "name": "NGA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/124.png"
+            },
+            "age": 23,
+            "number": 4,
+            "stats": {
+                "DEF": 78,
+                "FİZ": 77,
+                "HIZ": 76
+            }
+        },
+        {
+            "name": "MAME THIAM",
+            "position": "LW",
+            "rating": 77,
+            "ratingPosition": "SOL KANAT",
+            "image": "assets/players/thiam.png",
+            "nationality": {
+                "name": "SEN",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/149.png"
+            },
+            "age": 31,
+            "number": 11,
+            "stats": {
+                "HIZ": 78,
+                "DRİB": 77,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "MIGUEL CARDOSO",
+            "position": "CAM",
+            "rating": 77,
+            "ratingPosition": "ON NUMARA",
+            "image": "assets/players/cardoso.png",
+            "nationality": {
+                "name": "PRT",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
+            },
+            "age": 29,
+            "number": 10,
+            "stats": {
+                "PAS": 78,
+                "DRİB": 77,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "KARTAL YILMAZ",
+            "position": "CDM",
+            "rating": 76,
+            "ratingPosition": "D.ORTA SAHA",
+            "image": "assets/players/kyilmaz.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 23,
+            "number": 6,
+            "stats": {
+                "DEF": 77,
+                "PAS": 76,
+                "FİZ": 75
+            }
+        },
+        {
+            "name": "ALI KARIMI",
+            "position": "CM",
+            "rating": 77,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/karimi.png",
+            "nationality": {
+                "name": "IRN",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/71.png"
+            },
+            "age": 29,
+            "number": 8,
+            "isCaptain": true,
+            "stats": {
+                "PAS": 78,
+                "DRİB": 77,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "NICOLAS GAVORY",
+            "position": "LB",
+            "rating": 77,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/gavory.png",
+            "nationality": {
+                "name": "FRA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/50.png"
+            },
+            "age": 29,
+            "number": 3,
+            "stats": {
+                "HIZ": 77,
+                "DEF": 77,
+                "PAS": 76
+            }
+        }
+    ],
+    "manager": {
+        "name": "RECEP UÇAR",
+        "rating": 77,
+        "image": "assets/managers/ucar.png",
+        "age": 43,
+        "nationality": {
+            "name": "Turkey",
+            "code": "TUR",
+            "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+        },
+        "stats": {
+            "tactic": 77,
+            "motivation": 78,
+            "leadership": 76
+        }
+    }
+} 

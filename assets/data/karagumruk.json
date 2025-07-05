@@ -1,0 +1,223 @@
+{
+    "name": "KARAGÜMRÜK",
+    "cardTeamName": "karagumruk",
+    "logo": "https://tmssl.akamaized.net/images/wappen/head/6646.png",
+    "season": "2025-2026 Sezonu",
+    "players": [
+        {
+            "name": "MBAYE DIAGNE",
+            "position": "ST",
+            "rating": 78,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/diagne.png",
+            "nationality": {
+                "name": "SEN",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/149.png"
+            },
+            "age": 32,
+            "number": 94,
+            "stats": {
+                "BİT": 79,
+                "ŞUT": 78,
+                "FİZ": 77
+            }
+        },
+        {
+            "name": "EMILIANO VIVIANO",
+            "position": "GK",
+            "rating": 77,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/viviano.png",
+            "nationality": {
+                "name": "ITA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/75.png"
+            },
+            "age": 38,
+            "number": 1,
+            "isCaptain": true,
+            "stats": {
+                "REF": 78,
+                "DIV": 77,
+                "POS": 76
+            }
+        },
+        {
+            "name": "DAVIDE BIRASCHI",
+            "position": "CB",
+            "rating": 77,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/biraschi.png",
+            "nationality": {
+                "name": "ITA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/75.png"
+            },
+            "age": 29,
+            "number": 4,
+            "stats": {
+                "DEF": 78,
+                "FİZ": 77,
+                "HIZ": 75
+            }
+        },
+        {
+            "name": "LUCAS BIGLIA",
+            "position": "CDM",
+            "rating": 77,
+            "ratingPosition": "D.ORTA SAHA",
+            "image": "assets/players/biglia.png",
+            "nationality": {
+                "name": "ARG",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/9.png"
+            },
+            "age": 38,
+            "number": 6,
+            "stats": {
+                "DEF": 77,
+                "PAS": 78,
+                "FİZ": 76
+            }
+        },
+        {
+            "name": "FABIO BORINI",
+            "position": "RW",
+            "rating": 77,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/borini.png",
+            "nationality": {
+                "name": "ITA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/75.png"
+            },
+            "age": 32,
+            "number": 7,
+            "stats": {
+                "HIZ": 78,
+                "DRİB": 77,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "ANDREA BERTOLACCI",
+            "position": "CM",
+            "rating": 77,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/bertolacci.png",
+            "nationality": {
+                "name": "ITA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/75.png"
+            },
+            "age": 33,
+            "number": 8,
+            "stats": {
+                "PAS": 78,
+                "DRİB": 77,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "JIMMY DURMAZ",
+            "position": "CAM",
+            "rating": 77,
+            "ratingPosition": "ON NUMARA",
+            "image": "assets/players/durmaz.png",
+            "nationality": {
+                "name": "SWE",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/147.png"
+            },
+            "age": 35,
+            "number": 10,
+            "stats": {
+                "PAS": 78,
+                "DRİB": 77,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "EBRIMA COLLEY",
+            "position": "LW",
+            "rating": 77,
+            "ratingPosition": "SOL KANAT",
+            "image": "assets/players/colley.png",
+            "nationality": {
+                "name": "GMB",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/53.png"
+            },
+            "age": 24,
+            "number": 11,
+            "stats": {
+                "HIZ": 78,
+                "DRİB": 77,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "CANER ERKİN",
+            "position": "LB",
+            "rating": 77,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/erkin.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 35,
+            "number": 88,
+            "stats": {
+                "HIZ": 76,
+                "DEF": 77,
+                "PAS": 78
+            }
+        },
+        {
+            "name": "SERDAR AZIZ",
+            "position": "CB",
+            "rating": 77,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/aziz.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 33,
+            "number": 4,
+            "stats": {
+                "DEF": 78,
+                "FİZ": 77,
+                "HIZ": 75
+            }
+        },
+        {
+            "name": "DAVIDE BIRASCHI",
+            "position": "RB",
+            "rating": 77,
+            "ratingPosition": "SAĞ BEK",
+            "image": "assets/players/biraschi.png",
+            "nationality": {
+                "name": "ITA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/75.png"
+            },
+            "age": 29,
+            "number": 2,
+            "stats": {
+                "HIZ": 77,
+                "DEF": 77,
+                "PAS": 76
+            }
+        }
+    ],
+    "manager": {
+        "name": "ALPASLAN ÖZTÜRK",
+        "rating": 77,
+        "image": "assets/managers/ozturk.png",
+        "age": 47,
+        "nationality": {
+            "name": "Turkey",
+            "code": "TUR",
+            "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+        },
+        "stats": {
+            "tactic": 77,
+            "motivation": 78,
+            "leadership": 76
+        }
+    }
+} 

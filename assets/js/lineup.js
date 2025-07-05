@@ -635,7 +635,26 @@ managerArea.addEventListener('drop', (e) => {
 
 async function loadAllTeamCards(position = '') {
     try {
-        const teams = ['galatasaray', 'fenerbahce', 'besiktas', 'trabzonspor'];
+        const teams = [
+            'galatasaray', 
+            'fenerbahce', 
+            'besiktas', 
+            'trabzonspor',
+            'antalyaspor',
+            'kocaelispor',
+            'genclerbirligi',
+            'goztepe',
+            'karagumruk',
+            'gaziantep',
+            'kayserispor',
+            'alanyaspor',
+            'konyaspor',
+            'kasimpasa',
+            'rizespor',
+            'eyupspor',
+            'samsunspor',
+            'basaksehir'
+        ];
         let allCards = [];
         let failedTeams = [];
 

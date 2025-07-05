@@ -8,7 +8,7 @@
             "name": "ANDERSON TALISCA",
             "position": "CAM",
             "rating": 84,
-            "ratingPosition": "O.ORTA SAHA",
+            "ratingPosition": "ON NUMARA",
             "image": "assets/players/talisca.png",
             "nationality": {
                 "name": "BRA",
@@ -116,7 +116,7 @@
             "name": "OĞUZ AYDIN",
             "position": "RW",
             "rating": 78,
-            "ratingPosition": "FORVET",
+            "ratingPosition": "SAĞ KANAT",
             "image": "assets/players/oguz.png",
             "nationality": {
                 "name": "TUR",
@@ -152,7 +152,7 @@
             "name": "JHON DURAN",
             "position": "ST",
             "rating": 78,
-            "ratingPosition": "FORVET",
+            "ratingPosition": "SANTRAFOR",
             "image": "assets/players/duran.png",
             "nationality": {
                 "name": "COL",

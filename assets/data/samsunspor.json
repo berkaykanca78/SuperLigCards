@@ -1,0 +1,223 @@
+{
+    "name": "SAMSUNSPOR",
+    "cardTeamName": "samsunspor",
+    "logo": "https://tmssl.akamaized.net/images/wappen/head/152.png",
+    "season": "2025-2026 Sezonu",
+    "players": [
+        {
+            "name": "OKAN KOCUK",
+            "position": "GK",
+            "rating": 78,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/kocuk.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 28,
+            "number": 1,
+            "stats": {
+                "REF": 79,
+                "DIV": 78,
+                "POS": 77
+            }
+        },
+        {
+            "name": "LANDRY DIMATA",
+            "position": "ST",
+            "rating": 79,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/dimata.png",
+            "nationality": {
+                "name": "BEL",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/19.png"
+            },
+            "age": 28,
+            "number": 9,
+            "stats": {
+                "BİT": 80,
+                "ŞUT": 79,
+                "HIZ": 78
+            }
+        },
+        {
+            "name": "PHILIP AWUKU",
+            "position": "RW",
+            "rating": 77,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/awuku.png",
+            "nationality": {
+                "name": "GHA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/54.png"
+            },
+            "age": 24,
+            "number": 11,
+            "stats": {
+                "HIZ": 82,
+                "DRİB": 78,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "ERCAN KARA",
+            "position": "ST",
+            "rating": 77,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/ekara.png",
+            "nationality": {
+                "name": "AUT",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/5.png"
+            },
+            "age": 28,
+            "number": 99,
+            "stats": {
+                "BİT": 78,
+                "ŞUT": 77,
+                "FİZ": 79
+            }
+        },
+        {
+            "name": "YUSUF DEMİR",
+            "position": "CAM",
+            "rating": 78,
+            "ratingPosition": "ON NUMARA",
+            "image": "assets/players/ydemir.png",
+            "nationality": {
+                "name": "AUT",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/5.png"
+            },
+            "age": 20,
+            "number": 10,
+            "stats": {
+                "DRİB": 80,
+                "PAS": 78,
+                "ŞUT": 77
+            }
+        },
+        {
+            "name": "MARIUS MOUANDILMADJI",
+            "position": "ST",
+            "rating": 76,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/marius.png",
+            "nationality": {
+                "name": "TCD",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/163.png"
+            },
+            "age": 24,
+            "number": 20,
+            "stats": {
+                "HIZ": 79,
+                "BİT": 77,
+                "ŞUT": 76
+            }
+        },
+        {
+            "name": "ALIM ÖZTÜRK",
+            "position": "CB",
+            "rating": 77,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/aozturk.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 31,
+            "number": 5,
+            "isCaptain": true,
+            "stats": {
+                "DEF": 78,
+                "FİZ": 77,
+                "HIZ": 75
+            }
+        },
+        {
+            "name": "ZEKI YAVRU",
+            "position": "RB",
+            "rating": 76,
+            "ratingPosition": "SAĞ BEK",
+            "image": "assets/players/yavru.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 32,
+            "number": 2,
+            "stats": {
+                "HIZ": 77,
+                "DEF": 76,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "MUHAMMED GÜMÜŞKAYA",
+            "position": "CM",
+            "rating": 75,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/gumuskaya.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 22,
+            "number": 6,
+            "stats": {
+                "PAS": 76,
+                "DRİB": 75,
+                "FİZ": 74
+            }
+        },
+        {
+            "name": "MORYKE FOFANA",
+            "position": "LM",
+            "rating": 77,
+            "ratingPosition": "SOL KANAT",
+            "image": "assets/players/fofana.png",
+            "nationality": {
+                "name": "CIV",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/38.png"
+            },
+            "age": 32,
+            "number": 7,
+            "stats": {
+                "HIZ": 80,
+                "DRİB": 77,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "OLIVIER NTCHAM",
+            "position": "CM",
+            "rating": 77,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/ntcham.png",
+            "nationality": {
+                "name": "CMR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/31.png"
+            },
+            "age": 28,
+            "number": 8,
+            "stats": {
+                "PAS": 78,
+                "DRİB": 77,
+                "ŞUT": 76
+            }
+        }
+    ],
+    "manager": {
+        "name": "MARKUS GISDOL",
+        "rating": 78,
+        "image": "assets/managers/gisdol.png",
+        "age": 54,
+        "nationality": {
+            "name": "Germany",
+            "code": "GER",
+            "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/40.png"
+        },
+        "stats": {
+            "tactic": 79,
+            "motivation": 78,
+            "leadership": 77
+        }
+    }
+} 

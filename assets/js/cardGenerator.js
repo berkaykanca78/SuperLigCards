@@ -112,11 +112,50 @@ function generateTeamCards(data) {
     `;
 }
 
+// Takım verilerini yükle
+async function loadTeamData(team) {
+    if (team === 'all') {
+        return Promise.all([
+            fetch('assets/data/galatasaray.json').then(response => response.json()),
+            fetch('assets/data/fenerbahce.json').then(response => response.json()),
+            fetch('assets/data/besiktas.json').then(response => response.json()),
+            fetch('assets/data/trabzonspor.json').then(response => response.json()),
+            fetch('assets/data/basaksehir.json').then(response => response.json()),
+            fetch('assets/data/antalyaspor.json').then(response => response.json()),
+            fetch('assets/data/konyaspor.json').then(response => response.json()),
+            fetch('assets/data/alanyaspor.json').then(response => response.json()),
+            fetch('assets/data/kayserispor.json').then(response => response.json()),
+            fetch('assets/data/gaziantep.json').then(response => response.json()),
+            fetch('assets/data/kocaelispor.json').then(response => response.json()),
+            fetch('assets/data/genclerbirligi.json').then(response => response.json()),
+            fetch('assets/data/karagumruk.json').then(response => response.json()),
+            fetch('assets/data/rizespor.json').then(response => response.json()),
+            fetch('assets/data/goztepe.json').then(response => response.json()),
+            fetch('assets/data/samsunspor.json').then(response => response.json()),
+            fetch('assets/data/eyupspor.json').then(response => response.json())
+        ]).then(results => {
+            let allPlayers = [];
+            results.forEach(teamData => {
+                allPlayers = allPlayers.concat(teamData.players);
+                if (teamData.manager) {
+                    allPlayers.push({
+                        ...teamData.manager,
+                        position: 'MAN',
+                        ratingPosition: 'TEKNİK DİREKTÖR'
+                    });
+                }
+            });
+            return { players: allPlayers };
+        });
+    } else {
+        return fetch(`assets/data/${team}.json`).then(response => response.json());
+    }
+}
+
 // Takım verilerini yükleyip kart HTML'ini oluşturan fonksiyon
 async function loadAndGenerateTeamCards(teamName) {
     try {
-        const response = await fetch(`assets/data/${teamName}.json`);
-        const data = await response.json();
+        const data = await loadTeamData(teamName);
         return generateTeamCards(data);
     } catch (error) {
         console.error('Takım verileri yüklenirken hata oluştu:', error);

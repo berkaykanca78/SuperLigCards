@@ -99,7 +99,7 @@
             "name": "JOÃO MÁRIO",
             "position": "CAM",
             "rating": 82,
-            "ratingPosition": "O.ORTA SAHA",
+            "ratingPosition": "ON NUMARA",
             "image": "assets/players/joaomario.png",
             "nationality": {
                 "name": "POR",
@@ -117,7 +117,7 @@
             "name": "MILOT RASHICA",
             "position": "RW",
             "rating": 81,
-            "ratingPosition": "FORVET",
+            "ratingPosition": "SAĞ KANAT",
             "image": "assets/players/rashica.png",
             "nationality": {
                 "name": "KOS",
@@ -171,7 +171,7 @@
             "name": "TAMMY ABRAHAM",
             "position": "ST",
             "rating": 84,
-            "ratingPosition": "FORVET",
+            "ratingPosition": "SANTRAFOR",
             "image": "assets/players/abraham.png",
             "nationality": {
                 "name": "ENG",
