@@ -1,0 +1,220 @@
+{
+    "name": "TRABZONSPOR",
+    "logo": "https://cdn.soccerwiki.org/images/logos/clubs/352.png",
+    "season": "2025-2026 Sezonu",
+    "players": [
+        {
+            "name": "SAVIC",
+            "position": "GK",
+            "rating": 82,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/savic.png",
+            "nationality": {
+                "name": "CRO",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/37.png"
+            },
+            "age": 28,
+            "number": 1,
+            "stats": {
+                "REF": 83,
+                "DIV": 82,
+                "POS": 81
+            }
+        },
+        {
+            "name": "BATAGOV",
+            "position": "CB",
+            "rating": 81,
+            "ratingPosition": "DEFANS",
+            "image": "assets/players/batagov.png",
+            "nationality": {
+                "name": "RUS",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/141.png"
+            },
+            "age": 26,
+            "number": 4,
+            "stats": {
+                "DEF": 82,
+                "FİZ": 81,
+                "HIZ": 79
+            }
+        },
+        {
+            "name": "PINA",
+            "position": "CDM",
+            "rating": 82,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/pina.png",
+            "nationality": {
+                "name": "ESP",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/157.png"
+            },
+            "age": 27,
+            "number": 6,
+            "stats": {
+                "DEF": 83,
+                "PAS": 82,
+                "FİZ": 81
+            }
+        },
+        {
+            "name": "BARISIC",
+            "position": "LB",
+            "rating": 81,
+            "ratingPosition": "DEFANS",
+            "image": "assets/players/barisic.png",
+            "nationality": {
+                "name": "CRO",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/37.png"
+            },
+            "age": 31,
+            "number": 3,
+            "stats": {
+                "HIZ": 82,
+                "DEF": 81,
+                "PAS": 83
+            }
+        },
+        {
+            "name": "OKAY YOKUŞLU",
+            "position": "CDM",
+            "rating": 82,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/okay.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 30,
+            "number": 5,
+            "stats": {
+                "DEF": 83,
+                "FİZ": 82,
+                "PAS": 81
+            }
+        },
+        {
+            "name": "MENDY",
+            "position": "CM",
+            "rating": 81,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/mendy.png",
+            "nationality": {
+                "name": "SEN",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/149.png"
+            },
+            "age": 29,
+            "number": 8,
+            "stats": {
+                "PAS": 82,
+                "DRİB": 81,
+                "FİZ": 80
+            }
+        },
+        {
+            "name": "ZUBKOV",
+            "position": "RW",
+            "rating": 80,
+            "ratingPosition": "FORVET",
+            "image": "assets/players/zubkov.png",
+            "nationality": {
+                "name": "UKR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/177.png"
+            },
+            "age": 27,
+            "number": 11,
+            "stats": {
+                "HIZ": 83,
+                "DRİB": 80,
+                "ŞUT": 79
+            }
+        },
+        {
+            "name": "M. CHAM",
+            "position": "LW",
+            "rating": 81,
+            "ratingPosition": "FORVET",
+            "image": "assets/players/cham.png",
+            "nationality": {
+                "name": "NOR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/124.png"
+            },
+            "age": 23,
+            "number": 7,
+            "stats": {
+                "HIZ": 85,
+                "DRİB": 82,
+                "ŞUT": 80
+            }
+        },
+        {
+            "name": "UĞURCAN",
+            "position": "GK",
+            "rating": 84,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/ugurcan.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 27,
+            "number": 1,
+            "stats": {
+                "REF": 86,
+                "DIV": 84,
+                "POS": 83
+            }
+        },
+        {
+            "name": "VISCA",
+            "position": "RW",
+            "rating": 82,
+            "ratingPosition": "FORVET",
+            "image": "assets/players/visca.png",
+            "nationality": {
+                "name": "BIH",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/39.png"
+            },
+            "age": 33,
+            "number": 19,
+            "stats": {
+                "HIZ": 85,
+                "DRİB": 83,
+                "PAS": 82
+            }
+        },
+        {
+            "name": "ONUACHU",
+            "position": "ST",
+            "rating": 83,
+            "ratingPosition": "FORVET",
+            "image": "assets/players/onuachu.png",
+            "nationality": {
+                "name": "NGA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/124.png"
+            },
+            "age": 29,
+            "number": 9,
+            "stats": {
+                "BİT": 85,
+                "FİZ": 84,
+                "ŞUT": 82
+            }
+        }
+    ],
+    "manager": {
+        "name": "FATİH TEKKE",
+        "rating": 78,
+        "image": "assets/managers/tekke.png",
+        "nationality": {
+            "name": "TUR",
+            "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+        },
+        "age": 46,
+        "stats": {
+            "TAK": 79,
+            "LİD": 78,
+            "TEK": 85
+        }
+    }
+} 

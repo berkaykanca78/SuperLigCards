@@ -1,0 +1,220 @@
+{
+    "name": "BEŞİKTAŞ JK",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/Be%C5%9Fikta%C5%9F_Logo_Be%C5%9Fikta%C5%9F_Amblem_Be%C5%9Fikta%C5%9F_Arma.png",
+    "season": "2025-2026 Sezonu",
+    "players": [
+        {
+            "name": "MERT GÜNOK",
+            "position": "GK",
+            "rating": 81,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/mertgunok.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 34,
+            "number": 1,
+            "stats": {
+                "REF": 82,
+                "DIV": 81,
+                "POS": 80
+            }
+        },
+        {
+            "name": "G. PAULISTA",
+            "position": "CB",
+            "rating": 82,
+            "ratingPosition": "DEFANS",
+            "image": "assets/players/paulista.png",
+            "nationality": {
+                "name": "BRA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/26.png"
+            },
+            "age": 33,
+            "number": 5,
+            "stats": {
+                "DEF": 84,
+                "FİZ": 83,
+                "HIZ": 79
+            }
+        },
+        {
+            "name": "JURASEK",
+            "position": "LB",
+            "rating": 80,
+            "ratingPosition": "DEFANS",
+            "image": "assets/players/jurasek.png",
+            "nationality": {
+                "name": "CZE",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/172.png"
+            },
+            "age": 23,
+            "number": 3,
+            "stats": {
+                "HIZ": 83,
+                "DEF": 79,
+                "PAS": 78
+            }
+        },
+        {
+            "name": "SVENNSON",
+            "position": "CDM",
+            "rating": 81,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/svennson.png",
+            "nationality": {
+                "name": "SWE",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/147.png"
+            },
+            "age": 30,
+            "number": 6,
+            "stats": {
+                "DEF": 82,
+                "PAS": 81,
+                "FİZ": 80
+            }
+        },
+        {
+            "name": "EMİRHAN TOPÇU",
+            "position": "CB",
+            "rating": 78,
+            "ratingPosition": "DEFANS",
+            "image": "assets/players/emirhan.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 21,
+            "number": 41,
+            "stats": {
+                "DEF": 80,
+                "FİZ": 82,
+                "HIZ": 76
+            }
+        },
+        {
+            "name": "JOÃO MÁRIO",
+            "position": "CAM",
+            "rating": 82,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/joaomario.png",
+            "nationality": {
+                "name": "POR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
+            },
+            "age": 31,
+            "number": 10,
+            "stats": {
+                "PAS": 84,
+                "DRİB": 83,
+                "ŞUT": 81
+            }
+        },
+        {
+            "name": "RASHICA",
+            "position": "RW",
+            "rating": 81,
+            "ratingPosition": "FORVET",
+            "image": "assets/players/rashica.png",
+            "nationality": {
+                "name": "KOS",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/244.png"
+            },
+            "age": 27,
+            "number": 7,
+            "stats": {
+                "HIZ": 86,
+                "DRİB": 82,
+                "ŞUT": 80
+            }
+        },
+        {
+            "name": "AL MUSRATI",
+            "position": "CDM",
+            "rating": 82,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/almusrati.png",
+            "nationality": {
+                "name": "LBY",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/108.png"
+            },
+            "age": 27,
+            "number": 8,
+            "stats": {
+                "DEF": 84,
+                "FİZ": 83,
+                "PAS": 81
+            }
+        },
+        {
+            "name": "RAFA SILVA",
+            "position": "RW",
+            "rating": 85,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/rafa.png",
+            "nationality": {
+                "name": "POR",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/512px-Flag_of_Portugal.svg.png"
+            },
+            "age": 31,
+            "number": 27,
+            "stats": {
+                "HIZ": 91,
+                "DRİB": 88,
+                "ŞUT": 83
+            }
+        },
+        {
+            "name": "TAMMY ABRAHAM",
+            "position": "ST",
+            "rating": 84,
+            "ratingPosition": "FORVET",
+            "image": "assets/players/abraham.png",
+            "nationality": {
+                "name": "ENG",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/189.png"
+            },
+            "age": 27,
+            "number": 9,
+            "stats": {
+                "ŞUT": 87,
+                "HIZ": 83,
+                "FİZ": 89
+            }
+        },
+        {
+            "name": "GEDSON",
+            "position": "CM",
+            "rating": 82,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/gedson.png",
+            "nationality": {
+                "name": "POR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
+            },
+            "age": 24,
+            "number": 83,
+            "stats": {
+                "HIZ": 85,
+                "DRİB": 83,
+                "PAS": 82
+            }
+        }
+    ],
+    "manager": {
+        "name": "SOLSKJAER",
+        "rating": 82,
+        "image": "assets/managers/solskjaer.png",
+        "nationality": {
+            "name": "NOR",
+            "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/125.png"
+        },
+        "age": 50,
+        "stats": {
+            "TAK": 80,
+            "LİD": 79,
+            "TEK": 81
+        }
+    }
+} 

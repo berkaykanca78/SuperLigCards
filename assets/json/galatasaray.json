@@ -1,0 +1,220 @@
+{
+    "name": "GALATASARAY SK",
+    "logo": "https://images.seeklogo.com/logo-png/61/2/galatasaray-5-yildizli-concept-logo-png_seeklogo-617686.png",
+    "season": "2025-2026 Sezonu",
+    "players": [
+        {
+            "name": "MAURO ICARDI",
+            "position": "ST",
+            "rating": 86,
+            "ratingPosition": "FORVET",
+            "image": "assets/players/icardi.png",
+            "nationality": {
+                "name": "ARG",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/9.png"
+            },
+            "age": 32,
+            "number": 9,
+            "stats": {
+                "BİT": 89,
+                "ŞUT": 85,
+                "HIZ": 82
+            }
+        },
+        {
+            "name": "LEROY SANÉ",
+            "position": "LM",
+            "rating": 85,
+            "ratingPosition": "SOL KANAT",
+            "image": "assets/players/sane.png",
+            "nationality": {
+                "name": "GER",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/40.png"
+            },
+            "age": 28,
+            "number": 10,
+            "stats": {
+                "HIZ": 93,
+                "DRİB": 87,
+                "ŞUT": 84
+            }
+        },
+        {
+            "name": "DAVINSON SANCHEZ",
+            "position": "CB",
+            "rating": 82,
+            "ratingPosition": "DEFANS",
+            "image": "assets/players/davinson.png",
+            "nationality": {
+                "name": "COL",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1024px-Flag_of_Colombia.svg.png"
+            },
+            "age": 28,
+            "number": 6,
+            "stats": {
+                "HIZ": 78,
+                "DEF": 85,
+                "FİZ": 89
+            }
+        },
+        {
+            "name": "BARIŞ ALPER",
+            "position": "LW",
+            "rating": 82,
+            "ratingPosition": "SOL KANAT",
+            "image": "assets/players/baris.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 23,
+            "number": 17,
+            "stats": {
+                "HIZ": 89,
+                "DRİB": 83,
+                "PAS": 80
+            }
+        },
+        {
+            "name": "TORREIRA",
+            "position": "CDM",
+            "rating": 83,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/torreira.png",
+            "nationality": {
+                "name": "URU",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/179.png"
+            },
+            "age": 27,
+            "number": 34,
+            "stats": {
+                "DEF": 85,
+                "PAS": 84,
+                "FİZ": 82
+            }
+        },
+        {
+            "name": "GABRIEL SARA",
+            "position": "CM",
+            "rating": 82,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/sara.png",
+            "nationality": {
+                "name": "BRA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/26.png"
+            },
+            "age": 24,
+            "number": 21,
+            "stats": {
+                "PAS": 84,
+                "DRİB": 83,
+                "ŞUT": 81
+            }
+        },
+        {
+            "name": "EREN ELMALI",
+            "position": "LB",
+            "rating": 81,
+            "ratingPosition": "DEFANS",
+            "image": "assets/players/eren.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 23,
+            "number": 3,
+            "stats": {
+                "HIZ": 82,
+                "PAS": 80,
+                "DEF": 81
+            }
+        },
+        {
+            "name": "KAAN AYHAN",
+            "position": "RB",
+            "rating": 80,
+            "ratingPosition": "DEFANS",
+            "image": "assets/players/kaan.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 29,
+            "number": 5,
+            "stats": {
+                "DEF": 82,
+                "FİZ": 81,
+                "HIZ": 79
+            }
+        },
+        {
+            "name": "A. BARDAKÇI",
+            "position": "CB",
+            "rating": 82,
+            "ratingPosition": "DEFANS",
+            "image": "assets/players/abdulkerim.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 29,
+            "number": 42,
+            "stats": {
+                "DEF": 83,
+                "FİZ": 81,
+                "HIZ": 79
+            }
+        },
+        {
+            "name": "MARIO LEMINA",
+            "position": "CDM",
+            "rating": 83,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/lemina.png",
+            "nationality": {
+                "name": "GAB",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/110.png"
+            },
+            "age": 30,
+            "number": 99,
+            "stats": {
+                "FİZ": 84,
+                "PAS": 82,
+                "DEF": 83
+            }
+        },
+        {
+            "name": "GÜNAY GÜVENÇ",
+            "position": "GK",
+            "rating": 81,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/gunay.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 32,
+            "number": 23,
+            "stats": {
+                "REF": 83,
+                "DIV": 82,
+                "POS": 80
+            }
+        }
+    ],
+    "manager": {
+        "name": "OKAN BURUK",
+        "rating": 87,
+        "image": "assets/managers/okan.png",
+        "nationality": {
+            "name": "TUR",
+            "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+        },
+        "age": 50,
+        "stats": {
+            "TAK": 88,
+            "LİD": 87,
+            "TEK": 86
+        }
+    }
+} 
