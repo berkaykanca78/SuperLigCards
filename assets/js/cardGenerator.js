@@ -114,7 +114,7 @@ function generateTeamCards(data) {
 // Takım verilerini yükleyip kart HTML'ini oluşturan fonksiyon
 async function loadAndGenerateTeamCards(teamName) {
     try {
-        const response = await fetch(`assets/json/${teamName}.json`);
+        const response = await fetch(`assets/data/${teamName}.json`);
         const data = await response.json();
         return generateTeamCards(data);
     } catch (error) {

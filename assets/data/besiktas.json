@@ -131,21 +131,21 @@
             }
         },
         {
-            "name": "AL MUSRATI",
+            "name": "JEAN CAJUSTE",
             "position": "CDM",
-            "rating": 82,
+            "rating": 80,
             "ratingPosition": "D.ORTA SAHA",
-            "image": "assets/players/almusrati.png",
+            "image": "assets/players/cajuste.png",
             "nationality": {
-                "name": "LBY",
-                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/800px-Flag_of_Libya.svg.png"
+                "name": "SWE",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/800px-Flag_of_Sweden.svg.png"
             },
-            "age": 27,
-            "number": 8,
+            "age": 24,
+            "number": 6,
             "stats": {
-                "DEF": 84,
+                "DEF": 81,
                 "FİZ": 83,
-                "PAS": 81
+                "PAS": 80
             }
         },
         {

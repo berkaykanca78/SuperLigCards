@@ -421,7 +421,7 @@ document.getElementById('positionFilter').addEventListener('change', function() 
 
 async function loadTeamCards(teamName, position = '') {
     try {
-        const response = await fetch(`assets/json/${teamName}.json`);
+        const response = await fetch(`assets/data/${teamName}.json`);
         if (!response.ok) {
             throw new Error(`${teamName} takımının verileri yüklenemedi (${response.status})`);
         }
@@ -644,7 +644,7 @@ async function loadAllTeamCards(position = '') {
 
         for (const team of teams) {
             try {
-                const response = await fetch(`assets/json/${team}.json`);
+                const response = await fetch(`assets/data/${team}.json`);
                 if (!response.ok) {
                     failedTeams.push(team);
                     continue;

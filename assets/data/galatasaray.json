@@ -167,21 +167,21 @@
             }
         },
         {
-            "name": "MARIO LEMINA",
+            "name": "HAKAN ÇALHANOĞLU",
             "position": "CDM",
-            "rating": 83,
+            "rating": 85,
             "ratingPosition": "D.ORTA SAHA",
-            "image": "assets/players/lemina.png",
+            "image": "assets/players/calhanoglu.png",
             "nationality": {
-                "name": "GAB",
-                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/800px-Flag_of_Gabon.svg.png"
+                "name": "TUR",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/800px-Flag_of_Turkey.svg.png"
             },
             "age": 30,
-            "number": 99,
+            "number": 10,
             "stats": {
-                "FİZ": 84,
-                "PAS": 82,
-                "DEF": 83
+                "FİZ": 78,
+                "PAS": 87,
+                "ATK": 85
             }
         },
         {
