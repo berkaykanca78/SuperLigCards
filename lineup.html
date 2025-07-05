@@ -37,8 +37,13 @@
             width: 350px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
             height: 100%;
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
         .right-panel {
@@ -426,28 +431,35 @@
         }
 
         .team-selector, .formation-controls {
-            background: #1e293b;
-            padding: 10px;
+            background: #334155;
+            padding: 12px;
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
-            gap: 8px;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .team-selector:hover, .formation-controls:hover {
+            background: #475569;
         }
 
         .team-selector select, .position-filter select, .formation-select {
-            padding: 6px 10px;
-            background: #334155;
+            padding: 8px 12px;
+            background: #1e293b;
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
             border-radius: 6px;
-            font-size: 13px;
+            font-size: 14px;
             cursor: pointer;
             outline: none;
             flex: 1;
+            transition: all 0.3s ease;
         }
 
         .team-selector select:hover, .position-filter select:hover, .formation-select:hover {
-            background: #475569;
+            background: #334155;
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .team-selector select option, .position-filter select option, .formation-select option {
@@ -458,16 +470,31 @@
 
         .cards-container {
             flex: 1;
-            background: #1e293b;
+            background: #334155;
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 12px;
+            padding: 15px;
             overflow-y: auto;
             max-height: calc(100vh - 200px);
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 12px;
+            gap: 15px;
             align-content: start;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+        }
+
+        .cards-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .cards-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .cards-container::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
         }
 
         .cards-grid {
@@ -703,6 +730,9 @@
             padding: 20px;
             color: rgba(255, 255, 255, 0.6);
             font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin: 10px;
         }
 
         @media (max-width: 768px) {
@@ -919,7 +949,7 @@
         }
 
         .formation-controls {
-            background: #1e293b;
+            background: #334155;
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 10px;
@@ -934,27 +964,28 @@
         }
 
         .clear-btn {
-            padding: 6px 10px;
-            background: #334155;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 12px;
+            background: #dc2626;
+            border: none;
             border-radius: 6px;
             color: white;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 4px;
-            min-width: 90px;
+            gap: 6px;
+            min-width: 100px;
         }
 
         .clear-btn:hover {
-            background: #475569;
+            background: #ef4444;
+            transform: translateY(-1px);
         }
 
         .clear-btn:active {
-            transform: translateY(1px);
+            transform: translateY(0);
         }
 
         .clear-btn::before {
@@ -1069,6 +1100,7 @@
         </div>
     </div>
 
+    <script src="assets/js/cardGenerator.js"></script>
     <script>
         // Takım kart fonksiyonları
         function showGalatasarayCards() {
@@ -2066,40 +2098,21 @@
             if (!sidebarContainer) return;
 
             try {
-                let cardsHtml = '';
-                sidebarContainer.innerHTML = '';
+                // Generate team cards HTML
+                const html = await loadAndGenerateTeamCards(teamName);
 
-                // Takıma göre ilgili fonksiyonu çağır
-                switch (teamName) {
-                    case 'galatasaray':
-                        cardsHtml = showGalatasarayCards();
-                        break;
-                    case 'fenerbahce':
-                        cardsHtml = showFenerbahceCards();
-                        break;
-                    case 'besiktas':
-                        cardsHtml = showBesiktasCards();
-                        break;
-                    case 'trabzonspor':
-                        cardsHtml = showTrabzonsporCards();
-                        break;
-                    default:
-                        showNoCardsMessage(teamName);
-                        return;
-                }
-
-                // Geçici bir div oluştur ve HTML'i içine yerleştir
+                // Create a temporary div to parse the HTML
                 const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = cardsHtml;
+                tempDiv.innerHTML = html;
 
-                // Kartları seç ve filtrele
+                // Filter cards based on position and exclude manager
                 let playerCards = Array.from(tempDiv.querySelectorAll('.player-card'))
                     .filter(card => {
                         const positionBadge = card.querySelector('.position-badge');
                         return !positionBadge || !positionBadge.textContent.includes('TEKNİK DİREKTÖR');
                     });
 
-                // Pozisyon filtresini uygula
+                // Apply position filter if specified
                 if (position) {
                     playerCards = playerCards.filter(card => {
                         const ratingType = card.querySelector('.rating-type').textContent;
@@ -2123,7 +2136,10 @@
                     return;
                 }
 
-                // Kartları sidebar'a ekle
+                // Clear and update the sidebar container
+                sidebarContainer.innerHTML = '';
+                
+                // Add cards to sidebar with drag functionality
                 playerCards.forEach(card => {
                     const sidebarCard = card.cloneNode(true);
                     if (!sidebarCard.classList.contains(teamName)) {
@@ -2137,7 +2153,7 @@
                 });
 
             } catch (error) {
-                console.error('Kartlar yüklenirken hata:', error);
+                console.error('Takım kartları yüklenirken hata oluştu:', error);
                 showErrorMessage(error);
             }
         }
