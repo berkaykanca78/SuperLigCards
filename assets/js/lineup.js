@@ -227,7 +227,6 @@ field.addEventListener('drop', (e) => {
             // Create delete icon
             const deleteIcon = document.createElement('div');
             deleteIcon.className = 'delete-icon';
-            deleteIcon.textContent = '×';
 
             // Add click handler
             deleteIconContainer.onclick = (e) => {
@@ -241,9 +240,6 @@ field.addEventListener('drop', (e) => {
             // Append delete icon to container and container to card
             deleteIconContainer.appendChild(deleteIcon);
             fieldCard.appendChild(deleteIconContainer);
-
-            // Make sure the delete icon is above the card
-            deleteIconContainer.style.zIndex = '9999';
 
             closestPoint.classList.add('occupied');
             makeDraggable(fieldCard);
