@@ -62,13 +62,13 @@ function generateTeamCards(data) {
             `).join('')}
 
             ${data.manager ? `
-            <div class="player-card ${data.cardTeamName}" draggable="true">
+            <div class="player-card ${data.cardTeamName}" draggable="true" data-position="MAN">
                 <div class="card-glow"></div>
                 <div class="card-shine"></div>
 
                 <div class="rating-badge" style="background: linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)">
                     <div class="rating-number" style="color: #000000">${data.manager.rating}</div>
-                    <div class="rating-type" style="color: #000000">TD</div>
+                    <div class="rating-type" style="color: #000000">MAN</div>
                 </div>
 
                 <div class="position-badge">TEKNİK DİREKTÖR</div>
@@ -102,7 +102,7 @@ function generateTeamCards(data) {
                             <img src="${data.manager.nationality.flag}" alt="${data.manager.nationality.name}" class="country-flag">
                             ${data.manager.nationality.code} • ${data.manager.age} yaş
                         </div>
-                        <div>TD</div>
+                        <div>MAN</div>
                     </div>
                 </div>
             </div>

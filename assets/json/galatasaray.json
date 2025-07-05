@@ -44,7 +44,7 @@
             "name": "DAVINSON SANCHEZ",
             "position": "CB",
             "rating": 82,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "STOPER",
             "image": "assets/players/davinson.png",
             "nationality": {
                 "name": "COL",
@@ -59,7 +59,7 @@
             }
         },
         {
-            "name": "BARIŞ ALPER",
+            "name": "BARIŞ ALPER YILMAZ",
             "position": "LW",
             "rating": 82,
             "ratingPosition": "SOL KANAT",
@@ -77,10 +77,10 @@
             }
         },
         {
-            "name": "TORREIRA",
+            "name": "LUCAS TORREIRA",
             "position": "CDM",
             "rating": 83,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "D.ORTA SAHA",
             "image": "assets/players/torreira.png",
             "nationality": {
                 "name": "URU",
@@ -116,7 +116,7 @@
             "name": "EREN ELMALI",
             "position": "LB",
             "rating": 81,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "SOL BEK",
             "image": "assets/players/eren.png",
             "nationality": {
                 "name": "TUR",
@@ -134,7 +134,7 @@
             "name": "KAAN AYHAN",
             "position": "RB",
             "rating": 80,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "SAĞ BEK",
             "image": "assets/players/kaan.png",
             "nationality": {
                 "name": "TUR",
@@ -149,10 +149,10 @@
             }
         },
         {
-            "name": "A. BARDAKÇI",
+            "name": "ABDÜLKERİM BARDAKÇI",
             "position": "CB",
             "rating": 82,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "STOPER",
             "image": "assets/players/abdulkerim.png",
             "nationality": {
                 "name": "TUR",
@@ -170,11 +170,11 @@
             "name": "MARIO LEMINA",
             "position": "CDM",
             "rating": 83,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "D.ORTA SAHA",
             "image": "assets/players/lemina.png",
             "nationality": {
                 "name": "GAB",
-                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/110.png"
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/800px-Flag_of_Gabon.svg.png"
             },
             "age": 30,
             "number": 99,

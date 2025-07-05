@@ -5,28 +5,28 @@
     "season": "2025-2026 Sezonu",
     "players": [
         {
-            "name": "SAVIC",
-            "position": "GK",
+            "name": "STEFAN SAVIC",
+            "position": "CB",
             "rating": 82,
-            "ratingPosition": "KALECİ",
+            "ratingPosition": "STOPER",
             "image": "assets/players/savic.png",
             "nationality": {
-                "name": "CRO",
-                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/37.png"
+                "name": "SRB",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/215.png"
             },
-            "age": 28,
-            "number": 1,
+            "age": 32,
+            "number": 15,
             "stats": {
-                "REF": 83,
-                "DIV": 82,
-                "POS": 81
+                "DEF": 84,
+                "FİZ": 83,
+                "HIZ": 78
             }
         },
         {
             "name": "BATAGOV",
             "position": "CB",
             "rating": 81,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "STOPER",
             "image": "assets/players/batagov.png",
             "nationality": {
                 "name": "RUS",
@@ -42,13 +42,13 @@
         },
         {
             "name": "PINA",
-            "position": "CDM",
+            "position": "RB",
             "rating": 82,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "SAĞ BEK",
             "image": "assets/players/pina.png",
             "nationality": {
-                "name": "ESP",
-                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/157.png"
+                "name": "CAP",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/800px-Flag_of_Cape_Verde.svg.png"
             },
             "age": 27,
             "number": 6,
@@ -62,7 +62,7 @@
             "name": "BARISIC",
             "position": "LB",
             "rating": 81,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "SOL BEK",
             "image": "assets/players/barisic.png",
             "nationality": {
                 "name": "CRO",
@@ -80,7 +80,7 @@
             "name": "OKAY YOKUŞLU",
             "position": "CDM",
             "rating": 82,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "D.ORTA SAHA",
             "image": "assets/players/okay.png",
             "nationality": {
                 "name": "TUR",
@@ -132,13 +132,13 @@
         },
         {
             "name": "M. CHAM",
-            "position": "LW",
+            "position": "CAM",
             "rating": 81,
-            "ratingPosition": "FORVET",
+            "ratingPosition": "O.ORTA SAHA",
             "image": "assets/players/cham.png",
             "nationality": {
-                "name": "NOR",
-                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/124.png"
+                "name": "AUS",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/800px-Flag_of_Austria.svg.png"
             },
             "age": 23,
             "number": 7,
@@ -174,7 +174,7 @@
             "image": "assets/players/visca.png",
             "nationality": {
                 "name": "BIH",
-                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/39.png"
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/800px-Flag_of_Bosnia_and_Herzegovina.svg.png"
             },
             "age": 33,
             "number": 19,

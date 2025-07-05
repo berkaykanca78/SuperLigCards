@@ -6,8 +6,8 @@ window.onload = function () {
     }
 };
 
- // Team selection functionality
- document.querySelectorAll('.team-button').forEach(button => {
+// Team selection functionality
+document.querySelectorAll('.team-button').forEach(button => {
     button.addEventListener('click', async function () {
         // Remove active class from all buttons
         document.querySelectorAll('.team-button').forEach(btn => {
@@ -25,4 +25,21 @@ window.onload = function () {
         const html = await loadAndGenerateTeamCards(teamName);
         cardsGrid.innerHTML = html;
     });
+});
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
+
+// Close sidebar when clicking outside on mobile
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+        if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+            sidebar.classList.remove('active');
+        }
+    }
 });

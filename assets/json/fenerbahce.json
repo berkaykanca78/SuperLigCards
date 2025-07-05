@@ -5,10 +5,10 @@
     "season": "2025-2026 Sezonu",
     "players": [
         {
-            "name": "TALISCA",
+            "name": "ANDERSON TALISCA",
             "position": "CAM",
             "rating": 84,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "O.ORTA SAHA",
             "image": "assets/players/talisca.png",
             "nationality": {
                 "name": "BRA",
@@ -23,7 +23,7 @@
             }
         },
         {
-            "name": "LIVAKOVIC",
+            "name": "DOMINIK LIVAKOVIC",
             "position": "GK",
             "rating": 83,
             "ratingPosition": "KALECİ",
@@ -41,10 +41,10 @@
             }
         },
         {
-            "name": "DJIKU",
+            "name": "ALEXANDER DJIKU",
             "position": "CB",
             "rating": 82,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "STOPER",
             "image": "assets/players/djiku.png",
             "nationality": {
                 "name": "GHA",
@@ -59,10 +59,10 @@
             }
         },
         {
-            "name": "OOSTERWOLDE",
+            "name": "JAYDEN OOSTERWOLDE",
             "position": "LB",
             "rating": 81,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "SOL BEK",
             "image": "assets/players/oosterwolde.png",
             "nationality": {
                 "name": "NED",
@@ -80,7 +80,7 @@
             "name": "MERT MÜLDÜR",
             "position": "RB",
             "rating": 80,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "SAĞ BEK",
             "image": "assets/players/muldur.png",
             "nationality": {
                 "name": "TUR",
@@ -95,8 +95,8 @@
             }
         },
         {
-            "name": "SZYMANSKI",
-            "position": "CAM",
+            "name": "SEBASTIAN SZYMANSKI",
+            "position": "CM",
             "rating": 83,
             "ratingPosition": "ORTA SAHA",
             "image": "assets/players/szymanski.png",
@@ -131,10 +131,10 @@
             }
         },
         {
-            "name": "Ç. SÖYÜNCÜ",
+            "name": "ÇAĞLAR SÖYÜNCÜ",
             "position": "CB",
             "rating": 82,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "STOPER",
             "image": "assets/players/caglar.png",
             "nationality": {
                 "name": "TUR",
@@ -149,7 +149,7 @@
             }
         },
         {
-            "name": "DURAN",
+            "name": "JHON DURAN",
             "position": "ST",
             "rating": 78,
             "ratingPosition": "FORVET",
@@ -167,7 +167,7 @@
             }
         },
         {
-            "name": "İRFAN CAN",
+            "name": "İRFAN CAN KAHVECİ",
             "position": "CM",
             "rating": 82,
             "ratingPosition": "ORTA SAHA",
@@ -188,7 +188,7 @@
             "name": "FRED",
             "position": "CDM",
             "rating": 83,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "D.ORTA SAHA",
             "image": "assets/players/fred.png",
             "nationality": {
                 "name": "BRA",

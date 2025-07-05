@@ -23,10 +23,10 @@
             }
         },
         {
-            "name": "G. PAULISTA",
+            "name": "GABRIEL PAULISTA",
             "position": "CB",
             "rating": 82,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "STOPER",
             "image": "assets/players/paulista.png",
             "nationality": {
                 "name": "BRA",
@@ -41,10 +41,10 @@
             }
         },
         {
-            "name": "JURASEK",
+            "name": "DAVID JURASEK",
             "position": "LB",
             "rating": 80,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "SOL BEK",
             "image": "assets/players/jurasek.png",
             "nationality": {
                 "name": "CZE",
@@ -59,10 +59,10 @@
             }
         },
         {
-            "name": "SVENNSON",
-            "position": "CDM",
+            "name": "JONAS SVENNSON",
+            "position": "RB",
             "rating": 81,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "SAĞ BEK",
             "image": "assets/players/svennson.png",
             "nationality": {
                 "name": "SWE",
@@ -80,7 +80,7 @@
             "name": "EMİRHAN TOPÇU",
             "position": "CB",
             "rating": 78,
-            "ratingPosition": "DEFANS",
+            "ratingPosition": "STOPER",
             "image": "assets/players/emirhan.png",
             "nationality": {
                 "name": "TUR",
@@ -98,7 +98,7 @@
             "name": "JOÃO MÁRIO",
             "position": "CAM",
             "rating": 82,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "O.ORTA SAHA",
             "image": "assets/players/joaomario.png",
             "nationality": {
                 "name": "POR",
@@ -113,7 +113,7 @@
             }
         },
         {
-            "name": "RASHICA",
+            "name": "MILOT RASHICA",
             "position": "RW",
             "rating": 81,
             "ratingPosition": "FORVET",
@@ -134,11 +134,11 @@
             "name": "AL MUSRATI",
             "position": "CDM",
             "rating": 82,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "D.ORTA SAHA",
             "image": "assets/players/almusrati.png",
             "nationality": {
                 "name": "LBY",
-                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/108.png"
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/800px-Flag_of_Libya.svg.png"
             },
             "age": 27,
             "number": 8,

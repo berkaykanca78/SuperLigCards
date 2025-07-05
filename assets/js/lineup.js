@@ -1,612 +1,8 @@
-// Takım kart fonksiyonları
-function showGalatasarayCards() {
-    return `
-        <div class="cards-grid">
-            <!-- Mauro Icardi -->
-            <div class="player-card galatasaray" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">86</div>
-                    <div class="rating-type">ST</div>
-                </div>
-
-                <div class="position-badge">FORVET</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/icardi.png"
-                            alt="Mauro Icardi" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">MAURO ICARDI</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">89</div>
-                            <div class="stat-label">BİT</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">85</div>
-                            <div class="stat-label">ŞUT</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">82</div>
-                            <div class="stat-label">HIZ</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://tmssl.akamaized.net/images/flagge/verysmall/9.png"
-                                alt="Argentina" class="country-flag">
-                            ARG • 32 yaş
-                        </div>
-                        <div># 9</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Leroy Sané -->
-            <div class="player-card galatasaray" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">85</div>
-                    <div class="rating-type">LM</div>
-                </div>
-
-                <div class="position-badge">SOL KANAT</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="./assets/players/sane.png" alt="Leroy Sané"
-                            onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">LEROY SANÉ</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">93</div>
-                            <div class="stat-label">HIZ</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">87</div>
-                            <div class="stat-label">DRİB</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">84</div>
-                            <div class="stat-label">ŞUT</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://tmssl.akamaized.net/images/flagge/verysmall/40.png"
-                                alt="Germany" class="country-flag">
-                            GER • 28 yaş
-                        </div>
-                        <div># 10</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Davinson Sanchez -->
-            <div class="player-card galatasaray" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">82</div>
-                    <div class="rating-type">CB</div>
-                </div>
-
-                <div class="position-badge">DEFANS</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/davinson.png"
-                            alt="Davinson Sanchez" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">DAVINSON SANCHEZ</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">78</div>
-                            <div class="stat-label">HIZ</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">85</div>
-                            <div class="stat-label">DEF</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">89</div>
-                            <div class="stat-label">FİZ</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1024px-Flag_of_Colombia.svg.png"
-                                alt="Colombia" class="country-flag">
-                            COL • 28 yaş
-                        </div>
-                        <div># 6</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    `;
-}
-
-function showFenerbahceCards() {
-    return `
-        <div class="cards-grid">
-            <!-- John Duran -->
-            <div class="player-card fenerbahce" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">80</div>
-                    <div class="rating-type">ST</div>
-                </div>
-
-                <div class="position-badge">FORVET</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/duran.png"
-                            alt="John Duran" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">JHON DURÁN</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">85</div>
-                            <div class="stat-label">ŞUT</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">88</div>
-                            <div class="stat-label">HIZ</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">82</div>
-                            <div class="stat-label">FİZ</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://tmssl.akamaized.net/images/flagge/verysmall/25.png" alt="Colombia" class="country-flag">
-                            COL • 21 yaş
-                        </div>
-                        <div># 19</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- İrfan Can Kahveci -->
-            <div class="player-card fenerbahce" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">84</div>
-                    <div class="rating-type">CAM</div>
-                </div>
-
-                <div class="position-badge">ORTA SAHA</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/irfan.png"
-                            alt="İrfan Can Kahveci" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">İRFAN CAN KAHVECİ</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">86</div>
-                            <div class="stat-label">PAS</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">84</div>
-                            <div class="stat-label">ŞUT</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">78</div>
-                            <div class="stat-label">HIZ</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://tmssl.akamaized.net/images/flagge/verysmall/174.png" alt="Turkey" class="country-flag">
-                            TUR • 29 yaş
-                        </div>
-                        <div># 17</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Fred -->
-            <div class="player-card fenerbahce" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">84</div>
-                    <div class="rating-type">CDM</div>
-                </div>
-
-                <div class="position-badge">ORTA SAHA</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/fred.png"
-                            alt="Fred" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">FRED</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">88</div>
-                            <div class="stat-label">PAS</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">85</div>
-                            <div class="stat-label">DEF</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">82</div>
-                            <div class="stat-label">TEK</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://tmssl.akamaized.net/images/flagge/verysmall/26.png" alt="Brazil" class="country-flag">
-                            BRA • 31 yaş
-                        </div>
-                        <div># 13</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    `;
-}
-
-function showBesiktasCards() {
-    return `
-        <div class="cards-grid">
-            <!-- Tammy Abraham -->
-            <div class="player-card besiktas" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">84</div>
-                    <div class="rating-type">ST</div>
-                </div>
-
-                <div class="position-badge">FORVET</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/abraham.png"
-                            alt="Tammy Abraham" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">TAMMY ABRAHAM</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">87</div>
-                            <div class="stat-label">ŞUT</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">83</div>
-                            <div class="stat-label">HIZ</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">89</div>
-                            <div class="stat-label">FİZ</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://tmssl.akamaized.net/images/flagge/verysmall/189.png" alt="England" class="country-flag">
-                            ENG • 27 yaş
-                        </div>
-                        <div># 9</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Rafa Silva -->
-            <div class="player-card besiktas" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">85</div>
-                    <div class="rating-type">RW</div>
-                </div>
-
-                <div class="position-badge">SAĞ KANAT</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/rafa.png"
-                            alt="Rafa Silva" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">RAFA SILVA</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">91</div>
-                            <div class="stat-label">HIZ</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">88</div>
-                            <div class="stat-label">DRİB</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">83</div>
-                            <div class="stat-label">ŞUT</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/512px-Flag_of_Portugal.svg.png" alt="Portugal" class="country-flag">
-                            POR • 31 yaş
-                        </div>
-                        <div># 27</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Gedson Fernandes -->
-            <div class="player-card besiktas" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">80</div>
-                    <div class="rating-type">CM</div>
-                </div>
-
-                <div class="position-badge">ORTA SAHA</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/gedson.png"
-                            alt="Gedson Fernandes" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">GEDSON FERNANDES</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">82</div>
-                            <div class="stat-label">PAS</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">85</div>
-                            <div class="stat-label">HIZ</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">79</div>
-                            <div class="stat-label">ŞUT</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/512px-Flag_of_Portugal.svg.png" alt="Portugal" class="country-flag">
-                            POR • 25 yaş
-                        </div>
-                        <div># 83</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    `;
-}
-
-function showTrabzonsporCards() {
-    return `
-        <div class="cards-grid">
-            <!-- Paul Onuachu -->
-            <div class="player-card trabzonspor" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">83</div>
-                    <div class="rating-type">ST</div>
-                </div>
-
-                <div class="position-badge">FORVET</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/onuachu.png"
-                            alt="Paul Onuachu" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">PAUL ONUACHU</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">87</div>
-                            <div class="stat-label">BİT</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">84</div>
-                            <div class="stat-label">ŞUT</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">89</div>
-                            <div class="stat-label">FİZ</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://tmssl.akamaized.net/images/flagge/verysmall/124.png" alt="Nigeria" class="country-flag">
-                            NGA • 29 yaş
-                        </div>
-                        <div># 9</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Edin Visca -->
-            <div class="player-card trabzonspor" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">81</div>
-                    <div class="rating-type">RW</div>
-                </div>
-
-                <div class="position-badge">SAĞ KANAT</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/visca.png"
-                            alt="Edin Visca" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">EDİN VİŞĆA</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">88</div>
-                            <div class="stat-label">HIZ</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">86</div>
-                            <div class="stat-label">DRİB</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">82</div>
-                            <div class="stat-label">ŞUT</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://tmssl.akamaized.net/images/flagge/verysmall/80.png" alt="Bosnia" class="country-flag">
-                            BIH • 34 yaş
-                        </div>
-                        <div># 31</div>
-                    </div>
-                </div>
-
-            </div>
-        
-            <!-- Uğurcan Çakır -->
-            <div class="player-card trabzonspor" draggable="true">
-                <div class="card-glow"></div>
-                <div class="card-shine"></div>
-
-                <div class="rating-badge">
-                    <div class="rating-number">84</div>
-                    <div class="rating-type">GK</div>
-                </div>
-
-                <div class="position-badge">KALECİ</div>
-
-                <div class="player-image-container">
-                    <div class="player-image">
-                        <img src="assets/players/ugurcan.png"
-                            alt="Uğurcan Çakır" onerror="this.style.display='none'">
-                    </div>
-                </div>
-
-                <div class="player-info">
-                    <div class="player-name">UĞURCAN ÇAKIR</div>
-
-                    <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">86</div>
-                            <div class="stat-label">REF</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">88</div>
-                            <div class="stat-label">DİV</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">84</div>
-                            <div class="stat-label">POS</div>
-                        </div>
-                    </div>
-
-                    <div class="player-details">
-                        <div>
-                            <img src="https://tmssl.akamaized.net/images/flagge/verysmall/174.png" alt="Turkey" class="country-flag">
-                            TUR • 28 yaş
-                        </div>
-                        <div># 1</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    `;
-}
-
 // Formasyon pozisyonları
 const formations = {
     '4-4-2': {
         positions: [
-            { x: 50, y: 93, role: 'GK', allowedRoles: ['GK'] },
+            { x: 50, y: 90, role: 'GK', allowedRoles: ['GK'] },
             { x: 15, y: 75, role: 'LB', allowedRoles: ['LB', 'LWB'] },
             { x: 35, y: 80, role: 'CB', allowedRoles: ['CB'] },
             { x: 65, y: 80, role: 'CB', allowedRoles: ['CB'] },
@@ -621,7 +17,7 @@ const formations = {
     },
     '4-3-3': {
         positions: [
-            { x: 50, y: 93, role: 'GK', allowedRoles: ['GK'] },
+            { x: 50, y: 90, role: 'GK', allowedRoles: ['GK'] },
             { x: 15, y: 75, role: 'LB', allowedRoles: ['LB', 'LWB'] },
             { x: 35, y: 80, role: 'CB', allowedRoles: ['CB'] },
             { x: 65, y: 80, role: 'CB', allowedRoles: ['CB'] },
@@ -636,22 +32,22 @@ const formations = {
     },
     '3-5-2': {
         positions: [
-            { x: 50, y: 93, role: 'GK', allowedRoles: ['GK'] },
+            { x: 50, y: 90, role: 'GK', allowedRoles: ['GK'] },
             { x: 35, y: 80, role: 'CB', allowedRoles: ['CB'] },
-            { x: 50, y: 80, role: 'CB', allowedRoles: ['CB'] },
+            { x: 50, y: 70, role: 'CB', allowedRoles: ['CB'] },
             { x: 65, y: 80, role: 'CB', allowedRoles: ['CB'] },
-            { x: 10, y: 45, role: 'LM', allowedRoles: ['LM', 'LWB'] },
+            { x: 10, y: 45, role: 'LWB', allowedRoles: ['LM', 'LWB'] },
             { x: 35, y: 50, role: 'CM', allowedRoles: ['CM', 'CDM'] },  // CM biraz ileri
             { x: 50, y: 45, role: 'CM', allowedRoles: ['CM', 'CAM'] },  // CAM biraz ileri
             { x: 65, y: 50, role: 'CM', allowedRoles: ['CM', 'CDM'] },  // CM biraz ileri
-            { x: 90, y: 45, role: 'RM', allowedRoles: ['RM', 'RWB'] },
+            { x: 90, y: 45, role: 'RWB', allowedRoles: ['RM', 'RWB'] },
             { x: 35, y: 20, role: 'ST', allowedRoles: ['ST', 'CF'] },
             { x: 65, y: 20, role: 'ST', allowedRoles: ['ST', 'CF'] }
         ]
     },
     '4-2-3-1': {
         positions: [
-            { x: 50, y: 93, role: 'GK', allowedRoles: ['GK'] },
+            { x: 50, y: 90, role: 'GK', allowedRoles: ['GK'] },
             { x: 15, y: 75, role: 'LB', allowedRoles: ['LB', 'LWB'] },
             { x: 35, y: 80, role: 'CB', allowedRoles: ['CB'] },
             { x: 65, y: 80, role: 'CB', allowedRoles: ['CB'] },
@@ -789,14 +185,12 @@ field.addEventListener('drop', (e) => {
     const x = ((e.clientX - dragOffset.x - rect.left) / rect.width) * 100;
     const y = ((e.clientY - dragOffset.y - rect.top) / rect.height) * 100;
 
-    // En yakın noktayı bul
+    // En yakın formasyon noktasını bul
     const points = document.querySelectorAll('.formation-point');
     let closestPoint = null;
     let minDistance = Infinity;
 
     points.forEach(point => {
-        if (point.classList.contains('occupied')) return; // Dolu pozisyonları atla
-
         const pointX = parseFloat(point.style.left);
         const pointY = parseFloat(point.style.top);
         const distance = Math.sqrt(
@@ -821,9 +215,35 @@ field.addEventListener('drop', (e) => {
             fieldCard.style.position = 'absolute';
             fieldCard.style.left = closestPoint.style.left;
             fieldCard.style.top = closestPoint.style.top;
-            fieldCard.style.transform = 'translate(-50%, -50%) scale(0.4)';
-            fieldCard.style.zIndex = '10';
+            fieldCard.style.transform = 'translate(-50%, -50%) scale(0.8)';
+            fieldCard.style.zIndex = '50';
             fieldCard.style.cursor = 'move';
+            fieldCard.style.pointerEvents = 'all';
+
+            // Create delete icon container
+            const deleteIconContainer = document.createElement('div');
+            deleteIconContainer.className = 'delete-icon-container';
+
+            // Create delete icon
+            const deleteIcon = document.createElement('div');
+            deleteIcon.className = 'delete-icon';
+            deleteIcon.textContent = '×';
+
+            // Add click handler
+            deleteIconContainer.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                fieldCard.remove();
+                closestPoint.classList.remove('occupied');
+                closestPoint.classList.remove('highlight');
+            };
+
+            // Append delete icon to container and container to card
+            deleteIconContainer.appendChild(deleteIcon);
+            fieldCard.appendChild(deleteIconContainer);
+
+            // Make sure the delete icon is above the card
+            deleteIconContainer.style.zIndex = '9999';
 
             closestPoint.classList.add('occupied');
             makeDraggable(fieldCard);
@@ -957,158 +377,422 @@ function makeDraggable(element) {
 
 // Temizle fonksiyonunu güncelle
 function clearField() {
-    const container = document.getElementById('cardContainer');
-    container.innerHTML = '';
+    // Saha üzerindeki kartları temizle
+    document.getElementById('cardContainer').innerHTML = '';
+    
+    // Manager alanını temizle
+    const managerArea = document.getElementById('managerArea');
+                managerArea.innerHTML = '<div class="manager-placeholder">Teknik Direktör</div>';
+    
+    // Formasyon noktalarını temizle
     document.querySelectorAll('.formation-point').forEach(point => {
-        point.classList.remove('active', 'highlight', 'occupied', 'invalid');
+        point.classList.remove('occupied');
     });
 }
 
+// Sayfa yüklendiğinde tüm takımların kartlarını göster
+document.addEventListener('DOMContentLoaded', function() {
+    loadAllTeamCards();
+});
+
 // Takım seçimi değiştiğinde
-document.getElementById('teamSelect').addEventListener('change', function () {
+document.getElementById('teamSelect').addEventListener('change', function() {
     const selectedTeam = this.value;
     const selectedPosition = document.getElementById('positionFilter').value;
-    if (selectedTeam) {
+    
+    if (selectedTeam === 'all') {
+        loadAllTeamCards(selectedPosition);
+    } else if (selectedTeam) {
         loadTeamCards(selectedTeam, selectedPosition);
-    } else {
-        clearField();
-        document.getElementById('cardsContainer').innerHTML = `
-            <div class="no-cards-message">
-                Oyuncu kartlarını görmek için takım seçin
-            </div>
-        `;
     }
 });
 
 // Pozisyon filtresi değiştiğinde
-document.getElementById('positionFilter').addEventListener('change', function () {
+document.getElementById('positionFilter').addEventListener('change', function() {
     const selectedTeam = document.getElementById('teamSelect').value;
     const selectedPosition = this.value;
-    if (selectedTeam) {
+    
+    if (selectedTeam === 'all') {
+        loadAllTeamCards(selectedPosition);
+    } else if (selectedTeam) {
         loadTeamCards(selectedTeam, selectedPosition);
     }
 });
 
 async function loadTeamCards(teamName, position = '') {
-    const sidebarContainer = document.getElementById('cardsContainer');
-    if (!sidebarContainer) return;
-
     try {
-        // Generate team cards HTML
-        const html = await loadAndGenerateTeamCards(teamName);
+        const response = await fetch(`assets/json/${teamName}.json`);
+        if (!response.ok) {
+            throw new Error(`${teamName} takımının verileri yüklenemedi (${response.status})`);
+        }
+        
+        let data;
+        try {
+            data = await response.json();
+        } catch (e) {
+            throw new Error(`${teamName} takımının JSON verileri geçersiz`);
+        }
+        
+        if (!data.players) {
+            throw new Error('Geçersiz takım veri formatı');
+        }
 
-        // Create a temporary div to parse the HTML
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = html;
+        let cards = [...data.players];
+        
+        if (data.manager) {
+            const managerCard = {
+                ...data.manager,
+                position: 'MAN',
+                ratingPosition: 'TEKNİK DİREKTÖR'
+            };
+            cards.push(managerCard);
+        }
 
-        // Filter cards based on position and exclude manager
-        let playerCards = Array.from(tempDiv.querySelectorAll('.player-card'))
-            .filter(card => {
-                const positionBadge = card.querySelector('.position-badge');
-                return !positionBadge || !positionBadge.textContent.includes('TEKNİK DİREKTÖR');
-            });
-
-        // Apply position filter if specified
+        // Pozisyon filtreleme
         if (position) {
-            playerCards = playerCards.filter(card => {
-                const ratingType = card.querySelector('.rating-type').textContent;
+            cards = cards.filter(card => {
+                const pos = card.position;
                 switch (position) {
                     case 'GK':
-                        return ratingType === 'GK';
+                        return pos === 'GK';
                     case 'DEF':
-                        return ['CB', 'LB', 'RB', 'LWB', 'RWB'].includes(ratingType);
+                        return ['CB', 'LB', 'RB', 'LWB', 'RWB'].includes(pos);
                     case 'MID':
-                        return ['CM', 'CDM', 'CAM', 'LM', 'RM'].includes(ratingType);
+                        return ['CM', 'CDM', 'CAM', 'LM', 'RM', 'AM'].includes(pos);
                     case 'FW':
-                        return ['ST', 'CF', 'LW', 'RW'].includes(ratingType);
+                        return ['ST', 'CF', 'LW', 'RW', 'FW'].includes(pos);
+                    case 'MAN':
+                        return pos === 'MAN';
                     default:
                         return true;
                 }
             });
         }
 
-        if (playerCards.length === 0) {
+        if (cards.length === 0) {
             showNoCardsMessage(teamName);
             return;
         }
 
-        // Clear and update the sidebar container
-        sidebarContainer.innerHTML = '';
-        
-        // Add cards to sidebar with drag functionality
-        playerCards.forEach(card => {
-            const sidebarCard = card.cloneNode(true);
-            if (!sidebarCard.classList.contains(teamName)) {
-                sidebarCard.classList.add(teamName);
-            }
-            sidebarCard.style.cursor = 'grab';
-            sidebarCard.setAttribute('draggable', 'true');
-            sidebarCard.addEventListener('dragstart', handleDragStart);
-            sidebarCard.addEventListener('dragend', handleDragEnd);
-            sidebarContainer.appendChild(sidebarCard);
-        });
-
+        displayCards(cards, data.cardTeamName);
     } catch (error) {
-        console.error('Takım kartları yüklenirken hata oluştu:', error);
-        showErrorMessage(error);
+        console.error('Takım kartları yüklenirken hata:', error);
+        showErrorMessage(error.message);
     }
 }
 
 function displayCards(cards, teamName) {
-    const sidebarContainer = document.getElementById('cardsContainer');
-    const fieldContainer = document.getElementById('cardContainer');
-    sidebarContainer.innerHTML = '';
-    fieldContainer.innerHTML = '';
+    const container = document.getElementById('cardsContainer');
+    container.innerHTML = '';
 
-    // Teknik direktör kartlarını filtrele
-    const playerCards = Array.from(cards).filter(card => {
-        const positionBadge = card.querySelector('.position-badge');
-        return !positionBadge || !positionBadge.textContent.includes('TEKNİK DİREKTÖR');
+    const cardsGrid = document.createElement('div');
+    cardsGrid.className = 'cards-grid';
+
+    cards.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.className = `player-card ${teamName}`;
+        cardElement.draggable = true;
+        cardElement.dataset.position = card.position;
+
+        // Special styling for manager cards
+        const ratingBadgeStyle = card.position === 'MAN' ? 
+            'style="background: linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)"' : '';
+        const ratingNumberStyle = card.position === 'MAN' ? 
+            'style="color: #000000"' : '';
+        const ratingTypeStyle = card.position === 'MAN' ? 
+            'style="color: #000000"' : '';
+
+        cardElement.innerHTML = `
+            <div class="card-glow"></div>
+            <div class="card-shine"></div>
+
+            <div class="rating-badge" ${ratingBadgeStyle}>
+                <div class="rating-number" ${ratingNumberStyle}>${card.rating}</div>
+                <div class="rating-type" ${ratingTypeStyle}>${card.position}</div>
+            </div>
+
+            <div class="position-badge">${card.ratingPosition}</div>
+
+            <div class="player-image-container">
+                <div class="player-image">
+                    <img src="${card.image}" alt="${card.name}" onerror="this.style.display='none'">
+                </div>
+            </div>
+
+            <div class="player-info">
+                <div class="player-name">${card.name}</div>
+
+                <div class="player-stats">
+                    ${card.position === 'MAN' ? `
+                        <div class="stat">
+                            <div class="stat-value">${card.stats.tactic}</div>
+                            <div class="stat-label">TAK</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${card.stats.motivation}</div>
+                            <div class="stat-label">MOT</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${card.stats.leadership}</div>
+                            <div class="stat-label">LİD</div>
+                        </div>
+                    ` : Object.entries(card.stats).map(([stat, value]) => `
+                        <div class="stat">
+                            <div class="stat-value">${value}</div>
+                            <div class="stat-label">${stat}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="player-details">
+                    <div>
+                        <img src="${card.nationality.flag}" alt="${card.nationality.name}" class="country-flag">
+                        ${card.nationality.code || card.nationality.name} • ${card.age} yaş
+                    </div>
+                    <div>${card.position === 'MAN' ? 'MAN' : `# ${card.number}`}</div>
+                </div>
+            </div>
+        `;
+
+        cardElement.addEventListener('dragstart', handleDragStart);
+        cardElement.addEventListener('dragend', handleDragEnd);
+        cardsGrid.appendChild(cardElement);
     });
 
-    if (playerCards.length === 0) {
-        showNoCardsMessage(teamName);
-        return;
-    }
-
-    playerCards.forEach(card => {
-        const sidebarCard = card.cloneNode(true);
-        // Takım sınıfını ekle (eğer yoksa)
-        if (!sidebarCard.classList.contains(teamName)) {
-            sidebarCard.classList.add(teamName);
-        }
-        sidebarCard.style.cursor = 'grab';
-        sidebarCard.setAttribute('draggable', 'true');
-        sidebarCard.addEventListener('dragstart', handleDragStart);
-        sidebarCard.addEventListener('dragend', handleDragEnd);
-        sidebarContainer.appendChild(sidebarCard);
-    });
-
-    console.log(`${playerCards.length} kart yüklendi - ${teamName}`);
+    container.appendChild(cardsGrid);
 }
 
 function showNoCardsMessage(teamName) {
-    const sidebarContainer = document.getElementById('cardsContainer');
-    sidebarContainer.innerHTML = `
+    const container = document.getElementById('cardsContainer');
+    container.innerHTML = `
         <div class="no-cards-message">
-            ${teamName.charAt(0).toUpperCase() + teamName.slice(1)} için kartlar henüz hazır değil...
+            ${teamName === 'all' ? 
+                'Seçilen pozisyonda oyuncu bulunamadı' : 
+                `${teamName.toUpperCase()} takımında seçilen pozisyonda oyuncu bulunamadı`}
         </div>
     `;
 }
 
 function showErrorMessage(error) {
-    const sidebarContainer = document.getElementById('cardsContainer');
-    sidebarContainer.innerHTML = `
-        <div class="no-cards-message">
-            Kartlar yüklenirken bir hata oluştu: ${error.message}<br>
-            Lütfen sayfayı yenileyin veya daha sonra tekrar deneyin.
+    const container = document.getElementById('cardsContainer');
+    container.innerHTML = `
+        <div class="error-message" style="
+            text-align: center;
+            padding: 20px;
+            color: #ff4444;
+            font-size: 14px;
+            background-color: rgba(255, 68, 68, 0.1);
+            border-radius: 8px;
+            margin: 20px;
+        ">
+            <div style="font-weight: bold; margin-bottom: 10px;">⚠️ Hata</div>
+            <div>${error}</div>
         </div>
     `;
 }
 
 // Pozisyon kontrolü için yardımcı fonksiyon
-function isPositionAllowed(cardRole, allowedRoles) {
-    // Kart rolünü kontrol et
-    const cardType = cardRole.querySelector('.rating-type').textContent;
+function isPositionAllowed(card, allowedRoles) {
+    if (!card || !allowedRoles) return false;
+
+    const cardType = card.dataset.position;
+    if (cardType === 'MAN') {
+        return false; // Managers can only be placed in the manager area
+    }
+
     return allowedRoles.includes(cardType);
+}
+
+const managerArea = document.getElementById('managerArea');
+
+managerArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    const draggingCard = document.querySelector('.dragging');
+    if (draggingCard && draggingCard.dataset.position === 'MAN') {
+        managerArea.classList.add('drag-over');
+    }
+});
+
+managerArea.addEventListener('dragleave', () => {
+    managerArea.classList.remove('drag-over');
+});
+
+managerArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const draggingCard = document.querySelector('.dragging');
+    if (draggingCard && draggingCard.dataset.position === 'MAN') {
+        const existingManager = managerArea.querySelector('.player-card');
+        if (existingManager) {
+            existingManager.remove();
+        }
+        managerArea.innerHTML = '';
+        const cardClone = draggingCard.cloneNode(true);
+        cardClone.classList.remove('dragging');
+        cardClone.style.position = 'relative';
+        cardClone.style.transform = 'scale(1)';
+        cardClone.style.margin = '0';
+        managerArea.appendChild(cardClone);
+    }
+    managerArea.classList.remove('drag-over');
+});
+
+async function loadAllTeamCards(position = '') {
+    try {
+        const teams = ['galatasaray', 'fenerbahce', 'besiktas', 'trabzonspor'];
+        let allCards = [];
+        let failedTeams = [];
+
+        for (const team of teams) {
+            try {
+                const response = await fetch(`assets/json/${team}.json`);
+                if (!response.ok) {
+                    failedTeams.push(team);
+                    continue;
+                }
+
+                const data = await response.json();
+                
+                if (data.players) {
+                    const cards = [...data.players].map(player => ({
+                        ...player,
+                        teamName: data.cardTeamName
+                    }));
+                    
+                    if (data.manager) {
+                        const managerCard = {
+                            ...data.manager,
+                            position: 'MAN',
+                            ratingPosition: 'TEKNİK DİREKTÖR',
+                            teamName: data.cardTeamName
+                        };
+                        cards.push(managerCard);
+                    }
+                    
+                    allCards = [...allCards, ...cards];
+                }
+            } catch (error) {
+                failedTeams.push(team);
+                console.error(`${team} takımı yüklenirken hata:`, error);
+            }
+        }
+
+        if (failedTeams.length > 0) {
+            console.warn(`Bazı takımlar yüklenemedi: ${failedTeams.join(', ')}`);
+        }
+
+        // Pozisyon filtreleme
+        if (position) {
+            allCards = allCards.filter(card => {
+                const pos = card.position;
+                switch (position) {
+                    case 'GK':
+                        return pos === 'GK';
+                    case 'DEF':
+                        return ['CB', 'LB', 'RB', 'LWB', 'RWB'].includes(pos);
+                    case 'MID':
+                        return ['CM', 'CDM', 'CAM', 'LM', 'RM', 'AM'].includes(pos);
+                    case 'FW':
+                        return ['ST', 'CF', 'LW', 'RW', 'FW'].includes(pos);
+                    case 'MAN':
+                        return pos === 'MAN';
+                    default:
+                        return true;
+                }
+            });
+        }
+
+        if (allCards.length === 0) {
+            if (failedTeams.length === teams.length) {
+                showErrorMessage('Hiçbir takımın verileri yüklenemedi');
+            } else {
+                showNoCardsMessage('all');
+            }
+            return;
+        }
+
+        displayAllCards(allCards);
+    } catch (error) {
+        console.error('Tüm takım kartları yüklenirken hata:', error);
+        showErrorMessage('Takım verileri yüklenirken bir hata oluştu');
+    }
+}
+
+function displayAllCards(cards) {
+    const container = document.getElementById('cardsContainer');
+    container.innerHTML = '';
+
+    const cardsGrid = document.createElement('div');
+    cardsGrid.className = 'cards-grid';
+
+    cards.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.className = `player-card ${card.teamName}`;
+        cardElement.draggable = true;
+        cardElement.dataset.position = card.position;
+
+        const ratingBadgeStyle = card.position === 'MAN' ? 
+            'style="background: linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)"' : '';
+        const ratingNumberStyle = card.position === 'MAN' ? 
+            'style="color: #000000"' : '';
+        const ratingTypeStyle = card.position === 'MAN' ? 
+            'style="color: #000000"' : '';
+
+        cardElement.innerHTML = `
+            <div class="card-glow"></div>
+            <div class="card-shine"></div>
+
+            <div class="rating-badge" ${ratingBadgeStyle}>
+                <div class="rating-number" ${ratingNumberStyle}>${card.rating}</div>
+                <div class="rating-type" ${ratingTypeStyle}>${card.position}</div>
+            </div>
+
+            <div class="position-badge">${card.ratingPosition}</div>
+
+            <div class="player-image-container">
+                <div class="player-image">
+                    <img src="${card.image}" alt="${card.name}" onerror="this.style.display='none'">
+                </div>
+            </div>
+
+            <div class="player-info">
+                <div class="player-name">${card.name}</div>
+
+                <div class="player-stats">
+                    ${card.position === 'MAN' ? `
+                        <div class="stat">
+                            <div class="stat-value">${card.stats.tactic}</div>
+                            <div class="stat-label">TAK</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${card.stats.motivation}</div>
+                            <div class="stat-label">MOT</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">${card.stats.leadership}</div>
+                            <div class="stat-label">LİD</div>
+                        </div>
+                    ` : Object.entries(card.stats).map(([stat, value]) => `
+                        <div class="stat">
+                            <div class="stat-value">${value}</div>
+                            <div class="stat-label">${stat}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="player-details">
+                    <div>
+                        <img src="${card.nationality.flag}" alt="${card.nationality.name}" class="country-flag">
+                        ${card.nationality.code || card.nationality.name} • ${card.age} yaş
+                    </div>
+                    <div>${card.position === 'MAN' ? 'MAN' : `# ${card.number}`}</div>
+                </div>
+            </div>
+        `;
+
+        cardElement.addEventListener('dragstart', handleDragStart);
+        cardElement.addEventListener('dragend', handleDragEnd);
+        cardsGrid.appendChild(cardElement);
+    });
+
+    container.appendChild(cardsGrid);
 }
