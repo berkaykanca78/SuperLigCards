@@ -178,6 +178,7 @@
             },
             "age": 28,
             "number": 17,
+            "isCaptain": true,
             "stats": {
                 "PAS": 84,
                 "DRİB": 83,

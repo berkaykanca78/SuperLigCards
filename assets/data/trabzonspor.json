@@ -23,7 +23,7 @@
             }
         },
         {
-            "name": "BATAGOV",
+            "name": "ARSENIY BATAGOV",
             "position": "CB",
             "rating": 81,
             "ratingPosition": "STOPER",
@@ -33,7 +33,7 @@
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/141.png"
             },
             "age": 26,
-            "number": 4,
+            "number": 44,
             "stats": {
                 "DEF": 82,
                 "FİZ": 81,
@@ -41,7 +41,7 @@
             }
         },
         {
-            "name": "PINA",
+            "name": "WAGNER PINA",
             "position": "RB",
             "rating": 82,
             "ratingPosition": "SAĞ BEK",
@@ -51,7 +51,7 @@
                 "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/800px-Flag_of_Cape_Verde.svg.png"
             },
             "age": 27,
-            "number": 6,
+            "number": 20,
             "stats": {
                 "DEF": 83,
                 "PAS": 82,
@@ -59,7 +59,7 @@
             }
         },
         {
-            "name": "BARISIC",
+            "name": "BORNA BARIŠIĆ",
             "position": "LB",
             "rating": 81,
             "ratingPosition": "SOL BEK",
@@ -87,7 +87,7 @@
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
             },
             "age": 30,
-            "number": 5,
+            "number": 35,
             "stats": {
                 "DEF": 83,
                 "FİZ": 82,
@@ -95,17 +95,17 @@
             }
         },
         {
-            "name": "MENDY",
-            "position": "CM",
+            "name": "BATISTA MENDY",
+            "position": "CDM",
             "rating": 81,
-            "ratingPosition": "ORTA SAHA",
+            "ratingPosition": "D.ORTA SAHA",
             "image": "assets/players/mendy.png",
             "nationality": {
                 "name": "SEN",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/149.png"
             },
             "age": 29,
-            "number": 8,
+            "number": 6,
             "stats": {
                 "PAS": 82,
                 "DRİB": 81,
@@ -113,17 +113,17 @@
             }
         },
         {
-            "name": "ZUBKOV",
+            "name": "OLEKSANDR ZUBKOV",
             "position": "RW",
             "rating": 80,
-            "ratingPosition": "FORVET",
+            "ratingPosition": "SAĞ KANAT",
             "image": "assets/players/zubkov.png",
             "nationality": {
                 "name": "UKR",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/177.png"
             },
             "age": 27,
-            "number": 11,
+            "number": 22,
             "stats": {
                 "HIZ": 83,
                 "DRİB": 80,
@@ -131,7 +131,7 @@
             }
         },
         {
-            "name": "M. CHAM",
+            "name": "MUHAMMED CHAM",
             "position": "CAM",
             "rating": 81,
             "ratingPosition": "O.ORTA SAHA",
@@ -141,7 +141,7 @@
                 "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/800px-Flag_of_Austria.svg.png"
             },
             "age": 23,
-            "number": 7,
+            "number": 10,
             "stats": {
                 "HIZ": 85,
                 "DRİB": 82,
@@ -149,7 +149,7 @@
             }
         },
         {
-            "name": "UĞURCAN",
+            "name": "UĞURCAN ÇAKIR",
             "position": "GK",
             "rating": 84,
             "ratingPosition": "KALECİ",
@@ -160,6 +160,7 @@
             },
             "age": 27,
             "number": 1,
+            "isCaptain": true,
             "stats": {
                 "REF": 86,
                 "DIV": 84,
@@ -167,17 +168,17 @@
             }
         },
         {
-            "name": "VISCA",
+            "name": "EDIN VISCA",
             "position": "RW",
             "rating": 82,
-            "ratingPosition": "FORVET",
+            "ratingPosition": "SAĞ KANAT",
             "image": "assets/players/visca.png",
             "nationality": {
                 "name": "BIH",
                 "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/800px-Flag_of_Bosnia_and_Herzegovina.svg.png"
             },
             "age": 33,
-            "number": 19,
+            "number": 7,
             "stats": {
                 "HIZ": 85,
                 "DRİB": 83,
@@ -185,7 +186,7 @@
             }
         },
         {
-            "name": "ONUACHU",
+            "name": "PAUL ONUACHU",
             "position": "ST",
             "rating": 83,
             "ratingPosition": "FORVET",
@@ -195,7 +196,7 @@
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/124.png"
             },
             "age": 29,
-            "number": 9,
+            "number": 30,
             "stats": {
                 "BİT": 85,
                 "FİZ": 84,

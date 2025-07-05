@@ -16,6 +16,7 @@
             },
             "age": 34,
             "number": 34,
+            "isCaptain": true,
             "stats": {
                 "REF": 82,
                 "DIV": 81,
@@ -185,7 +186,7 @@
             }
         },
         {
-            "name": "GEDSON",
+            "name": "GEDSON FERNANDES",
             "position": "CM",
             "rating": 82,
             "ratingPosition": "ORTA SAHA",

@@ -24,6 +24,7 @@ function generateTeamCards(data) {
                 <div class="player-card ${data.cardTeamName}">
                     <div class="card-glow"></div>
                     <div class="card-shine"></div>
+                    ${player.isCaptain ? '<div class="captain-badge">C</div>' : ''}
 
                     <div class="rating-badge">
                         <div class="rating-number">${player.rating}</div>

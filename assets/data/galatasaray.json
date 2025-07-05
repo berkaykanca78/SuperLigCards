@@ -16,6 +16,7 @@
             },
             "age": 32,
             "number": 9,
+            "isCaptain": true,
             "stats": {
                 "BİT": 89,
                 "ŞUT": 85,

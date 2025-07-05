@@ -212,6 +212,13 @@ field.addEventListener('drop', (e) => {
 
         if (isPositionAllowed(draggedCard, allowedRoles)) {
             const fieldCard = draggedCard.cloneNode(true);
+            // Preserve captain badge if it exists
+            const captainBadge = draggedCard.querySelector('.captain-badge');
+            if (captainBadge) {
+                const newCaptainBadge = captainBadge.cloneNode(true);
+                fieldCard.appendChild(newCaptainBadge);
+            }
+            
             fieldCard.style.position = 'absolute';
             fieldCard.style.left = closestPoint.style.left;
             fieldCard.style.top = closestPoint.style.top;
@@ -481,58 +488,54 @@ function displayCards(cards, teamName) {
     const container = document.getElementById('cardsContainer');
     container.innerHTML = '';
 
-    const cardsGrid = document.createElement('div');
-    cardsGrid.className = 'cards-grid';
-
-    cards.forEach(card => {
-        const cardElement = document.createElement('div');
-        cardElement.className = `player-card ${teamName}`;
-        cardElement.draggable = true;
-        cardElement.dataset.position = card.position;
+    cards.forEach(player => {
+        const card = document.createElement('div');
+        card.className = `player-card ${teamName}`;
+        card.draggable = true;
+        card.dataset.position = player.position;
 
         // Special styling for manager cards
-        const ratingBadgeStyle = card.position === 'MAN' ? 
-            'style="background: linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)"' : '';
-        const ratingNumberStyle = card.position === 'MAN' ? 
-            'style="color: #000000"' : '';
-        const ratingTypeStyle = card.position === 'MAN' ? 
-            'style="color: #000000"' : '';
+        const isManager = player.position === 'MAN';
+        const ratingBadgeStyle = isManager ? 'style="background: linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)"' : '';
+        const ratingNumberStyle = isManager ? 'style="color: #000000"' : '';
+        const ratingTypeStyle = isManager ? 'style="color: #000000"' : '';
 
-        cardElement.innerHTML = `
+        card.innerHTML = `
             <div class="card-glow"></div>
             <div class="card-shine"></div>
+            ${!isManager && player.isCaptain ? '<div class="captain-badge">C</div>' : ''}
 
             <div class="rating-badge" ${ratingBadgeStyle}>
-                <div class="rating-number" ${ratingNumberStyle}>${card.rating}</div>
-                <div class="rating-type" ${ratingTypeStyle}>${card.position}</div>
+                <div class="rating-number" ${ratingNumberStyle}>${player.rating}</div>
+                <div class="rating-type" ${ratingTypeStyle}>${player.position}</div>
             </div>
 
-            <div class="position-badge">${card.ratingPosition}</div>
+            <div class="position-badge">${player.ratingPosition}</div>
 
             <div class="player-image-container">
                 <div class="player-image">
-                    <img src="${card.image}" alt="${card.name}" onerror="this.style.display='none'">
+                    <img src="${player.image}" alt="${player.name}" onerror="this.style.display='none'">
                 </div>
             </div>
 
             <div class="player-info">
-                <div class="player-name">${card.name}</div>
+                <div class="player-name">${player.name}</div>
 
                 <div class="player-stats">
-                    ${card.position === 'MAN' ? `
+                    ${isManager ? `
                         <div class="stat">
-                            <div class="stat-value">${card.stats.tactic}</div>
+                            <div class="stat-value">${player.stats.tactic}</div>
                             <div class="stat-label">TAK</div>
                         </div>
                         <div class="stat">
-                            <div class="stat-value">${card.stats.motivation}</div>
+                            <div class="stat-value">${player.stats.motivation}</div>
                             <div class="stat-label">MOT</div>
                         </div>
                         <div class="stat">
-                            <div class="stat-value">${card.stats.leadership}</div>
+                            <div class="stat-value">${player.stats.leadership}</div>
                             <div class="stat-label">LİD</div>
                         </div>
-                    ` : Object.entries(card.stats).map(([stat, value]) => `
+                    ` : Object.entries(player.stats).map(([stat, value]) => `
                         <div class="stat">
                             <div class="stat-value">${value}</div>
                             <div class="stat-label">${stat}</div>
@@ -542,20 +545,18 @@ function displayCards(cards, teamName) {
 
                 <div class="player-details">
                     <div>
-                        <img src="${card.nationality.flag}" alt="${card.nationality.name}" class="country-flag">
-                        ${card.nationality.code || card.nationality.name} • ${card.age} yaş
+                        <img src="${player.nationality.flag}" alt="${player.nationality.name}" class="country-flag">
+                        ${isManager ? player.nationality.code : player.nationality.name} • ${player.age} yaş
                     </div>
-                    <div>${card.position === 'MAN' ? 'MAN' : `# ${card.number}`}</div>
+                    <div>${isManager ? 'MAN' : `# ${player.number}`}</div>
                 </div>
             </div>
         `;
 
-        cardElement.addEventListener('dragstart', handleDragStart);
-        cardElement.addEventListener('dragend', handleDragEnd);
-        cardsGrid.appendChild(cardElement);
+        card.addEventListener('dragstart', handleDragStart);
+        card.addEventListener('dragend', handleDragEnd);
+        container.appendChild(card);
     });
-
-    container.appendChild(cardsGrid);
 }
 
 function showNoCardsMessage(teamName) {
