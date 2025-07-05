@@ -884,56 +884,243 @@ body {
 
 /* Takıma özel stiller */
 .player-card.galatasaray {
-    background: linear-gradient(135deg, #7B2539 0%, #E30613 50%, #7B2539 100%);
-}
-
-.player-card.galatasaray .rating-badge {
-    background: linear-gradient(145deg, #FDB912 0%, #FFD700 100%);
-}
-
-.player-card.galatasaray .position-badge {
-    background: #7B2539;
-    color: #FDB912;
+    background: linear-gradient(135deg, #8B0000 0%, #FF6B00 50%, #8B0000 100%);
 }
 
 .player-card.fenerbahce {
-    background: linear-gradient(135deg, #041E42 0%, #273B8A 50%, #041E42 100%);
-}
-
-.player-card.fenerbahce .rating-badge {
-    background: linear-gradient(145deg, #FFED00 0%, #FFD700 100%);
-}
-
-.player-card.fenerbahce .position-badge {
-    background: #041E42;
-    color: #FFED00;
+    background: linear-gradient(135deg, #FFD700 0%, #0066FF 50%, #FFD700 100%);
 }
 
 .player-card.besiktas {
-    background: linear-gradient(135deg, #1A1A1A 0%, #2C2C2C 50%, #1A1A1A 100%);
-}
-
-.player-card.besiktas .rating-badge {
-    background: linear-gradient(145deg, #FFFFFF 0%, #CCCCCC 100%);
-}
-
-.player-card.besiktas .position-badge {
-    background: #1A1A1A;
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 50%, #1a1a1a 100%);
 }
 
 .player-card.trabzonspor {
-    background: linear-gradient(135deg, #7B2539 0%, #2E3A87 50%, #7B2539 100%);
+    background: linear-gradient(135deg, #722F37 0%, #2E3A87 50%, #722F37 100%);
 }
 
-.player-card.trabzonspor .rating-badge {
-    background: linear-gradient(145deg, #86BBD8 0%, #2E3A87 100%);
+.player-card.kasimpasa {
+    background: linear-gradient(135deg, #0066CC 0%, #003399 50%, #0066CC 100%);
+}
+
+.player-card.konyaspor {
+    background: linear-gradient(135deg, #FFFFFF 0%, #009245 50%, #FFFFFF 100%);
+    color: #000000;
+    border: 2px solid #009245;
+}
+
+.player-card.konyaspor .rating-badge {
+    background: linear-gradient(145deg, #009245 0%, #007A3D 100%);
     color: #FFFFFF;
 }
 
-.player-card.trabzonspor .position-badge {
-    background: #7B2539;
-    color: #86BBD8;
+.player-card.konyaspor .position-badge {
+    background: #009245;
+    color: #FFFFFF;
+}
+
+.player-card.alanyaspor {
+    background: linear-gradient(135deg, #F58220 0%, #000000 50%, #F58220 100%);
+    color: #FFFFFF;
+    border: 2px solid #F58220;
+}
+
+.player-card.alanyaspor .rating-badge {
+    background: linear-gradient(145deg, #F58220 0%, #000000 100%);
+    color: #FFFFFF;
+}
+
+.player-card.alanyaspor .position-badge {
+    background: #F58220;
+    color: #FFFFFF;
+}
+
+.player-card.kayserispor {
+    background: linear-gradient(135deg, #FF0000 0%, #FFD700 50%, #FF0000 100%);
+    color: #000000;
+    border: 2px solid #FF0000;
+}
+
+.player-card.kayserispor .rating-badge {
+    background: linear-gradient(145deg, #FF0000 0%, #CC0000 100%);
+    color: #FFFFFF;
+}
+
+.player-card.kayserispor .position-badge {
+    background: #FF0000;
+    color: #FFFFFF;
+}
+
+.player-card.antalyaspor {
+    background: linear-gradient(135deg, #FF0000 0%, #FFFFFF 50%, #FF0000 100%);
+    color: #000000;
+    border: 2px solid #FF0000;
+}
+
+.player-card.antalyaspor .rating-badge {
+    background: linear-gradient(145deg, #FF0000 0%, #CC0000 100%);
+    color: #FFFFFF;
+}
+
+.player-card.antalyaspor .position-badge {
+    background: #FF0000;
+    color: #FFFFFF;
+}
+
+.player-card.kocaelispor {
+    background: linear-gradient(135deg, #006633 0%, #FFFFFF 50%, #006633 100%);
+    color: #000000;
+    border: 2px solid #006633;
+}
+
+.player-card.kocaelispor .rating-badge {
+    background: linear-gradient(145deg, #006633 0%, #004D27 100%);
+    color: #FFFFFF;
+}
+
+.player-card.kocaelispor .position-badge {
+    background: #006633;
+    color: #FFFFFF;
+}
+
+.player-card.genclerbirligi {
+    background: linear-gradient(135deg, #FF0000 0%, #000000 50%, #FF0000 100%);
+    color: #FFFFFF;
+    border: 2px solid #FF0000;
+}
+
+.player-card.genclerbirligi .rating-badge {
+    background: linear-gradient(145deg, #FF0000 0%, #CC0000 100%);
+    color: #FFFFFF;
+}
+
+.player-card.genclerbirligi .position-badge {
+    background: #FF0000;
+    color: #FFFFFF;
+}
+
+.player-card.karagumruk {
+    background: linear-gradient(135deg, #FF0000 0%, #000000 50%, #FF0000 100%);
+    color: #FFFFFF;
+    border: 2px solid #FF0000;
+}
+
+.player-card.karagumruk .rating-badge {
+    background: linear-gradient(145deg, #FF0000 0%, #CC0000 100%);
+    color: #FFFFFF;
+}
+
+.player-card.karagumruk .position-badge {
+    background: #FF0000;
+    color: #FFFFFF;
+}
+
+.player-card.gaziantepfk {
+    background: linear-gradient(135deg, #FF0000 0%, #000000 50%, #FF0000 100%);
+    color: #FFFFFF;
+    border: 2px solid #FF0000;
+}
+
+.player-card.gaziantep {
+    background: linear-gradient(135deg, #E31E24 0%, #000000 50%, #E31E24 100%);
+    color: #FFFFFF;
+    border: 2px solid #E31E24;
+}
+
+.player-card.gaziantep .rating-badge {
+    background: linear-gradient(145deg, #E31E24 0%, #000000 100%);
+    color: #FFFFFF;
+}
+
+.player-card.gaziantep .position-badge {
+    background: #E31E24;
+    color: #FFFFFF;
+}
+
+.player-card.eyupspor {
+    background: linear-gradient(135deg, #800080 0%, #FFD700 50%, #800080 100%);
+    color: #FFFFFF;
+    border: 2px solid #FFD700;
+}
+
+.player-card.eyupspor .rating-badge {
+    background: linear-gradient(145deg, #800080 0%, #4B0082 100%);
+    color: #FFD700;
+}
+
+.player-card.eyupspor .position-badge {
+    background: #800080;
+    color: #FFD700;
+    border: 1px solid #FFD700;
+}
+
+.player-card.eyupspor .player-name {
+    color: #FFD700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.player-card.rizespor {
+    background: linear-gradient(135deg, #00529F 0%, #FFFFFF 50%, #00529F 100%);
+    color: #000000;
+    border: 2px solid #00529F;
+}
+
+.player-card.rizespor .rating-badge {
+    background: linear-gradient(145deg, #00529F 0%, #003D7A 100%);
+    color: #FFFFFF;
+}
+
+.player-card.rizespor .position-badge {
+    background: #00529F;
+    color: #FFFFFF;
+}
+
+.player-card.goztepe {
+    background: linear-gradient(135deg, #FBBD0F 0%, #C60D21 50%, #FBBD0F 100%);
+    color: #000000;
+    border: 2px solid #FBBD0F;
+}
+
+.player-card.goztepe .rating-badge {
+    background: linear-gradient(145deg, #C60D21 0%, #A30A1B 100%);
+    color: #FFFFFF;
+}
+
+.player-card.goztepe .position-badge {
+    background: #C60D21;
+    color: #FFFFFF;
+}
+
+.player-card.basaksehir {
+    background: linear-gradient(135deg, #FF6B01 0%, #762241 50%, #FF6B01 100%);
+    color: #FFFFFF;
+    border: 2px solid #FF6B01;
+}
+
+.player-card.basaksehir .rating-badge {
+    background: linear-gradient(145deg, #FF6B01 0%, #762241 100%);
+    color: #FFFFFF;
+}
+
+.player-card.basaksehir .position-badge {
+    background: #FF6B01;
+    color: #FFFFFF;
+}
+
+.player-card.samsunspor {
+    background: linear-gradient(135deg, #FF0000 0%, #FFFFFF 50%, #FF0000 100%);
+    color: #000000;
+    border: 2px solid #FF0000;
+}
+
+.player-card.samsunspor .rating-badge {
+    background: linear-gradient(145deg, #FF0000 0%, #CC0000 100%);
+    color: #FFFFFF;
+}
+
+.player-card.samsunspor .position-badge {
+    background: #FF0000;
+    color: #FFFFFF;
 }
 
 /* Teknik direktör kartları için özel stil */
@@ -961,6 +1148,62 @@ body {
 
 .player-card.trabzonspor .card-glow {
     background: linear-gradient(45deg, #7B2539, #86BBD8, #7B2539);
+}
+
+.player-card.kasimpasa .card-glow {
+    background: linear-gradient(45deg, #0066CC, #FFFFFF, #0066CC);
+}
+
+.player-card.konyaspor .card-glow {
+    background: linear-gradient(45deg, #009245, #FFFFFF, #009245);
+}
+
+.player-card.alanyaspor .card-glow {
+    background: linear-gradient(45deg, #F58220, #000000, #F58220);
+}
+
+.player-card.kayserispor .card-glow {
+    background: linear-gradient(45deg, #FF0000, #FFD700, #FF0000);
+}
+
+.player-card.antalyaspor .card-glow {
+    background: linear-gradient(45deg, #FF0000, #FFFFFF, #FF0000);
+}
+
+.player-card.kocaelispor .card-glow {
+    background: linear-gradient(45deg, #006633, #FFFFFF, #006633);
+}
+
+.player-card.genclerbirligi .card-glow {
+    background: linear-gradient(45deg, #FF0000, #000000, #FF0000);
+}
+
+.player-card.karagumruk .card-glow {
+    background: linear-gradient(45deg, #FF0000, #000000, #FF0000);
+}
+
+.player-card.gaziantep .card-glow {
+    background: linear-gradient(45deg, #E31E24, #000000, #E31E24);
+}
+
+.player-card.eyupspor .card-glow {
+    background: linear-gradient(45deg, #800080, #FFD700, #800080);
+}
+
+.player-card.rizespor .card-glow {
+    background: linear-gradient(45deg, #00529F, #FFFFFF, #00529F);
+}
+
+.player-card.goztepe .card-glow {
+    background: linear-gradient(45deg, #FBBD0F, #C60D21, #FBBD0F);
+}
+
+.player-card.basaksehir .card-glow {
+    background: linear-gradient(45deg, #FF6B01, #762241, #FF6B01);
+}
+
+.player-card.samsunspor .card-glow {
+    background: linear-gradient(45deg, #E30613, #FFFFFF, #E30613);
 }
 
 /* Kartların üst üste binmesini engelle */
