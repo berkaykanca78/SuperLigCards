@@ -1,5 +1,19 @@
 // Kart oluşturma fonksiyonu
 function generateTeamCards(data) {
+    // Get the currently selected league
+    const leagueSelect = document.getElementById('leagueSelect');
+    const selectedLeague = leagueSelect ? leagueSelect.value : 'superlig';
+
+    // League logos mapping
+    const leagueLogos = {
+        superlig: 'https://www.tff.org/Resources/TFF/Images/0000000015/TFF/TFF-Logolar/2024-2025/trendyol-super-lig-dikey-logo.png',
+        turkiyekupasi: 'https://upload.wikimedia.org/wikipedia/tr/6/61/Ziraat_T%C3%BCrkiye_Kupas%C4%B1_logosu.png',
+        superkupasi: 'https://upload.wikimedia.org/wikipedia/tr/thumb/6/61/T%C3%BCrkiye_S%C3%BCper_Kupas%C4%B1_logo.png/250px-T%C3%BCrkiye_S%C3%BCper_Kupas%C4%B1_logo.png',
+        championsleague: 'assets/tournaments/ucl.png',
+        europaleague: 'assets/tournaments/uel.png',
+        conferenceleague: 'assets/tournaments/uecl.png'
+    };
+
     return `
         <div class="header">
             <div class="logo-container">
@@ -17,14 +31,27 @@ function generateTeamCards(data) {
                     </button>
                 </div>
             </div>
+            <div class="league-selector">
+                <div class="league-toggle">
+                    <select id="leagueSelect" class="league-select" onchange="handleLeagueChange(this.value)">
+                        <option value="superlig" selected>Trendyol Süper Lig</option>
+                        <option value="turkiyekupasi">Ziraat Türkiye Kupası</option>
+                        <option value="superkupasi">TFF Süper Kupa</option>
+                        <option value="championsleague">UEFA Champions League</option>
+                        <option value="europaleague">UEFA Europa League</option>
+                        <option value="conferenceleague">UEFA Conference League</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
-        <div class="cards-grid">
+        <div class="cards-grid theme-${selectedLeague}">
             ${data.players.map(player => `
                 <div class="player-card ${data.cardTeamName}">
                     <div class="card-glow"></div>
                     <div class="card-shine"></div>
                     ${player.isCaptain ? '<div class="captain-badge">C</div>' : ''}
+                    <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}')"></div>
 
                     <div class="rating-badge">
                         <div class="rating-number">${player.rating}</div>
@@ -66,6 +93,7 @@ function generateTeamCards(data) {
             <div class="player-card ${data.cardTeamName}" draggable="true" data-position="MAN">
                 <div class="card-glow"></div>
                 <div class="card-shine"></div>
+                <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}')"></div>
 
                 <div class="rating-badge" style="background: linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)">
                     <div class="rating-number" style="color: #000000">${data.manager.rating}</div>
@@ -110,6 +138,28 @@ function generateTeamCards(data) {
             ` : ''}
         </div>
     `;
+}
+
+// League change handler function
+function handleLeagueChange(selectedLeague) {
+    const cardsGrid = document.querySelector('.cards-grid');
+    const leagueLogos = {
+        superlig: 'https://www.tff.org/Resources/TFF/Images/0000000015/TFF/TFF-Logolar/2024-2025/trendyol-super-lig-dikey-logo.png',
+        championsleague: 'assets/tournaments/ucl.png',
+        europaleague: 'assets/tournaments/uel.png',
+        conferenceleague: 'assets/tournaments/uecl.png',
+        turkiyekupasi: 'https://upload.wikimedia.org/wikipedia/tr/6/61/Ziraat_T%C3%BCrkiye_Kupas%C4%B1_logosu.png',
+        superkupasi: 'https://upload.wikimedia.org/wikipedia/tr/thumb/6/61/T%C3%BCrkiye_S%C3%BCper_Kupas%C4%B1_logo.png/250px-T%C3%BCrkiye_S%C3%BCper_Kupas%C4%B1_logo.png'
+    };
+
+    // Update theme class
+    cardsGrid.className = `cards-grid theme-${selectedLeague}`;
+
+    // Update all league indicators
+    const leagueIndicators = document.querySelectorAll('.league-indicator');
+    leagueIndicators.forEach(indicator => {
+        indicator.style.backgroundImage = `url('${leagueLogos[selectedLeague]}')`;
+    });
 }
 
 // Takım verilerini yükle

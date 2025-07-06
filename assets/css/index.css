@@ -624,8 +624,8 @@ body {
 
 .captain-badge {
     position: absolute;
-    top: 25px;
-    right: 10px;
+    top: 65px;
+    right: 12px;
     background-color: #007bff;
     color: white;
     padding: 4px 8px;
@@ -947,4 +947,303 @@ body {
 
 .player-card.samsunspor .card-glow {
     background: linear-gradient(45deg, #E30613, #FFFFFF, #E30613);
+}
+
+.league-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.league-toggle {
+    position: relative;
+    z-index: 1;
+}
+
+.league-select {
+    appearance: none;
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    border: 2px solid rgba(230, 0, 18, 0.3);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.league-select:hover {
+    border-color: #E60012;
+    background-color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(230, 0, 18, 0.15);
+}
+
+.league-select:focus {
+    border-color: #E60012;
+    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.2);
+}
+
+.league-toggle::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #E60012;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.league-select:hover + .league-toggle::after {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* League-specific themes */
+.theme-superlig .cards-grid {
+    background: linear-gradient(135deg, rgba(230, 0, 18, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+/* Champions League Theme */
+.theme-championsleague .player-card {
+    background: linear-gradient(145deg, #00235E 0%, #0A1130 100%) !important;
+    border-color: #969FA8 !important;
+}
+
+.theme-championsleague .player-card .player-name,
+.theme-championsleague .player-card .rating-number,
+.theme-championsleague .player-card .rating-type,
+.theme-championsleague .player-card .position-badge {
+    color: #ffffff !important;
+}
+
+.theme-championsleague .player-card .player-stats {
+    background: rgba(150, 159, 168, 0.2) !important;
+}
+
+.theme-championsleague .player-card .stat {
+    background: rgba(150, 159, 168, 0.3) !important;
+}
+
+.theme-championsleague .player-card .player-details {
+    color: #969FA8 !important;
+}
+
+/* Europa League Theme */
+.theme-europaleague .player-card {
+    background: linear-gradient(145deg, #F68E00 0%, #DA7B00 100%) !important;
+    border-color: #000000 !important;
+}
+
+.theme-europaleague .player-card .player-name,
+.theme-europaleague .player-card .rating-number,
+.theme-europaleague .player-card .rating-type {
+    color: #000000 !important;
+}
+
+.theme-europaleague .player-card .player-stats {
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.theme-europaleague .player-card .stat {
+    background: rgba(0, 0, 0, 0.15) !important;
+}
+
+.theme-europaleague .player-card .player-details,
+.theme-europaleague .player-card .position-badge {
+    color: #F68E00 !important;
+}
+
+/* Conference League Theme */
+.theme-conferenceleague .player-card {
+    background: linear-gradient(145deg, #00A88F 0%, #004F42 100%) !important;
+    border-color: #FFFFFF !important;
+}
+
+.theme-conferenceleague .player-card .player-name,
+.theme-conferenceleague .player-card .rating-number,
+.theme-conferenceleague .player-card .rating-type,
+.theme-conferenceleague .player-card .position-badge {
+    color: #ffffff !important;
+}
+
+.theme-conferenceleague .player-card .player-stats {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.theme-conferenceleague .player-card .stat {
+    background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.theme-conferenceleague .player-card .player-details {
+    color: #E0E0E0 !important;
+}
+
+/* Card glow effects for different themes */
+.theme-championsleague .player-card .card-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(150, 159, 168, 0.4), transparent 70%) !important;
+}
+
+.theme-europaleague .player-card .card-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(246, 142, 0, 0.4), transparent 70%) !important;
+}
+
+.theme-conferenceleague .player-card .card-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(0, 168, 143, 0.4), transparent 70%) !important;
+}
+
+/* Card shine effects for different themes */
+.theme-championsleague .player-card .card-shine {
+    background: linear-gradient(135deg, rgba(150, 159, 168, 0.2), transparent 50%) !important;
+}
+
+.theme-europaleague .player-card .card-shine {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent 50%) !important;
+}
+
+.theme-conferenceleague .player-card .card-shine {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent 50%) !important;
+}
+
+/* Rating badge themes */
+.theme-championsleague .player-card .rating-badge {
+    background: linear-gradient(145deg, #969FA8 0%, #00235E 100%) !important;
+}
+
+.theme-europaleague .player-card .rating-badge {
+    background: linear-gradient(145deg, #000000 0%, #F68E00 100%) !important;
+}
+
+.theme-conferenceleague .player-card .rating-badge {
+    background: linear-gradient(145deg, #FFFFFF 0%, #00A88F 100%) !important;
+}
+
+/* League logo styles */
+.league-indicator {
+    position: absolute;
+    top: 20px;
+    right: 7px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.player-card:hover .league-indicator {
+    transform: scale(1.1);
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* League-specific card styles */
+.theme-superlig .player-card {
+    border-color: rgba(230, 0, 18, 0.3);
+}
+
+.theme-championsleague .player-card {
+    border-color: rgba(0, 35, 94, 0.3);
+}
+
+.theme-europaleague .player-card {
+    border-color: rgba(246, 142, 0, 0.3);
+}
+
+.theme-conferenceleague .player-card {
+    border-color: rgba(0, 168, 143, 0.3);
+}
+
+/* Türkiye Kupası Theme */
+.theme-turkiyekupasi .player-card {
+    background: linear-gradient(145deg, #FFFFFF 0%, #8B0000 100%) !important;
+    border-color: #E30613 !important;
+}
+
+.theme-turkiyekupasi .player-card .player-name,
+.theme-turkiyekupasi .player-card .rating-number,
+.theme-turkiyekupasi .player-card .rating-type,
+.theme-turkiyekupasi .player-card .position-badge {
+    color: #ffffff !important;
+}
+
+.theme-turkiyekupasi .player-card .player-stats {
+    background: rgba(255, 215, 0, 0.2) !important;
+}
+
+.theme-turkiyekupasi .player-card .stat {
+    background: rgba(255, 215, 0, 0.25) !important;
+}
+
+.theme-turkiyekupasi .player-card .player-details {
+    color: #E30613 !important;
+}
+
+/* Card glow effect for Türkiye Kupası */
+.theme-turkiyekupasi .player-card .card-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.4), transparent 70%) !important;
+}
+
+/* Card shine effect for Türkiye Kupası */
+.theme-turkiyekupasi .player-card .card-shine {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), transparent 50%) !important;
+}
+
+/* Rating badge theme for Türkiye Kupası */
+.theme-turkiyekupasi .player-card .rating-badge {
+    background: linear-gradient(145deg, #E30613 0%, #FFFFFF 100%) !important;
+}
+
+/* Süper Kupa Theme */
+.theme-superkupasi .player-card {
+    background: linear-gradient(145deg, #00A88F 0%, #004F42 100%) !important;
+    border-color: #FFD700 !important;
+}
+
+.theme-superkupasi .player-card .player-name,
+.theme-superkupasi .player-card .rating-number,
+.theme-superkupasi .player-card .rating-type {
+    color: #FFFFFF !important;
+}
+
+.theme-superkupasi .player-card .player-stats {
+    background: rgba(0, 168, 143, 0.2) !important;
+}
+
+.theme-superkupasi .player-card .stat {
+    background: rgba(255, 215, 0, 0.15) !important;
+}
+
+.theme-superkupasi .player-card .player-details,
+.theme-superkupasi .player-card .position-badge {
+    color: #FFD700 !important;
+}
+
+/* Card glow effect for Süper Kupa */
+.theme-superkupasi .player-card .card-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(0, 168, 143, 0.4), transparent 70%) !important;
+}
+
+/* Card shine effect for Süper Kupa */
+.theme-superkupasi .player-card .card-shine {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), transparent 50%) !important;
+}
+
+/* Rating badge theme for Süper Kupa */
+.theme-superkupasi .player-card .rating-badge {
+    background: linear-gradient(145deg, #40E0D0 0%, #004F42 100%) !important;
+    color: #FFFFFF !important;
 }
