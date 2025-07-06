@@ -216,80 +216,168 @@ body {
     }
 }
 
+/* Header styles */
 .header {
-    margin-bottom: 50px;
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(230, 0, 18, 0.1);
 }
 
 .logo-container {
-    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    background: transparent;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 0.5rem;
 }
 
 .team-logo {
-    width: 100px;
-    height: 100px;
-    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.team-logo-container {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .header-text {
-    text-align: right;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
+    flex: 1;
+}
+
+.header-text h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 0.5rem 0;
 }
 
 .header-actions {
     display: flex;
-    gap: 15px;
     align-items: center;
+    gap: 1.5rem;
+}
+
+.header-actions p {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+    margin: 0;
 }
 
 .lineup-button {
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-    color: #1a1a2e;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(145deg, #E60012, #FF1A1A);
+    color: white;
     border: none;
-    padding: 8px 20px;
     border-radius: 8px;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1rem;
-    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(230, 0, 18, 0.2);
 }
 
 .lineup-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 4px 12px rgba(230, 0, 18, 0.3);
 }
 
-.lineup-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+.lineup-button svg {
+    width: 18px;
+    height: 18px;
 }
 
-.header h1 {
-    color: #FFD700;
-    font-size: 4rem;
-    font-weight: 900;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+.league-selector {
+    margin-left: 2rem;
+    position: relative;
 }
 
-.header p {
-    color: #FFFFFF;
-    font-size: 1.4rem;
-    font-weight: 300;
-    opacity: 0.9;
+.league-toggle {
+    position: relative;
+    z-index: 1;
+}
+
+.league-select {
+    appearance: none;
+    padding: 0.8rem 3rem 0.8rem 1.2rem;
+    border: 2px solid rgba(230, 0, 18, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 240px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.league-select:hover {
+    border-color: #E60012;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(230, 0, 18, 0.15);
+}
+
+.league-select:focus {
+    border-color: #E60012;
+    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.1);
+}
+
+.league-toggle::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, transparent 50%, #E60012 50%);
+    transform-origin: right;
+    transition: all 0.3s ease;
+    clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+}
+
+.league-select:hover + .league-toggle::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .league-selector {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .league-select {
+        width: 100%;
+    }
 }
 
 .cards-grid {
@@ -947,68 +1035,6 @@ body {
 
 .player-card.samsunspor .card-glow {
     background: linear-gradient(45deg, #E30613, #FFFFFF, #E30613);
-}
-
-.league-selector {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-left: auto;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.league-toggle {
-    position: relative;
-    z-index: 1;
-}
-
-.league-select {
-    appearance: none;
-    padding: 0.75rem 3rem 0.75rem 1rem;
-    border: 2px solid rgba(230, 0, 18, 0.3);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #333;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    min-width: 200px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.league-select:hover {
-    border-color: #E60012;
-    background-color: #ffffff;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(230, 0, 18, 0.15);
-}
-
-.league-select:focus {
-    border-color: #E60012;
-    box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.2);
-}
-
-.league-toggle::after {
-    content: '▼';
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: #E60012;
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.league-select:hover + .league-toggle::after {
-    transform: translateY(-50%) scale(1.1);
 }
 
 /* League-specific themes */
