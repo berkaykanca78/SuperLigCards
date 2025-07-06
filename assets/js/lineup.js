@@ -531,6 +531,7 @@ function displayCards(cards, teamName) {
             <div class="card-glow"></div>
             <div class="card-shine"></div>
             ${!isManager && player.isCaptain ? '<div class="captain-badge">C</div>' : ''}
+            <button class="add-button" onclick="autoPlaceCard(this.closest('.player-card'))">+</button>
 
             <div class="rating-badge" ${ratingBadgeStyle}>
                 <div class="rating-number" ${ratingNumberStyle}>${player.rating}</div>
@@ -652,6 +653,23 @@ managerArea.addEventListener('drop', (e) => {
         managerArea.innerHTML = '';
         const cardClone = draggingCard.cloneNode(true);
         cardClone.classList.remove('dragging');
+
+        // Remove existing add button if any
+        const addButton = cardClone.querySelector('.add-button');
+        if (addButton) {
+            addButton.remove();
+        }
+
+        // Add delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-button';
+        deleteButton.innerHTML = '×';
+        deleteButton.onclick = () => {
+            cardClone.remove();
+            managerArea.innerHTML = '<div class="manager-placeholder">Teknik Direktör</div>';
+        };
+        cardClone.appendChild(deleteButton);
+
         cardClone.style.position = 'relative';
         cardClone.style.transform = 'scale(1)';
         cardClone.style.margin = '0';
@@ -783,6 +801,8 @@ function displayAllCards(cards) {
         cardElement.innerHTML = `
             <div class="card-glow"></div>
             <div class="card-shine"></div>
+            ${card.isCaptain ? '<div class="captain-badge">C</div>' : ''}
+            <button class="add-button" onclick="autoPlaceCard(this.closest('.player-card'))">+</button>
 
             <div class="rating-badge" ${ratingBadgeStyle}>
                 <div class="rating-number" ${ratingNumberStyle}>${card.rating}</div>
@@ -867,63 +887,62 @@ function handleBenchDragLeave(e) {
 
 function handleBenchDrop(e) {
     e.preventDefault();
-    const benchSlot = e.target.closest('.bench-slot');
-    if (!benchSlot || !draggedCard) return;
+    const slot = e.target.closest('.bench-slot');
+    if (!slot) return;
 
-    benchSlot.classList.remove('drag-over');
-    const slotPosition = benchSlot.dataset.position;
-    const cardPosition = draggedCard.getAttribute('data-position');
+    const draggingCard = document.querySelector('.dragging');
+    if (!draggingCard) return;
+
+    const cardPosition = draggingCard.dataset.position;
+    const slotPosition = slot.dataset.position;
 
     // Check if the card already exists on the field
-    const cardId = draggedCard.id;
+    const cardId = draggingCard.id;
     const existingFieldCard = document.querySelector(`#cardContainer .player-card[id="${cardId}"]`);
     if (existingFieldCard) {
-        alert('Bu oyuncu zaten sahada! Aynı oyuncu hem sahada hem yedek kulübesinde olamaz.');
+        alert('Bu oyuncu sahada! Aynı oyuncu hem sahada hem yedek kulübesinde olamaz.');
         return;
     }
 
     // Check if the card already exists on the bench
     const existingBenchCard = document.querySelector(`.bench-slot .player-card[id="${cardId}"]`);
-    if (existingBenchCard && existingBenchCard.parentElement !== benchSlot) {
+    if (existingBenchCard) {
         alert('Bu oyuncu zaten yedek kulübesinde!');
         return;
     }
 
     if (isValidBenchPosition(cardPosition, slotPosition)) {
-        // Remove any existing card in the bench slot
-        const existingCard = benchSlot.querySelector('.player-card');
+        const existingCard = slot.querySelector('.player-card');
         if (existingCard) {
             existingCard.remove();
         }
 
-        const benchCard = draggedCard.cloneNode(true);
-        benchCard.style.transform = 'scale(0.7)';
-        benchCard.style.margin = '0 auto';
-        benchCard.style.position = 'relative';
-        benchCard.style.zIndex = '1';
+        const cardClone = draggingCard.cloneNode(true);
+        cardClone.classList.remove('dragging');
 
-        // Create delete icon container
-        const deleteIconContainer = document.createElement('div');
-        deleteIconContainer.className = 'delete-icon-container';
+        // Remove existing add button if any
+        const addButton = cardClone.querySelector('.add-button');
+        if (addButton) {
+            addButton.remove();
+        }
 
-        // Create delete icon
-        const deleteIcon = document.createElement('div');
-        deleteIcon.className = 'delete-icon';
-
-        // Add click handler
-        deleteIconContainer.onclick = (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            benchCard.remove();
-            benchSlot.querySelector('.bench-placeholder').style.display = 'block';
+        // Add delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-button';
+        deleteButton.innerHTML = '×';
+        deleteButton.onclick = () => {
+            cardClone.remove();
+            slot.querySelector('.bench-placeholder').style.display = 'block';
         };
+        cardClone.appendChild(deleteButton);
 
-        // Append delete icon to container and container to card
-        deleteIconContainer.appendChild(deleteIcon);
-        benchCard.appendChild(deleteIconContainer);
-
-        benchSlot.querySelector('.bench-placeholder').style.display = 'none';
-        benchSlot.appendChild(benchCard);
+        slot.querySelector('.bench-placeholder').style.display = 'none';
+        cardClone.style.position = 'relative';
+        cardClone.style.transform = 'none';
+        cardClone.style.margin = '0';
+        slot.appendChild(cardClone);
+    } else {
+        alert('Bu oyuncu bu yedek pozisyonunda oynayamaz!');
     }
 }
 
@@ -952,4 +971,81 @@ function returnCardToContainer(card) {
     card.style.transform = '';
     card.style.margin = '';
     cardsContainer.appendChild(card);
+}
+
+function autoPlaceCard(card) {
+    if (!card) return;
+
+    // Get current formation
+    const currentFormation = document.getElementById('formation').value;
+    const formationPositions = formations[currentFormation].positions;
+    
+    // Get card's position
+    const cardPosition = card.querySelector('.rating-type').textContent;
+    
+    // Check if card is already on field
+    const cardId = card.id;
+    const existingFieldCard = document.querySelector(`#cardContainer .player-card[id="${cardId}"]`);
+    if (existingFieldCard) {
+        alert('Bu oyuncu zaten sahada!');
+        return;
+    }
+
+    // Check if card is on bench
+    const existingBenchCard = document.querySelector(`.bench-slot .player-card[id="${cardId}"]`);
+    if (existingBenchCard) {
+        alert('Bu oyuncu yedek kulübesinde! Aynı oyuncu hem sahada hem yedek kulübesinde olamaz.');
+        return;
+    }
+
+    // Find suitable position
+    let foundPosition = null;
+    for (let i = 0; i < formationPositions.length; i++) {
+        const pos = formationPositions[i];
+        const point = document.querySelector(`.formation-point[data-index="${i}"]`);
+        
+        // Check if position is empty
+        const existingCard = document.querySelector(`#cardContainer .player-card[style*="left: ${point.style.left}"]`);
+        if (!existingCard && isPositionAllowed(card, pos.allowedRoles)) {
+            foundPosition = point;
+            break;
+        }
+    }
+
+    if (foundPosition) {
+        const fieldCard = card.cloneNode(true);
+        // Remove the add button from the field card
+        const addButton = fieldCard.querySelector('.add-button');
+        if (addButton) {
+            addButton.remove();
+        }
+        
+        // Add delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-button';
+        deleteButton.innerHTML = '×';
+        deleteButton.onclick = () => fieldCard.remove();
+        fieldCard.appendChild(deleteButton);
+        
+        // Preserve captain badge if it exists
+        const captainBadge = card.querySelector('.captain-badge');
+        if (captainBadge) {
+            const newCaptainBadge = captainBadge.cloneNode(true);
+            fieldCard.appendChild(newCaptainBadge);
+        }
+        
+        fieldCard.style.position = 'absolute';
+        fieldCard.style.left = foundPosition.style.left;
+        fieldCard.style.top = foundPosition.style.top;
+        fieldCard.style.transform = 'translate(-50%, -50%) scale(0.8)';
+        fieldCard.style.zIndex = '50';
+        fieldCard.style.cursor = 'move';
+        fieldCard.style.pointerEvents = 'all';
+        
+        const cardContainer = document.getElementById('cardContainer');
+        cardContainer.appendChild(fieldCard);
+        makeDraggable(fieldCard);
+    } else {
+        alert('Bu oyuncu için uygun pozisyon bulunamadı!');
+    }
 }
