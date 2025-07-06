@@ -2,10 +2,11 @@
 function generateTeamCards(data) {
     // Get the currently selected league
     const leagueSelect = document.getElementById('leagueSelect');
-    const selectedLeague = leagueSelect ? leagueSelect.value : 'superlig';
+    const selectedLeague = leagueSelect ? leagueSelect.value : 'default';
 
     // League logos mapping
     const leagueLogos = {
+        default: '', // No logo for default theme
         superlig: 'https://www.tff.org/Resources/TFF/Images/0000000015/TFF/TFF-Logolar/2024-2025/trendyol-super-lig-dikey-logo.png',
         turkiyekupasi: 'https://upload.wikimedia.org/wikipedia/tr/6/61/Ziraat_T%C3%BCrkiye_Kupas%C4%B1_logosu.png',
         superkupasi: 'https://upload.wikimedia.org/wikipedia/tr/thumb/6/61/T%C3%BCrkiye_S%C3%BCper_Kupas%C4%B1_logo.png/250px-T%C3%BCrkiye_S%C3%BCper_Kupas%C4%B1_logo.png',
@@ -34,7 +35,8 @@ function generateTeamCards(data) {
             <div class="league-selector">
                 <div class="league-toggle">
                     <select id="leagueSelect" class="league-select" onchange="handleLeagueChange(this.value)">
-                        <option value="superlig" selected>Trendyol Süper Lig</option>
+                        <option value="default" selected>Takım Renkleri</option>
+                        <option value="superlig">Trendyol Süper Lig</option>
                         <option value="turkiyekupasi">Ziraat Türkiye Kupası</option>
                         <option value="superkupasi">TFF Süper Kupa</option>
                         <option value="championsleague">UEFA Champions League</option>
@@ -51,7 +53,7 @@ function generateTeamCards(data) {
                     <div class="card-glow"></div>
                     <div class="card-shine"></div>
                     ${player.isCaptain ? '<div class="captain-badge">C</div>' : ''}
-                    <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}')"></div>
+                    <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}'); ${selectedLeague === 'default' ? 'display: none;' : ''}"></div>
 
                     <div class="rating-badge">
                         <div class="rating-number">${player.rating}</div>
@@ -93,7 +95,7 @@ function generateTeamCards(data) {
             <div class="player-card ${data.cardTeamName}" draggable="true" data-position="MAN">
                 <div class="card-glow"></div>
                 <div class="card-shine"></div>
-                <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}')"></div>
+                <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}'); ${selectedLeague === 'default' ? 'display: none;' : ''}"></div>
 
                 <div class="rating-badge" style="background: linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)">
                     <div class="rating-number" style="color: #000000">${data.manager.rating}</div>
@@ -143,7 +145,11 @@ function generateTeamCards(data) {
 // League change handler function
 function handleLeagueChange(selectedLeague) {
     const cardsGrid = document.querySelector('.cards-grid');
+    const mainContent = document.querySelector('.main-content');
+    const header = document.querySelector('.header');
+    const headerText = document.querySelector('.header-text h1');
     const leagueLogos = {
+        default: '', // No logo for default theme
         superlig: 'https://www.tff.org/Resources/TFF/Images/0000000015/TFF/TFF-Logolar/2024-2025/trendyol-super-lig-dikey-logo.png',
         championsleague: 'assets/tournaments/ucl.png',
         europaleague: 'assets/tournaments/uel.png',
@@ -152,14 +158,63 @@ function handleLeagueChange(selectedLeague) {
         superkupasi: 'https://upload.wikimedia.org/wikipedia/tr/thumb/6/61/T%C3%BCrkiye_S%C3%BCper_Kupas%C4%B1_logo.png/250px-T%C3%BCrkiye_S%C3%BCper_Kupas%C4%B1_logo.png'
     };
 
-    // Update theme class
+    // Remove all theme classes from main content
+    mainContent.className = mainContent.className.replace(/theme-\w+/g, '');
+    // Add new theme class to main content
+    mainContent.classList.add(`theme-${selectedLeague}`);
+
+    // Update theme class for cards grid
     cardsGrid.className = `cards-grid theme-${selectedLeague}`;
+
+    // Update header theme
+    header.className = `header theme-${selectedLeague}`;
 
     // Update all league indicators
     const leagueIndicators = document.querySelectorAll('.league-indicator');
-    leagueIndicators.forEach(indicator => {
-        indicator.style.backgroundImage = `url('${leagueLogos[selectedLeague]}')`;
-    });
+    if (selectedLeague === 'default') {
+        // Hide league indicators for default theme
+        leagueIndicators.forEach(indicator => {
+            indicator.style.display = 'none';
+        });
+    } else {
+        // Show and update league indicators for other themes
+        leagueIndicators.forEach(indicator => {
+            indicator.style.display = 'block';
+            indicator.style.backgroundImage = `url('${leagueLogos[selectedLeague]}')`;
+        });
+    }
+    
+    // Update theme classes to include team information
+    const activeTeamButton = document.querySelector('.team-button.active');
+    if (activeTeamButton && selectedLeague !== 'default') {
+        const teamName = activeTeamButton.dataset.team;
+        
+        // Remove team-specific classes for non-default themes
+        if (mainContent) {
+            mainContent.className = mainContent.className.replace(/team-\w+/g, '');
+        }
+        if (cardsGrid) {
+            cardsGrid.className = cardsGrid.className.replace(/team-\w+/g, '');
+        }
+        if (header) {
+            header.className = header.className.replace(/team-\w+/g, '');
+        }
+    } else if (activeTeamButton && selectedLeague === 'default') {
+        // Apply team-specific classes for default theme
+        const teamName = activeTeamButton.dataset.team;
+        if (mainContent) {
+            mainContent.className = mainContent.className.replace(/team-\w+/g, '');
+            mainContent.classList.add(`team-${teamName}`);
+        }
+        if (cardsGrid) {
+            cardsGrid.className = cardsGrid.className.replace(/team-\w+/g, '');
+            cardsGrid.classList.add(`team-${teamName}`);
+        }
+        if (header) {
+            header.className = header.className.replace(/team-\w+/g, '');
+            header.classList.add(`team-${teamName}`);
+        }
+    }
 }
 
 // Takım verilerini yükle

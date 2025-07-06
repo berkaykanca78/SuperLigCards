@@ -248,8 +248,8 @@ body {
     position: sticky;
     top: 20px;
     z-index: 100;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(230, 0, 18, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo-container {
@@ -278,13 +278,10 @@ body {
 }
 
 .header-text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: #1a1a2e;
-    margin-bottom: 0.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin: 0;
+    transition: color 0.3s ease;
 }
 
 .header-actions {
@@ -1361,4 +1358,239 @@ body {
     .container {
         flex-direction: column;
     }
+}
+
+/* Default team theme - Dynamic team colors */
+.theme-default .header-text h1,
+.theme-default .header-actions p {
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.theme-default .lineup-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.theme-default .lineup-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Hide league indicator in default theme */
+.theme-default .league-indicator {
+    display: none !important;
+}
+
+/* Dynamic team-specific header colors for default theme */
+.theme-default.team-galatasaray .header {
+    background: linear-gradient(135deg, #FFD700 0%, #E60012 100%);
+    box-shadow: 0 4px 20px rgba(230, 0, 18, 0.3);
+    border-color: rgba(230, 0, 18, 0.3);
+}
+
+.theme-default.team-fenerbahce .header {
+    background: linear-gradient(135deg, #FFD700 0%, #003399 100%);
+    box-shadow: 0 4px 20px rgba(0, 51, 153, 0.3);
+    border-color: rgba(0, 51, 153, 0.3);
+}
+
+.theme-default.team-besiktas .header {
+    background: linear-gradient(135deg, #FFFFFF 0%, #000000 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.theme-default.team-besiktas .header-text h1,
+.theme-default.team-besiktas .header-actions p {
+    color: #000000;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.theme-default.team-trabzonspor .header {
+    background: linear-gradient(135deg, #8B0000 0%, #4B0000 100%);
+    box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
+    border-color: rgba(139, 0, 0, 0.3);
+}
+
+.theme-default.team-basaksehir .header {
+    background: linear-gradient(135deg, #FF4500 0%, #FF6600 100%);
+    box-shadow: 0 4px 20px rgba(255, 69, 0, 0.3);
+    border-color: rgba(255, 69, 0, 0.3);
+}
+
+.theme-default.team-antalyaspor .header {
+    background: linear-gradient(135deg, #E60012 0%, #8B0000 100%);
+    box-shadow: 0 4px 20px rgba(230, 0, 18, 0.3);
+    border-color: rgba(230, 0, 18, 0.3);
+}
+
+.theme-default.team-konyaspor .header {
+    background: linear-gradient(135deg, #00AA00 0%, #006600 100%);
+    box-shadow: 0 4px 20px rgba(0, 170, 0, 0.3);
+    border-color: rgba(0, 170, 0, 0.3);
+}
+
+.theme-default.team-alanyaspor .header {
+    background: linear-gradient(135deg, #FF8C00 0%, #FF6600 100%);
+    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.3);
+    border-color: rgba(255, 140, 0, 0.3);
+}
+
+.theme-default.team-kayserispor .header {
+    background: linear-gradient(135deg, #FFD700 0%, #E60012 100%);
+    box-shadow: 0 4px 20px rgba(230, 0, 18, 0.3);
+    border-color: rgba(230, 0, 18, 0.3);
+}
+
+.theme-default.team-gaziantep .header {
+    background: linear-gradient(135deg, #8B0000 0%, #4B0000 100%);
+    box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
+    border-color: rgba(139, 0, 0, 0.3);
+}
+
+.theme-default.team-kocaelispor .header {
+    background: linear-gradient(135deg, #00AA00 0%, #006600 100%);
+    box-shadow: 0 4px 20px rgba(0, 170, 0, 0.3);
+    border-color: rgba(0, 170, 0, 0.3);
+}
+
+.theme-default.team-genclerbirligi .header {
+    background: linear-gradient(135deg, #E60012 0%, #000000 100%);
+    box-shadow: 0 4px 20px rgba(230, 0, 18, 0.3);
+    border-color: rgba(230, 0, 18, 0.3);
+}
+
+.theme-default.team-karagumruk .header {
+    background: linear-gradient(135deg, #8B0000 0%, #000000 100%);
+    box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
+    border-color: rgba(139, 0, 0, 0.3);
+}
+
+.theme-default.team-kasimpasa .header {
+    background: linear-gradient(135deg, #0066CC 0%, #003399 100%);
+    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    border-color: rgba(0, 102, 204, 0.3);
+}
+
+.theme-default.team-rizespor .header {
+    background: linear-gradient(135deg, #0066CC 0%, #003399 100%);
+    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3);
+    border-color: rgba(0, 102, 204, 0.3);
+}
+
+.theme-default.team-goztepe .header {
+    background: linear-gradient(135deg, #FFD700 0%, #E60012 100%);
+    box-shadow: 0 4px 20px rgba(230, 0, 18, 0.3);
+    border-color: rgba(230, 0, 18, 0.3);
+}
+
+.theme-default.team-samsunspor .header {
+    background: linear-gradient(135deg, #E60012 0%, #8B0000 100%);
+    box-shadow: 0 4px 20px rgba(230, 0, 18, 0.3);
+    border-color: rgba(230, 0, 18, 0.3);
+}
+
+.theme-default.team-eyupspor .header {
+    background: linear-gradient(135deg, #6A0DAD 0%, #4B0082 100%);
+    box-shadow: 0 4px 20px rgba(106, 13, 173, 0.3);
+    border-color: rgba(106, 13, 173, 0.3);
+}
+
+/* Theme-specific header styles */
+.theme-superlig .header {
+    background: linear-gradient(135deg, #E60012 0%, #8B0000 100%);
+    box-shadow: 0 4px 20px rgba(230, 0, 18, 0.2);
+    border-color: rgba(230, 0, 18, 0.3);
+}
+
+.theme-championsleague .header {
+    background: linear-gradient(135deg, #000F2C 0%, #002A5C 100%);
+    box-shadow: 0 4px 20px rgba(0, 15, 44, 0.3);
+    border-color: rgba(0, 15, 44, 0.3);
+}
+
+.theme-europaleague .header {
+    background: linear-gradient(135deg, #F28E1C 0%, #D95F0E 100%);
+    box-shadow: 0 4px 20px rgba(242, 142, 28, 0.2);
+    border-color: rgba(242, 142, 28, 0.3);
+}
+
+.theme-conferenceleague .header {
+    background: linear-gradient(135deg, #00A651 0%, #006B34 100%);
+    box-shadow: 0 4px 20px rgba(0, 166, 81, 0.2);
+    border-color: rgba(0, 166, 81, 0.3);
+}
+
+.theme-turkiyekupasi .header {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+    box-shadow: 0 4px 20px rgba(230, 0, 18, 0.15);
+    border-color: rgba(230, 0, 18, 0.2);
+}
+
+.theme-superkupasi .header {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+/* Theme-specific header text colors */
+.theme-superlig .header-text h1,
+.theme-championsleague .header-text h1,
+.theme-europaleague .header-text h1,
+.theme-conferenceleague .header-text h1,
+.theme-turkiyekupasi .header-text h1,
+.theme-superlig .header-actions p,
+.theme-championsleague .header-actions p,
+.theme-europaleague .header-actions p,
+.theme-conferenceleague .header-actions p,
+.theme-turkiyekupasi .header-actions p {
+    color: #FFFFFF;
+}
+
+.theme-turkiyekupasi .header-text h1,
+.theme-turkiyekupasi .header-actions p {
+    color: #E60012;
+}
+
+.theme-superkupasi .header-text h1,
+.theme-superkupasi .header-actions p {
+    color: #000000;
+}
+
+/* Theme-specific button styles */
+.theme-superlig .lineup-button,
+.theme-championsleague .lineup-button,
+.theme-europaleague .lineup-button,
+.theme-conferenceleague .lineup-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.theme-turkiyekupasi .lineup-button {
+    background: rgba(230, 0, 18, 0.1);
+    color: #E60012;
+    border: 1px solid rgba(230, 0, 18, 0.3);
+}
+
+.theme-superkupasi .lineup-button {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.theme-superlig .lineup-button:hover,
+.theme-championsleague .lineup-button:hover,
+.theme-europaleague .lineup-button:hover,
+.theme-conferenceleague .lineup-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.theme-turkiyekupasi .lineup-button:hover {
+    background: rgba(230, 0, 18, 0.2);
+}
+
+.theme-superkupasi .lineup-button:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
