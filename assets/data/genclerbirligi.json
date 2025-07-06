@@ -202,6 +202,42 @@
                 "DRİB": 77,
                 "ŞUT": 76
             }
+        },
+        {
+            "name": "BURAK YILDIRIM",
+            "position": "RB",
+            "rating": 76,
+            "ratingPosition": "SAĞ BEK",
+            "image": "assets/players/byildirim.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 23,
+            "number": 26,
+            "stats": {
+                "HIZ": 77,
+                "DEF": 76,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "MARIO FERNANDES",
+            "position": "CAM",
+            "rating": 76,
+            "ratingPosition": "ON NUMARA",
+            "image": "assets/players/mfernandes.png",
+            "nationality": {
+                "name": "BRA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/26.png"
+            },
+            "age": 25,
+            "number": 27,
+            "stats": {
+                "PAS": 77,
+                "DRİB": 76,
+                "ŞUT": 75
+            }
         }
     ],
     "manager": {

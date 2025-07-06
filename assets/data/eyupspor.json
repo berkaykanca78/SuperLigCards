@@ -202,6 +202,42 @@
                 "FİZ": 76,
                 "HIZ": 75
             }
+        },
+        {
+            "name": "AHMET KAYA",
+            "position": "LB",
+            "rating": 76,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/akaya.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 21,
+            "number": 19,
+            "stats": {
+                "HIZ": 77,
+                "DEF": 76,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "PEDRO SANTOS",
+            "position": "ST",
+            "rating": 76,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/psantos.png",
+            "nationality": {
+                "name": "PRT",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
+            },
+            "age": 23,
+            "number": 23,
+            "stats": {
+                "BİT": 77,
+                "ŞUT": 76,
+                "FİZ": 75
+            }
         }
     ],
     "manager": {

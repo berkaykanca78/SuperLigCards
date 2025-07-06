@@ -202,6 +202,42 @@
                 "DIV": 79,
                 "POS": 78
             }
+        },
+        {
+            "name": "EMRE DEMIR",
+            "position": "CAM",
+            "rating": 76,
+            "ratingPosition": "ON NUMARA",
+            "image": "assets/players/edemir.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 20,
+            "number": 18,
+            "stats": {
+                "PAS": 77,
+                "DRİB": 77,
+                "ŞUT": 74
+            }
+        },
+        {
+            "name": "LUCAS MARTINEZ",
+            "position": "CB",
+            "rating": 76,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/lmartinez.png",
+            "nationality": {
+                "name": "ARG",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/9.png"
+            },
+            "age": 26,
+            "number": 22,
+            "stats": {
+                "DEF": 77,
+                "FİZ": 76,
+                "HIZ": 75
+            }
         }
     ],
     "manager": {

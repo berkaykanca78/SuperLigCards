@@ -202,6 +202,42 @@
                 "DRİB": 76,
                 "ŞUT": 75
             }
+        },
+        {
+            "name": "OĞULCAN ÇAĞLAYAN",
+            "position": "ST",
+            "rating": 76,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/ocaglayan.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 25,
+            "number": 36,
+            "stats": {
+                "BİT": 77,
+                "ŞUT": 76,
+                "FİZ": 75
+            }
+        },
+        {
+            "name": "CARLOS MANE",
+            "position": "LW",
+            "rating": 76,
+            "ratingPosition": "SOL KANAT",
+            "image": "assets/players/cmane.png",
+            "nationality": {
+                "name": "PRT",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
+            },
+            "age": 24,
+            "number": 37,
+            "stats": {
+                "HIZ": 78,
+                "DRİB": 76,
+                "ŞUT": 74
+            }
         }
     ],
     "manager": {

@@ -202,6 +202,42 @@
                 "DEF": 77,
                 "PAS": 76
             }
+        },
+        {
+            "name": "SERDAR SAATÇI",
+            "position": "CB",
+            "rating": 76,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/ssaatci.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 20,
+            "number": 30,
+            "stats": {
+                "DEF": 77,
+                "FİZ": 76,
+                "HIZ": 75
+            }
+        },
+        {
+            "name": "JOAO CARLOS",
+            "position": "LW",
+            "rating": 76,
+            "ratingPosition": "SOL KANAT",
+            "image": "assets/players/jcarlos.png",
+            "nationality": {
+                "name": "BRA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/26.png"
+            },
+            "age": 23,
+            "number": 31,
+            "stats": {
+                "HIZ": 78,
+                "DRİB": 76,
+                "ŞUT": 74
+            }
         }
     ],
     "manager": {

@@ -202,6 +202,42 @@
                 "DRİB": 77,
                 "ŞUT": 75
             }
+        },
+        {
+            "name": "MEHMET YILMAZ",
+            "position": "CM",
+            "rating": 76,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/myilmaz.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 23,
+            "number": 16,
+            "stats": {
+                "PAS": 77,
+                "DRİB": 76,
+                "FİZ": 75
+            }
+        },
+        {
+            "name": "ALEX SANTOS",
+            "position": "LM",
+            "rating": 76,
+            "ratingPosition": "SOL ORTA",
+            "image": "assets/players/asantos.png",
+            "nationality": {
+                "name": "BRA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/26.png"
+            },
+            "age": 24,
+            "number": 20,
+            "stats": {
+                "HIZ": 78,
+                "DRİB": 76,
+                "PAS": 75
+            }
         }
     ],
     "manager": {

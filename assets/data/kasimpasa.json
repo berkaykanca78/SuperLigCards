@@ -202,6 +202,42 @@
                 "DRİB": 78,
                 "ŞUT": 76
             }
+        },
+        {
+            "name": "EREN ELMALI",
+            "position": "LB",
+            "rating": 76,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/eelmali.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 23,
+            "number": 32,
+            "stats": {
+                "HIZ": 77,
+                "DEF": 76,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "MIGUEL TORRES",
+            "position": "CDM",
+            "rating": 76,
+            "ratingPosition": "ÖN LİBERO",
+            "image": "assets/players/mtorres.png",
+            "nationality": {
+                "name": "ESP",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/157.png"
+            },
+            "age": 25,
+            "number": 33,
+            "stats": {
+                "DEF": 77,
+                "FİZ": 76,
+                "PAS": 75
+            }
         }
     ],
     "manager": {

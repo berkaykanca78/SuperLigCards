@@ -202,6 +202,42 @@
                 "ŞUT": 76,
                 "FİZ": 78
             }
+        },
+        {
+            "name": "ONUR BULUT",
+            "position": "RB",
+            "rating": 76,
+            "ratingPosition": "SAĞ BEK",
+            "image": "assets/players/obulut.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 24,
+            "number": 40,
+            "stats": {
+                "HIZ": 77,
+                "DEF": 76,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "LUCAS LIMA",
+            "position": "CM",
+            "rating": 76,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/llima.png",
+            "nationality": {
+                "name": "BRA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/26.png"
+            },
+            "age": 26,
+            "number": 41,
+            "stats": {
+                "PAS": 77,
+                "DRİB": 76,
+                "ŞUT": 75
+            }
         }
     ],
     "manager": {

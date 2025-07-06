@@ -202,6 +202,42 @@
                 "DRİB": 78,
                 "ŞUT": 77
             }
+        },
+        {
+            "name": "KEMAL ÖZDEMIR",
+            "position": "RM",
+            "rating": 76,
+            "ratingPosition": "SAĞ ORTA",
+            "image": "assets/players/kozdemir.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 22,
+            "number": 24,
+            "stats": {
+                "HIZ": 77,
+                "DRİB": 76,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "DAVID RODRIGUEZ",
+            "position": "CM",
+            "rating": 76,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/drodriguez.png",
+            "nationality": {
+                "name": "ESP",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/157.png"
+            },
+            "age": 24,
+            "number": 25,
+            "stats": {
+                "PAS": 77,
+                "DRİB": 76,
+                "FİZ": 75
+            }
         }
     ],
     "manager": {

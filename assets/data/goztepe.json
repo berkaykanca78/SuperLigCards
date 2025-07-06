@@ -202,6 +202,42 @@
                 "DRİB": 77,
                 "PAS": 76
             }
+        },
+        {
+            "name": "OKAN KOCUK",
+            "position": "GK",
+            "rating": 76,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/okocuk.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 27,
+            "number": 28,
+            "stats": {
+                "REF": 77,
+                "DIV": 76,
+                "POS": 75
+            }
+        },
+        {
+            "name": "ANDRE SILVA",
+            "position": "ST",
+            "rating": 76,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/asilva.png",
+            "nationality": {
+                "name": "PRT",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
+            },
+            "age": 24,
+            "number": 29,
+            "stats": {
+                "BİT": 77,
+                "ŞUT": 76,
+                "FİZ": 75
+            }
         }
     ],
     "manager": {

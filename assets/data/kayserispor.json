@@ -202,6 +202,42 @@
                 "DEF": 77,
                 "PAS": 76
             }
+        },
+        {
+            "name": "MERT ÇETIN",
+            "position": "CB",
+            "rating": 76,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/mcetin.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 24,
+            "number": 34,
+            "stats": {
+                "DEF": 77,
+                "FİZ": 76,
+                "HIZ": 75
+            }
+        },
+        {
+            "name": "RICARDO PEREIRA",
+            "position": "RW",
+            "rating": 76,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/rpereira.png",
+            "nationality": {
+                "name": "PRT",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/136.png"
+            },
+            "age": 22,
+            "number": 35,
+            "stats": {
+                "HIZ": 78,
+                "DRİB": 76,
+                "ŞUT": 74
+            }
         }
     ],
     "manager": {
