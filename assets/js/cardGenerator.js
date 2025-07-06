@@ -278,4 +278,217 @@ async function loadAndGenerateTeamCards(teamName) {
             </div>
         `;
     }
+}
+
+function createPlayerCard(player) {
+    const card = document.createElement('div');
+    card.className = `player-card ${player.team.toLowerCase()}`;
+    card.setAttribute('draggable', 'true');
+    card.setAttribute('data-position', player.position);
+
+    // Add button for mobile
+    const addButton = document.createElement('button');
+    addButton.className = 'add-to-field-btn';
+    addButton.innerHTML = '+';
+    addButton.setAttribute('aria-label', 'Sahaya Ekle');
+    card.appendChild(addButton);
+
+    // Card glow and shine effects
+    const cardGlow = document.createElement('div');
+    cardGlow.className = 'card-glow';
+    card.appendChild(cardGlow);
+
+    const cardShine = document.createElement('div');
+    cardShine.className = 'card-shine';
+    card.appendChild(cardShine);
+
+    // Rating badge
+    const ratingBadge = document.createElement('div');
+    ratingBadge.className = 'rating-badge';
+    if (player.position === 'MAN') {
+        ratingBadge.style.background = 'linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)';
+    }
+    
+    const ratingNumber = document.createElement('div');
+    ratingNumber.className = 'rating-number';
+    ratingNumber.textContent = player.rating;
+    if (player.position === 'MAN') {
+        ratingNumber.style.color = '#000000';
+    }
+    
+    const ratingType = document.createElement('div');
+    ratingType.className = 'rating-type';
+    ratingType.textContent = player.position;
+    if (player.position === 'MAN') {
+        ratingType.style.color = '#000000';
+    }
+    
+    ratingBadge.appendChild(ratingNumber);
+    ratingBadge.appendChild(ratingType);
+    card.appendChild(ratingBadge);
+
+    // Position badge
+    const positionBadge = document.createElement('div');
+    positionBadge.className = 'position-badge';
+    positionBadge.textContent = player.ratingPosition || (player.position === 'MAN' ? 'TEKNİK DİREKTÖR' : player.position);
+    card.appendChild(positionBadge);
+
+    // Player image container
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'player-image-container';
+    
+    const playerImage = document.createElement('div');
+    playerImage.className = 'player-image';
+    
+    const img = document.createElement('img');
+    img.src = player.image;
+    img.alt = player.name;
+    img.onerror = function() { this.style.display = 'none'; };
+    
+    playerImage.appendChild(img);
+    imageContainer.appendChild(playerImage);
+    card.appendChild(imageContainer);
+
+    // Player info
+    const playerInfo = document.createElement('div');
+    playerInfo.className = 'player-info';
+    
+    const playerName = document.createElement('div');
+    playerName.className = 'player-name';
+    playerName.textContent = player.name;
+    playerInfo.appendChild(playerName);
+
+    // Stats section
+    const statsSection = document.createElement('div');
+    statsSection.className = 'player-stats';
+    
+    if (player.position === 'MAN') {
+        // Manager stats
+        const managerStats = ['tactic', 'motivation', 'leadership'];
+        const statLabels = { tactic: 'TAK', motivation: 'MOT', leadership: 'LİD' };
+        
+        managerStats.forEach(stat => {
+            const statDiv = document.createElement('div');
+            statDiv.className = 'stat';
+            
+            const statValue = document.createElement('div');
+            statValue.className = 'stat-value';
+            statValue.textContent = player.stats[stat];
+            
+            const statLabel = document.createElement('div');
+            statLabel.className = 'stat-label';
+            statLabel.textContent = statLabels[stat];
+            
+            statDiv.appendChild(statValue);
+            statDiv.appendChild(statLabel);
+            statsSection.appendChild(statDiv);
+        });
+    } else {
+        // Player stats
+        Object.entries(player.stats).forEach(([stat, value]) => {
+            const statDiv = document.createElement('div');
+            statDiv.className = 'stat';
+            
+            const statValue = document.createElement('div');
+            statValue.className = 'stat-value';
+            statValue.textContent = value;
+            
+            const statLabel = document.createElement('div');
+            statLabel.className = 'stat-label';
+            statLabel.textContent = stat;
+            
+            statDiv.appendChild(statValue);
+            statDiv.appendChild(statLabel);
+            statsSection.appendChild(statDiv);
+        });
+    }
+    
+    playerInfo.appendChild(statsSection);
+
+    // Player details
+    const playerDetails = document.createElement('div');
+    playerDetails.className = 'player-details';
+    
+    const detailsLeft = document.createElement('div');
+    const flag = document.createElement('img');
+    flag.src = player.nationality.flag;
+    flag.alt = player.nationality.name;
+    flag.className = 'country-flag';
+    detailsLeft.appendChild(flag);
+    detailsLeft.appendChild(document.createTextNode(` ${player.nationality.name} • ${player.age} yaş`));
+    
+    const detailsRight = document.createElement('div');
+    detailsRight.textContent = player.position === 'MAN' ? 'MAN' : `# ${player.number}`;
+    
+    playerDetails.appendChild(detailsLeft);
+    playerDetails.appendChild(detailsRight);
+    playerInfo.appendChild(playerDetails);
+
+    card.appendChild(playerInfo);
+
+    // Add click handler for mobile add button
+    addButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const availablePoints = document.querySelectorAll('.formation-point:not(.occupied)');
+        const validPoints = Array.from(availablePoints).filter(point => {
+            return point.getAttribute('data-position') === player.position ||
+                   (player.position === 'MAN' && point.classList.contains('manager-area'));
+        });
+
+        if (validPoints.length > 0) {
+            const firstValidPoint = validPoints[0];
+            const cardClone = card.cloneNode(true);
+            cardClone.style.position = 'absolute';
+            
+            if (player.position === 'MAN') {
+                const managerArea = document.querySelector('.manager-area');
+                if (managerArea) {
+                    managerArea.innerHTML = '';
+                    managerArea.appendChild(cardClone);
+                    managerArea.classList.add('occupied');
+                }
+            } else {
+                firstValidPoint.appendChild(cardClone);
+                firstValidPoint.classList.add('occupied');
+                
+                // Position the card properly
+                cardClone.style.left = '50%';
+                cardClone.style.top = '50%';
+                cardClone.style.transform = 'translate(-50%, -50%) scale(0.5)';
+            }
+
+            // Add delete functionality to the cloned card
+            const deleteIcon = document.createElement('div');
+            deleteIcon.className = 'delete-icon-container';
+            deleteIcon.innerHTML = '<div class="delete-icon"></div>';
+            cardClone.appendChild(deleteIcon);
+
+            deleteIcon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (player.position === 'MAN') {
+                    const managerArea = document.querySelector('.manager-area');
+                    managerArea.innerHTML = '<div class="manager-placeholder">Teknik Direktör</div>';
+                    managerArea.classList.remove('occupied');
+                } else {
+                    firstValidPoint.innerHTML = '';
+                    firstValidPoint.classList.remove('occupied');
+                }
+            });
+        } else {
+            alert('Bu pozisyon için uygun boş alan bulunamadı!');
+        }
+    });
+
+    // Make card draggable
+    card.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', '');
+        e.dataTransfer.effectAllowed = 'move';
+        card.classList.add('dragging');
+    });
+
+    card.addEventListener('dragend', () => {
+        card.classList.remove('dragging');
+    });
+
+    return card;
 } 
