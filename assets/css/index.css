@@ -19,6 +19,7 @@ body {
     margin: 0 auto;
     display: flex;
     position: relative;
+    overflow-x: hidden;
 }
 
 .sidebar {
@@ -124,6 +125,9 @@ body {
     flex: 1;
     min-height: 100vh;
     background: #0f172a;
+    width: calc(100% - 260px);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Mobile menu toggle button */
@@ -143,16 +147,24 @@ body {
 
 /* Responsive design */
 @media (max-width: 1200px) {
+    .main-content {
+        padding: 12px;
+    }
+
     .cards-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
+        gap: 20px 10px;
+        padding: 12px;
     }
 }
 
 @media (max-width: 992px) {
+    .main-content {
+        padding: 10px;
+    }
+
     .cards-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 15px 10px;
+        padding: 10px;
     }
 }
 
@@ -172,12 +184,14 @@ body {
     
     .main-content {
         margin-left: 0;
-        padding: 10px;
+        width: 100%;
+        padding: 8px;
+        overflow-x: hidden;
     }
     
     .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 15px 10px;
+        padding: 8px;
     }
     
     .header h1 {
@@ -197,18 +211,24 @@ body {
         width: 24px;
         height: 24px;
     }
+    
+    .player-card {
+        max-width: 180px;
+    }
 }
 
 @media (max-width: 480px) {
+    .main-content {
+        padding: 8px;
+    }
+
     .cards-grid {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 15px;
+        gap: 12px;
+        padding: 8px;
     }
     
     .player-card {
-        width: 100%;
-        max-width: 193px;
-        margin: 0 auto;
+        max-width: 165px;
     }
     
     .header h1 {
@@ -243,42 +263,100 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     padding: 0.5rem;
+    flex-shrink: 0;
 }
 
-.team-logo {
+.team-logo-container {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
 
-.team-logo-container {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-}
-
 .header-text {
     flex: 1;
+    min-width: 0;
 }
 
 .header-text h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #333;
-    margin: 0 0 0.5rem 0;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.header-actions p {
-    font-size: 1rem;
-    color: #666;
-    font-weight: 500;
-    margin: 0;
+/* Responsive design for header */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 3rem;
+    }
+
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .header-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 1.8rem;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .lineup-button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        margin-top: 2.5rem;
+        padding: 0.8rem;
+    }
+
+    .logo-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .lineup-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
 }
 
 .lineup-button {
@@ -382,15 +460,19 @@ body {
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 25px 10px;
-    /* row-gap column-gap */
+    grid-template-columns: repeat(auto-fit, minmax(193px, 1fr));
+    gap: 25px 15px;
     margin-top: 35px;
     padding: 15px;
+    width: 100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .player-card {
-    width: 193px;
+    width: 100%;
+    max-width: 193px;
     height: 275px;
     background: linear-gradient(135deg, #2c2c54 0%, #40407a 50%, #2c2c54 100%);
     border-radius: 12px;
@@ -1272,4 +1354,11 @@ body {
 .theme-superkupasi .player-card .rating-badge {
     background: linear-gradient(145deg, #40E0D0 0%, #004F42 100%) !important;
     color: #FFFFFF !important;
+}
+
+/* Container responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 }
