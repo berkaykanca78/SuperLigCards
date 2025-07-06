@@ -149,7 +149,7 @@
             }
         },
         {
-            "name": "JHON DURAN",
+            "name": "JHON DURÁN",
             "position": "ST",
             "rating": 78,
             "ratingPosition": "SANTRAFOR",
@@ -208,7 +208,7 @@
             "position": "ST",
             "rating": 82,
             "ratingPosition": "SANTRAFOR",
-            "image": "assets/players/en-nesyri.png",
+            "image": "assets/players/ennesyri.png",
             "nationality": {
                 "name": "MAR",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/107.png"

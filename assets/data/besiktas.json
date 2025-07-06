@@ -132,21 +132,21 @@
             }
         },
         {
-            "name": "JEAN CAJUSTE",
-            "position": "CDM",
-            "rating": 80,
-            "ratingPosition": "ÖN LİBERO",
-            "image": "assets/players/cajuste.png",
+            "name": "SEMİH KILIÇSOY",
+            "position": "ST",
+            "rating": 78,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/semih.png",
             "nationality": {
-                "name": "SWE",
-                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/800px-Flag_of_Sweden.svg.png"
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
             },
-            "age": 24,
-            "number": 24,
+            "age": 18,
+            "number": 90,
             "stats": {
-                "DEF": 81,
-                "FİZ": 83,
-                "PAS": 80
+                "HIZ": 82,
+                "ŞUT": 79,
+                "FİZ": 77
             }
         },
         {
@@ -226,7 +226,7 @@
             "position": "CDM",
             "rating": 82,
             "ratingPosition": "ÖN LİBERO",
-            "image": "assets/players/musrati.png",
+            "image": "assets/players/almusrati.png",
             "nationality": {
                 "name": "LBY",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/96.png"

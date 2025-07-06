@@ -168,21 +168,21 @@
             }
         },
         {
-            "name": "HAKAN ÇALHANOĞLU",
-            "position": "CDM",
-            "rating": 85,
-            "ratingPosition": "ÖN LİBERO",
-            "image": "assets/players/calhanoglu.png",
+            "name": "ROLAND SALLAI",
+            "position": "RW",
+            "rating": 82,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/sallai.png",
             "nationality": {
-                "name": "TUR",
-                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/800px-Flag_of_Turkey.svg.png"
+                "name": "HUN",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/178.png"
             },
-            "age": 30,
-            "number": 8,
+            "age": 26,
+            "number": 7,
             "stats": {
-                "FİZ": 78,
-                "PAS": 87,
-                "ATK": 85
+                "HIZ": 85,
+                "DRİB": 83,
+                "ŞUT": 82
             }
         },
         {
