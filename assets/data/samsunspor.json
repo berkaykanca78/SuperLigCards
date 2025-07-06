@@ -23,43 +23,6 @@
             }
         },
         {
-            "name": "ZEKI YAVRU",
-            "position": "RB",
-            "rating": 76,
-            "ratingPosition": "SAĞ BEK",
-            "image": "assets/players/yavru.png",
-            "nationality": {
-                "name": "TUR",
-                "flag": "https://tmssl.akamaized.net//images/flagge/verysmall/174.png"
-            },
-            "age": 32,
-            "number": 2,
-            "isCaptain": true,
-            "stats": {
-                "HIZ": 77,
-                "DEF": 76,
-                "PAS": 75
-            }
-        },
-        {
-            "name": "LOGI TOMASSON",
-            "position": "LB",
-            "rating": 77,
-            "ratingPosition": "SOL BEK",
-            "image": "assets/players/tomasson.png",
-            "nationality": {
-                "name": "ISL",
-                "flag": "https://tmssl.akamaized.net//images/flagge/verysmall/73.png"
-            },
-            "age": 25,
-            "number": 3,
-            "stats": {
-                "HIZ": 78,
-                "DEF": 77,
-                "PAS": 76
-            }
-        },
-        {
             "name": "RICK VAN DRONGELEN",
             "position": "CB",
             "rating": 77,
@@ -114,6 +77,43 @@
             }
         },
         {
+            "name": "LOGI TÓMASSON",
+            "position": "LB",
+            "rating": 77,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/tomasson.png",
+            "nationality": {
+                "name": "ISL",
+                "flag": "https://tmssl.akamaized.net//images/flagge/verysmall/73.png"
+            },
+            "age": 25,
+            "number": 3,
+            "stats": {
+                "HIZ": 78,
+                "DEF": 77,
+                "PAS": 76
+            }
+        },
+        {
+            "name": "ZEKI YAVRU",
+            "position": "RB",
+            "rating": 76,
+            "ratingPosition": "SAĞ BEK",
+            "image": "assets/players/yavru.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net//images/flagge/verysmall/174.png"
+            },
+            "age": 32,
+            "number": 2,
+            "isCaptain": true,
+            "stats": {
+                "HIZ": 77,
+                "DEF": 76,
+                "PAS": 75
+            }
+        },
+        {
             "name": "ARBNOR MUJA",
             "position": "RW",
             "rating": 77,
@@ -142,7 +142,7 @@
                 "flag": "https://tmssl.akamaized.net//images/flagge/verysmall/174.png"
             },
             "age": 29,
-            "number": 7,
+            "number": 11,
             "stats": {
                 "HIZ": 78,
                 "DRİB": 77,
@@ -201,6 +201,42 @@
                 "PAS": 77,
                 "DRİB": 76,
                 "ŞUT": 75
+            }
+        },
+        {
+            "name": "CARLOS HOLSE",
+            "position": "RW",
+            "rating": 76,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/holse.png",
+            "nationality": {
+                "name": "DEN",
+                "flag": "https://tmssl.akamaized.net//images/flagge/verysmall/39.png"
+            },
+            "age": 24,
+            "number": 17,
+            "stats": {
+                "HIZ": 78,
+                "DRİB": 76,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "LARRY DIMATA",
+            "position": "ST",
+            "rating": 76,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/dimata.png",
+            "nationality": {
+                "name": "BEL",
+                "flag": "https://tmssl.akamaized.net//images/flagge/verysmall/19.png"
+            },
+            "age": 26,
+            "number": 9,
+            "stats": {
+                "BİT": 77,
+                "ŞUT": 76,
+                "HIZ": 75
             }
         }
     ],

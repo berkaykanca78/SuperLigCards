@@ -202,6 +202,42 @@
                 "DEF": 83,
                 "FİZ": 82
             }
+        },
+        {
+            "name": "YOUSSEF EN-NESYRI",
+            "position": "ST",
+            "rating": 82,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/en-nesyri.png",
+            "nationality": {
+                "name": "MAR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/107.png"
+            },
+            "age": 26,
+            "number": 19,
+            "stats": {
+                "ŞUT": 83,
+                "FİZ": 84,
+                "HIZ": 82
+            }
+        },
+        {
+            "name": "SOFYAN AMRABAT",
+            "position": "CDM",
+            "rating": 83,
+            "ratingPosition": "ÖN LİBERO",
+            "image": "assets/players/amrabat.png",
+            "nationality": {
+                "name": "MAR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/107.png"
+            },
+            "age": 27,
+            "number": 34,
+            "stats": {
+                "PAS": 83,
+                "DEF": 84,
+                "FİZ": 85
+            }
         }
     ],
     "manager": {

@@ -202,6 +202,42 @@
                 "FİZ": 84,
                 "ŞUT": 82
             }
+        },
+        {
+            "name": "ANTHONY NWAKAEME",
+            "position": "LW",
+            "rating": 81,
+            "ratingPosition": "SOL KANAT",
+            "image": "assets/players/nwakaeme.png",
+            "nationality": {
+                "name": "NGA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/124.png"
+            },
+            "age": 34,
+            "number": 9,
+            "stats": {
+                "DRİB": 83,
+                "ŞUT": 82,
+                "FİZ": 84
+            }
+        },
+        {
+            "name": "OZAN TUFAN",
+            "position": "CM",
+            "rating": 80,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/ozan.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 29,
+            "number": 11,
+            "stats": {
+                "PAS": 82,
+                "ŞUT": 81,
+                "FİZ": 83
+            }
         }
     ],
     "manager": {

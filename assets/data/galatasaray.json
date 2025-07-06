@@ -202,6 +202,42 @@
                 "DIV": 82,
                 "POS": 80
             }
+        },
+        {
+            "name": "MARIO LEMINA",
+            "position": "CDM",
+            "rating": 83,
+            "ratingPosition": "ÖN LİBERO",
+            "image": "assets/players/lemina.png",
+            "nationality": {
+                "name": "GAB",
+                "flag": "https://cdn.britannica.com/85/7185-050-2DEB57E7/Flag-Gabon.jpg"
+            },
+            "age": 30,
+            "number": 99,
+            "stats": {
+                "FİZ": 85,
+                "DEF": 83,
+                "PAS": 82
+            }
+        },
+        {
+            "name": "YUNUS AKGÜN",
+            "position": "RW",
+            "rating": 81,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/yunus.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 23,
+            "number": 11,
+            "stats": {
+                "HIZ": 86,
+                "DRİB": 82,
+                "PAS": 80
+            }
         }
     ],
     "manager": {

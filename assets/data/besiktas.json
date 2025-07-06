@@ -202,6 +202,42 @@
                 "DRİB": 83,
                 "PAS": 82
             }
+        },
+        {
+            "name": "ERNEST MUÇI",
+            "position": "LW",
+            "rating": 80,
+            "ratingPosition": "SOL KANAT",
+            "image": "assets/players/muci.png",
+            "nationality": {
+                "name": "ALB",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/3.png"
+            },
+            "age": 22,
+            "number": 23,
+            "stats": {
+                "HIZ": 85,
+                "DRİB": 82,
+                "ŞUT": 79
+            }
+        },
+        {
+            "name": "MOATASEM AL-MUSRATI",
+            "position": "CDM",
+            "rating": 82,
+            "ratingPosition": "ÖN LİBERO",
+            "image": "assets/players/musrati.png",
+            "nationality": {
+                "name": "LBY",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/96.png"
+            },
+            "age": 27,
+            "number": 28,
+            "stats": {
+                "DEF": 84,
+                "FİZ": 83,
+                "PAS": 81
+            }
         }
     ],
     "manager": {
