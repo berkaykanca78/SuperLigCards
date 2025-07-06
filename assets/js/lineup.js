@@ -120,7 +120,7 @@ function handleDragStart(e) {
     
     e.dataTransfer.setDragImage(dragImage, dragOffset.x, dragOffset.y);
     e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text/plain', '');
+    e.dataTransfer.setData('text/plain', card.id);
 
     requestAnimationFrame(() => {
         document.body.removeChild(dragImage);
@@ -210,56 +210,71 @@ field.addEventListener('drop', (e) => {
         const pointIndex = parseInt(closestPoint.dataset.index);
         const allowedRoles = formations[currentFormation].positions[pointIndex].allowedRoles;
 
-        if (isPositionAllowed(draggedCard, allowedRoles)) {
-            const fieldCard = draggedCard.cloneNode(true);
-            // Preserve captain badge if it exists
-            const captainBadge = draggedCard.querySelector('.captain-badge');
-            if (captainBadge) {
-                const newCaptainBadge = captainBadge.cloneNode(true);
-                fieldCard.appendChild(newCaptainBadge);
-            }
-            
-            fieldCard.style.position = 'absolute';
-            fieldCard.style.left = closestPoint.style.left;
-            fieldCard.style.top = closestPoint.style.top;
-            fieldCard.style.transform = 'translate(-50%, -50%) scale(0.8)';
-            fieldCard.style.zIndex = '50';
-            fieldCard.style.cursor = 'move';
-            fieldCard.style.pointerEvents = 'all';
-
-            // Create delete icon container
-            const deleteIconContainer = document.createElement('div');
-            deleteIconContainer.className = 'delete-icon-container';
-
-            // Create delete icon
-            const deleteIcon = document.createElement('div');
-            deleteIcon.className = 'delete-icon';
-
-            // Add click handler
-            deleteIconContainer.onclick = (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                fieldCard.remove();
-                closestPoint.classList.remove('occupied');
-                closestPoint.classList.remove('highlight');
-            };
-
-            // Append delete icon to container and container to card
-            deleteIconContainer.appendChild(deleteIcon);
-            fieldCard.appendChild(deleteIconContainer);
-
-            closestPoint.classList.add('occupied');
-            makeDraggable(fieldCard);
-            document.getElementById('cardContainer').appendChild(fieldCard);
-        } else {
-            // Pozisyon uygun değilse görsel feedback
-            closestPoint.classList.add('invalid');
-            setTimeout(() => closestPoint.classList.remove('invalid'), 500);
+        // Check if the card already exists on the bench
+        const cardId = draggedCard.id;
+        const existingBenchCard = document.querySelector(`.bench-slot .player-card[id="${cardId}"]`);
+        if (existingBenchCard) {
+            alert('Bu oyuncu yedek kulübesinde! Aynı oyuncu hem sahada hem yedek kulübesinde olamaz.');
+            return;
         }
-    }
 
-    // Vurgulamayı kaldır
-    points.forEach(p => p.classList.remove('highlight'));
+        // Check if the card already exists on the field (for position change)
+        const existingFieldCard = document.querySelector(`#cardContainer .player-card[id="${cardId}"]`);
+        if (existingFieldCard) {
+            // If it's a position change, check if the new position is allowed
+            if (!isPositionAllowed(draggedCard, allowedRoles)) {
+                alert('Bu oyuncu bu pozisyonda oynayamaz!');
+                return;
+            }
+            existingFieldCard.remove();
+        } else if (!isPositionAllowed(draggedCard, allowedRoles)) {
+            // If it's a new card, check if the position is allowed
+            alert('Bu oyuncu bu pozisyonda oynayamaz!');
+            return;
+        }
+
+        const fieldCard = draggedCard.cloneNode(true);
+        // Preserve captain badge if it exists
+        const captainBadge = draggedCard.querySelector('.captain-badge');
+        if (captainBadge) {
+            const newCaptainBadge = captainBadge.cloneNode(true);
+            fieldCard.appendChild(newCaptainBadge);
+        }
+        
+        fieldCard.style.position = 'absolute';
+        fieldCard.style.left = closestPoint.style.left;
+        fieldCard.style.top = closestPoint.style.top;
+        fieldCard.style.transform = 'translate(-50%, -50%) scale(0.8)';
+        fieldCard.style.zIndex = '50';
+        fieldCard.style.cursor = 'move';
+        fieldCard.style.pointerEvents = 'all';
+
+        // Create delete icon container
+        const deleteIconContainer = document.createElement('div');
+        deleteIconContainer.className = 'delete-icon-container';
+
+        // Create delete icon
+        const deleteIcon = document.createElement('div');
+        deleteIcon.className = 'delete-icon';
+
+        // Add click handler
+        deleteIconContainer.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            fieldCard.remove();
+            closestPoint.classList.remove('occupied');
+            closestPoint.classList.remove('highlight');
+        };
+
+        // Append delete icon to container and container to card
+        deleteIconContainer.appendChild(deleteIcon);
+        fieldCard.appendChild(deleteIconContainer);
+
+        // Add the card to the field
+        document.getElementById('cardContainer').appendChild(fieldCard);
+        closestPoint.classList.add('occupied');
+        points.forEach(p => p.classList.remove('highlight'));
+    }
 });
 
 function makeDraggable(element) {
@@ -391,11 +406,23 @@ function clearField() {
     document.querySelectorAll('.formation-point').forEach(point => {
         point.classList.remove('occupied');
     });
+
+    // Clear bench slots
+    const benchSlots = document.querySelectorAll('.bench-slot');
+    benchSlots.forEach(slot => {
+        const card = slot.querySelector('.player-card');
+        if (card) {
+            returnCardToContainer(card);
+        }
+        slot.classList.remove('occupied');
+        slot.querySelector('.bench-placeholder').style.display = '';
+    });
 }
 
 // Sayfa yüklendiğinde tüm takımların kartlarını göster
 document.addEventListener('DOMContentLoaded', function() {
     loadAllTeamCards();
+    initializeBench();
 });
 
 // Takım seçimi değiştiğinde
@@ -811,4 +838,118 @@ function displayAllCards(cards) {
     });
 
     container.appendChild(cardsGrid);
+}
+
+// Add these functions for substitutes bench handling
+function initializeBench() {
+    const benchSlots = document.querySelectorAll('.bench-slot');
+    benchSlots.forEach(slot => {
+        slot.addEventListener('dragover', handleBenchDragOver);
+        slot.addEventListener('drop', handleBenchDrop);
+        slot.addEventListener('dragleave', handleBenchDragLeave);
+    });
+}
+
+function handleBenchDragOver(e) {
+    e.preventDefault();
+    const benchSlot = e.currentTarget;
+    const cardPosition = draggedCard ? draggedCard.getAttribute('data-position') : null;
+    const slotPosition = benchSlot.getAttribute('data-position');
+
+    if (isValidBenchPosition(cardPosition, slotPosition)) {
+        benchSlot.classList.add('drag-over');
+    }
+}
+
+function handleBenchDragLeave(e) {
+    e.currentTarget.classList.remove('drag-over');
+}
+
+function handleBenchDrop(e) {
+    e.preventDefault();
+    const benchSlot = e.target.closest('.bench-slot');
+    if (!benchSlot || !draggedCard) return;
+
+    benchSlot.classList.remove('drag-over');
+    const slotPosition = benchSlot.dataset.position;
+    const cardPosition = draggedCard.getAttribute('data-position');
+
+    // Check if the card already exists on the field
+    const cardId = draggedCard.id;
+    const existingFieldCard = document.querySelector(`#cardContainer .player-card[id="${cardId}"]`);
+    if (existingFieldCard) {
+        alert('Bu oyuncu zaten sahada! Aynı oyuncu hem sahada hem yedek kulübesinde olamaz.');
+        return;
+    }
+
+    // Check if the card already exists on the bench
+    const existingBenchCard = document.querySelector(`.bench-slot .player-card[id="${cardId}"]`);
+    if (existingBenchCard && existingBenchCard.parentElement !== benchSlot) {
+        alert('Bu oyuncu zaten yedek kulübesinde!');
+        return;
+    }
+
+    if (isValidBenchPosition(cardPosition, slotPosition)) {
+        // Remove any existing card in the bench slot
+        const existingCard = benchSlot.querySelector('.player-card');
+        if (existingCard) {
+            existingCard.remove();
+        }
+
+        const benchCard = draggedCard.cloneNode(true);
+        benchCard.style.transform = 'scale(0.7)';
+        benchCard.style.margin = '0 auto';
+        benchCard.style.position = 'relative';
+        benchCard.style.zIndex = '1';
+
+        // Create delete icon container
+        const deleteIconContainer = document.createElement('div');
+        deleteIconContainer.className = 'delete-icon-container';
+
+        // Create delete icon
+        const deleteIcon = document.createElement('div');
+        deleteIcon.className = 'delete-icon';
+
+        // Add click handler
+        deleteIconContainer.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            benchCard.remove();
+            benchSlot.querySelector('.bench-placeholder').style.display = 'block';
+        };
+
+        // Append delete icon to container and container to card
+        deleteIconContainer.appendChild(deleteIcon);
+        benchCard.appendChild(deleteIconContainer);
+
+        benchSlot.querySelector('.bench-placeholder').style.display = 'none';
+        benchSlot.appendChild(benchCard);
+    }
+}
+
+function isValidBenchPosition(cardPos, slotPos) {
+    if (!cardPos || !slotPos) return false;
+
+    const positionMappings = {
+        'GK': ['GK'],
+        'RB': ['RB', 'RWB'],
+        'CB': ['CB'],
+        'LB': ['LB', 'LWB'],
+        'CM': ['CM'],
+        'CDM': ['CDM'],
+        'CAM': ['CAM'],
+        'RW': ['RM', 'RW'],
+        'LW': ['LM', 'LW'],
+        'ST': ['ST', 'CF']
+    };
+
+    return positionMappings[slotPos]?.includes(cardPos);
+}
+
+function returnCardToContainer(card) {
+    const cardsContainer = document.getElementById('cardsContainer');
+    card.style.position = '';
+    card.style.transform = '';
+    card.style.margin = '';
+    cardsContainer.appendChild(card);
 }
