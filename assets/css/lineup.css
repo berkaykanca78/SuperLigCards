@@ -37,11 +37,11 @@ body {
 .right-panel {
     flex: 1;
     background: linear-gradient(to bottom,
-        #2d5a27 0%,
-        #1e4f14 25%,
-        #2d5a27 50%,
-        #1e4f14 75%,
-        #2d5a27 100%);
+            #2d5a27 0%,
+            #1e4f14 25%,
+            #2d5a27 50%,
+            #1e4f14 75%,
+            #2d5a27 100%);
     position: relative;
     border-radius: 12px;
     border: 4px solid rgba(255, 255, 255, 0.8);
@@ -98,13 +98,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 40px,
-        rgba(255, 255, 255, 0.03) 40px,
-        rgba(255, 255, 255, 0.03) 80px
-    );
+    background-image: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 40px,
+            rgba(255, 255, 255, 0.03) 40px,
+            rgba(255, 255, 255, 0.03) 80px);
     pointer-events: none;
 }
 
@@ -115,13 +113,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 40px,
-        rgba(255, 255, 255, 0.03) 40px,
-        rgba(255, 255, 255, 0.03) 80px
-    );
+    background-image: repeating-linear-gradient(-45deg,
+            transparent,
+            transparent 40px,
+            rgba(255, 255, 255, 0.03) 40px,
+            rgba(255, 255, 255, 0.03) 80px);
     pointer-events: none;
 }
 
@@ -210,7 +206,7 @@ body {
     width: 22%;
     height: 4%;
     border: 3px solid rgba(255, 255, 255, 1);
-    box-shadow: 
+    box-shadow:
         0 0 15px rgba(255, 255, 255, 0.5),
         0 0 30px rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1);
@@ -233,21 +229,17 @@ body {
     transform: translateX(-50%);
     width: 22%;
     height: 8%;
-    background-image: 
-        repeating-linear-gradient(
-            90deg,
+    background-image:
+        repeating-linear-gradient(90deg,
             transparent,
             transparent 8px,
             rgba(255, 255, 255, 0.15) 8px,
-            rgba(255, 255, 255, 0.15) 16px
-        ),
-        repeating-linear-gradient(
-            0deg,
+            rgba(255, 255, 255, 0.15) 16px),
+        repeating-linear-gradient(0deg,
             transparent,
             transparent 8px,
             rgba(255, 255, 255, 0.15) 8px,
-            rgba(255, 255, 255, 0.15) 16px
-        );
+            rgba(255, 255, 255, 0.15) 16px);
     pointer-events: none;
     z-index: 9;
 }
@@ -385,10 +377,12 @@ body {
         transform: translate(-50%, -50%) scale(1);
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.1);
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
     }
+
     100% {
         transform: translate(-50%, -50%) scale(1);
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
@@ -536,7 +530,8 @@ body {
     }
 }
 
-.team-selector, .formation-controls {
+.team-selector,
+.formation-controls {
     background: #334155;
     padding: 12px;
     border-radius: 8px;
@@ -546,11 +541,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.team-selector:hover, .formation-controls:hover {
+.team-selector:hover,
+.formation-controls:hover {
     background: #475569;
 }
 
-.team-selector select, .position-filter select, .formation-select {
+.team-selector select,
+.position-filter select,
+.formation-select {
     padding: 8px 12px;
     background: #1e293b;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -563,12 +561,16 @@ body {
     transition: all 0.3s ease;
 }
 
-.team-selector select:hover, .position-filter select:hover, .formation-select:hover {
+.team-selector select:hover,
+.position-filter select:hover,
+.formation-select:hover {
     background: #334155;
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.team-selector select option, .position-filter select option, .formation-select option {
+.team-selector select option,
+.position-filter select option,
+.formation-select option {
     background: #334155;
     color: white;
     padding: 4px;
@@ -701,7 +703,7 @@ body {
     position: relative;
     overflow: hidden;
     margin-top: 25px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .player-image {
@@ -730,7 +732,7 @@ body {
     padding: 6px;
     position: relative;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.9) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
     border-radius: 0 0 12px 12px;
 }
 
@@ -740,7 +742,7 @@ body {
     color: #fff;
     text-align: center;
     margin-bottom: 4px;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -764,7 +766,7 @@ body {
     font-size: 0.85rem;
     font-weight: 700;
     color: #FFD700;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     line-height: 1;
 }
 
@@ -781,7 +783,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 0.7rem;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     padding: 0 5px;
 }
 
@@ -791,7 +793,7 @@ body {
     margin-right: 4px;
     vertical-align: middle;
     border-radius: 2px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .card-glow {
@@ -818,6 +820,7 @@ body {
         opacity: 0.4;
         transform: scale(1);
     }
+
     100% {
         opacity: 0.8;
         transform: scale(1.05);
@@ -830,12 +833,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.1) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%);
     transform: translateY(-100%) rotate(45deg);
     animation: shine 3s infinite;
     z-index: 1;
@@ -845,9 +846,11 @@ body {
     0% {
         transform: translateY(-100%) rotate(45deg);
     }
+
     20% {
         transform: translateY(100%) rotate(45deg);
     }
+
     100% {
         transform: translateY(100%) rotate(45deg);
     }
@@ -914,12 +917,15 @@ body {
         padding: 5px;
     }
 
-    .team-selector, .formation-controls {
+    .team-selector,
+    .formation-controls {
         flex-direction: column;
         gap: 8px;
     }
 
-    .team-selector select, .position-filter select, .formation-select {
+    .team-selector select,
+    .position-filter select,
+    .formation-select {
         width: 100%;
     }
 
@@ -959,12 +965,6 @@ body {
     .goal-area-bottom {
         width: 40%;
         height: 10%;
-    }
-
-    /* Mobilde gereksiz elementleri gizle */
-    .manager-area,
-    #managerArea {
-        display: none !important;
     }
 
     #cardContainer .player-card {
@@ -1102,22 +1102,213 @@ body {
     }
 
     /* Takım renkleri - mobil için */
-    #cardContainer .player-card.galatasaray { background: linear-gradient(135deg, #E30613 0%, #FDB912 100%) !important; }
-    #cardContainer .player-card.fenerbahce { background: linear-gradient(135deg, #FFED00 0%, #001E87 100%) !important; }
-    #cardContainer .player-card.besiktas { background: linear-gradient(135deg, #000000 0%, #FFFFFF 100%) !important; }
-    #cardContainer .player-card.trabzonspor { background: linear-gradient(135deg, #7B1FA2 0%, #90CAF9 100%) !important; }
-    #cardContainer .player-card.basaksehir { background: linear-gradient(135deg, #FF6B00 0%, #1A237E 100%) !important; }
-    #cardContainer .player-card.antalyaspor { background: linear-gradient(135deg, #E53935 0%, #FFFFFF 100%) !important; }
-    #cardContainer .player-card.konyaspor { background: linear-gradient(135deg, #43A047 0%, #FFFFFF 100%) !important; }
-    #cardContainer .player-card.alanyaspor { background: linear-gradient(135deg, #FF6F00 0%, #1B5E20 100%) !important; }
-    #cardContainer .player-card.kayserispor { background: linear-gradient(135deg, #FFD700 0%, #B71C1C 100%) !important; }
-    #cardContainer .player-card.kasimpasa { background: linear-gradient(135deg, #0D47A1 0%, #FFFFFF 100%) !important; }
-    #cardContainer .player-card.karagumruk { background: linear-gradient(135deg, #B71C1C 0%, #000000 100%) !important; }
-    #cardContainer .player-card.gaziantep { background: linear-gradient(135deg, #B71C1C 0%, #000000 100%) !important; }
-    #cardContainer .player-card.rizespor { background: linear-gradient(135deg, #1B5E20 0%, #0D47A1 100%) !important; }
-    #cardContainer .player-card.samsunspor { background: linear-gradient(135deg, #B71C1C 0%, #FFFFFF 100%) !important; }
-    #cardContainer .player-card.kocaelispor { background: linear-gradient(135deg, #43A047 0%, #000000 100%) !important; }
-    #cardContainer .player-card.eyupspor { background: linear-gradient(135deg, #795548 0%, #FFFFFF 100%) !important; }
+    #cardContainer .player-card.galatasaray {
+        background: linear-gradient(135deg, #E30613 0%, #FDB912 100%) !important;
+    }
+
+    #cardContainer .player-card.fenerbahce {
+        background: linear-gradient(135deg, #FFED00 0%, #001E87 100%) !important;
+    }
+
+    #cardContainer .player-card.besiktas {
+        background: linear-gradient(135deg, #000000 0%, #FFFFFF 100%) !important;
+    }
+
+    #cardContainer .player-card.trabzonspor {
+        background: linear-gradient(135deg, #7B1FA2 0%, #90CAF9 100%) !important;
+    }
+
+    #cardContainer .player-card.basaksehir {
+        background: linear-gradient(135deg, #FF6B00 0%, #1A237E 100%) !important;
+    }
+
+    #cardContainer .player-card.antalyaspor {
+        background: linear-gradient(135deg, #E53935 0%, #FFFFFF 100%) !important;
+    }
+
+    #cardContainer .player-card.konyaspor {
+        background: linear-gradient(135deg, #43A047 0%, #FFFFFF 100%) !important;
+    }
+
+    #cardContainer .player-card.alanyaspor {
+        background: linear-gradient(135deg, #FF6F00 0%, #1B5E20 100%) !important;
+    }
+
+    #cardContainer .player-card.kayserispor {
+        background: linear-gradient(135deg, #FFD700 0%, #B71C1C 100%) !important;
+    }
+
+    #cardContainer .player-card.kasimpasa {
+        background: linear-gradient(135deg, #0D47A1 0%, #FFFFFF 100%) !important;
+    }
+
+    #cardContainer .player-card.karagumruk {
+        background: linear-gradient(135deg, #B71C1C 0%, #000000 100%) !important;
+    }
+
+    #cardContainer .player-card.gaziantep {
+        background: linear-gradient(135deg, #B71C1C 0%, #000000 100%) !important;
+    }
+
+    #cardContainer .player-card.rizespor {
+        background: linear-gradient(135deg, #1B5E20 0%, #0D47A1 100%) !important;
+    }
+
+    #cardContainer .player-card.samsunspor {
+        background: linear-gradient(135deg, #B71C1C 0%, #FFFFFF 100%) !important;
+    }
+
+    #cardContainer .player-card.kocaelispor {
+        background: linear-gradient(135deg, #43A047 0%, #000000 100%) !important;
+    }
+
+    #cardContainer .player-card.eyupspor {
+        background: linear-gradient(135deg, #795548 0%, #FFFFFF 100%) !important;
+    }
+
+    /* Saha içindeki manager alanını gizle */
+    .field-container .manager-area {
+        display: none;
+    }
+
+    /* Mobil için yeni manager alanı */
+    .right-panel .manager-area {
+        position: absolute;
+        bottom: -90px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 160px;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(8px);
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        z-index: 900;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .right-panel .manager-area::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid rgba(0, 0, 0, 0.75);
+        z-index: 901;
+    }
+
+    .right-panel .manager-area .player-card {
+        transform: scale(0.75) !important;
+        margin: 0 !important;
+    }
+
+    .right-panel .manager-area.drag-over {
+        border-color: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .right-panel .manager-area.drag-over::before {
+        border-bottom-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .right-panel .manager-area .manager-placeholder {
+        font-size: 13px;
+        padding: 10px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mobilde home butonunun konumunu ayarla */
+    .home-button {
+        bottom: 20px;
+    }
+
+    .mobile-manager-section {
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        background: linear-gradient(to bottom,
+                rgba(45, 90, 39, 0.9) 0%,
+                rgba(30, 79, 20, 0.9) 100%);
+        border-radius: 12px;
+        padding: 15px;
+        position: relative;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.2),
+            inset 0 0 30px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+    }
+
+    .mobile-manager-section .manager-area {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        width: 140px;
+        height: 180px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(8px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .mobile-manager-section .manager-area .player-card {
+        transform: scale(0.85) !important;
+        margin: 0 !important;
+        position: relative !important;
+        width: 135px !important;
+        height: 190px !important;
+    }
+
+    .mobile-manager-section .manager-area .player-card .delete-button {
+        display: none !important;
+    }
+
+    .mobile-manager-section .manager-area .player-card .player-image-container {
+        height: 100px;
+    }
+
+    .mobile-manager-section .manager-area .player-card .player-info {
+        padding: 4px;
+    }
+
+    .mobile-manager-section .manager-area .player-card .player-stats {
+        margin-bottom: 2px;
+    }
+
+    .mobile-manager-section .manager-area .player-card .player-name {
+        font-size: 0.8rem;
+        margin-bottom: 2px;
+    }
+
+    .mobile-manager-section .manager-area .player-card .stat-value {
+        font-size: 0.8rem;
+    }
+
+    .mobile-manager-section .manager-area .player-card .stat-label {
+        font-size: 0.5rem;
+    }
+
+    .mobile-manager-section .manager-area .player-card .player-details {
+        font-size: 0.65rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1527,9 +1718,19 @@ body {
 }
 
 @keyframes shake {
-    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-    25% { transform: translate(-50%, -50%) rotate(-5deg); }
-    75% { transform: translate(-50%, -50%) rotate(5deg); }
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-50%, -50%) rotate(-5deg);
+    }
+
+    75% {
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
 }
 
 /* Kart pozisyon göstergeleri */
@@ -1614,7 +1815,7 @@ body {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    box-shadow: 
+    box-shadow:
         0 4px 20px rgba(230, 0, 18, 0.3),
         0 2px 10px rgba(0, 0, 0, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -1628,7 +1829,7 @@ body {
 
 .home-button:hover {
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 
+    box-shadow:
         0 8px 30px rgba(230, 0, 18, 0.4),
         0 4px 20px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
@@ -1638,7 +1839,7 @@ body {
 
 .home-button:active {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 
+    box-shadow:
         0 4px 15px rgba(230, 0, 18, 0.3),
         0 2px 10px rgba(0, 0, 0, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -1664,10 +1865,7 @@ body {
 
 @media (max-width: 768px) {
     .home-button {
-        bottom: 10px;
-        left: 10px;
-        padding: 8px 16px;
-        font-size: 12px;
+        bottom: 20px;
     }
 }
 
@@ -1740,7 +1938,7 @@ body {
     font-weight: bold;
     font-size: 14px;
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     pointer-events: none;
 }
 
@@ -1865,7 +2063,7 @@ body {
         gap: 20px;
         padding: 0 15px;
     }
-    
+
     .bench-slot {
         width: 80px;
         height: 80px;
@@ -1877,12 +2075,12 @@ body {
         gap: 15px;
         padding: 0 10px;
     }
-    
+
     .bench-slot {
         width: 75px;
         height: 75px;
     }
-    
+
     .bench-title {
         font-size: 18px;
         margin-bottom: 20px;
@@ -1894,18 +2092,18 @@ body {
         gap: 10px;
         padding: 0 5px;
     }
-    
+
     .bench-slot {
         width: 70px;
         height: 70px;
         margin: 8px;
     }
-    
+
     .bench-title {
         font-size: 16px;
         margin-bottom: 15px;
     }
-    
+
     .bench-slot .position-label {
         font-size: 14px;
     }
@@ -1954,7 +2152,8 @@ body {
 }
 
 .add-button {
-    display: none; /* Varsayılan olarak gizli */
+    display: none;
+    /* Varsayılan olarak gizli */
     position: absolute;
     top: 5px;
     right: 5px;
@@ -1970,7 +2169,7 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 10;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .delete-button {
@@ -1990,10 +2189,11 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 10;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.add-button:active, .delete-button:active {
+.add-button:active,
+.delete-button:active {
     transform: scale(0.95);
 }
 
@@ -2017,18 +2217,23 @@ body {
 
     /* Mobilde X butonu + butonunun solunda olsun */
     .delete-button {
-        right: 34px; /* + butonunun genişliği + biraz boşluk */
+        right: 34px;
+        /* + butonunun genişliği + biraz boşluk */
     }
 }
 
 /* Dokunmatik cihazlarda hover efektini kaldır */
 @media (hover: none) {
-    .add-button:hover, .delete-button:hover {
+
+    .add-button:hover,
+    .delete-button:hover {
         transform: none;
     }
+
     .add-button:hover {
         background-color: #4CAF50;
     }
+
     .delete-button:hover {
         background-color: #ff4444;
     }
@@ -2067,4 +2272,94 @@ body {
 .bench-positions .bench-slot.drag-over:hover .player-card button.delete-button:hover {
     background-color: #ff3333;
     transform: scale(1.1);
+}
+
+.mobile-manager-section {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-manager-section {
+        display: block;
+        width: 100%;
+        height: 180px;
+        margin-top: 20px;
+        background: linear-gradient(to bottom,
+                rgba(45, 90, 39, 0.9) 0%,
+                rgba(30, 79, 20, 0.9) 100%);
+        border-radius: 12px;
+        padding: 15px;
+        position: relative;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow:
+            0 4px 15px rgba(0, 0, 0, 0.2),
+            inset 0 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-manager-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: repeating-linear-gradient(45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.03) 10px,
+                rgba(255, 255, 255, 0.03) 20px);
+        border-radius: 10px;
+        pointer-events: none;
+    }
+
+    .mobile-manager-section .manager-area {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        transform: none;
+        width: 140px;
+        height: 180px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(8px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .mobile-manager-section .manager-area::before {
+        display: none;
+    }
+
+    .mobile-manager-section .section-title {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: rgba(255, 255, 255, 0.9);
+        padding: 4px 15px;
+        border-radius: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(4px);
+        z-index: 2;
+    }
+
+    /* Saha içindeki manager alanını gizle */
+    .field-container .manager-area {
+        display: none;
+    }
+
+    /* Home butonunun konumunu ayarla */
+    .home-button {
+        bottom: 20px;
+    }
 }

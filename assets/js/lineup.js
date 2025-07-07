@@ -1000,10 +1000,6 @@ function returnCardToContainer(card) {
 function autoPlaceCard(card) {
     if (!card) return;
 
-    // Get current formation
-    const currentFormation = document.getElementById('formation').value;
-    const formationPositions = formations[currentFormation].positions;
-    
     // Get card's position
     const cardPosition = card.querySelector('.rating-type').textContent;
     
@@ -1022,14 +1018,78 @@ function autoPlaceCard(card) {
         return;
     }
 
-    // Find suitable position
+    // Handle manager card differently
+    if (cardPosition === 'MAN') {
+        // Check if we're on mobile by checking window width
+        const isMobile = window.innerWidth <= 768;
+        
+        // Get the appropriate manager area based on device
+        const managerArea = isMobile 
+            ? document.querySelector('.mobile-manager-section .manager-area')
+            : document.querySelector('.field-container .manager-area');
+            
+        if (!managerArea) return;
+
+        // Check if there's already a manager
+        const existingManager = managerArea.querySelector('.player-card');
+        if (existingManager) {
+            alert('Zaten bir teknik direktör var!');
+            return;
+        }
+
+        const fieldCard = card.cloneNode(true);
+        
+        // Remove the add button from the field card
+        const addButton = fieldCard.querySelector('.add-button');
+        if (addButton) {
+            addButton.remove();
+        }
+        
+        // Add delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-button';
+        deleteButton.innerHTML = '×';
+        deleteButton.onclick = () => {
+            fieldCard.remove();
+            managerArea.innerHTML = '<div class="manager-placeholder">Teknik Direktör</div>';
+        };
+        fieldCard.appendChild(deleteButton);
+
+        // Clear placeholder and add manager card
+        managerArea.innerHTML = '';
+        managerArea.appendChild(fieldCard);
+
+        // For mobile, ensure proper styling
+        if (isMobile) {
+            fieldCard.style.transform = 'scale(0.75)';
+            fieldCard.style.margin = '0';
+        }
+        
+        return;
+    }
+
+    // Get current formation for player cards
+    const currentFormation = document.getElementById('formation').value;
+    const formationPositions = formations[currentFormation].positions;
+    
+    // Find suitable position for player cards
     let foundPosition = null;
     for (let i = 0; i < formationPositions.length; i++) {
         const pos = formationPositions[i];
         const point = document.querySelector(`.formation-point[data-index="${i}"]`);
         
-        // Check if position is empty
-        const existingCard = document.querySelector(`#cardContainer .player-card[style*="left: ${point.style.left}"]`);
+        if (!point) continue; // Skip if point not found
+
+        // Check if position is empty by checking both left and top coordinates
+        const pointLeft = point.style.left;
+        const pointTop = point.style.top;
+        
+        if (!pointLeft || !pointTop) continue; // Skip if coordinates are not set
+
+        // Find any card at this exact position
+        const existingCard = document.querySelector(`#cardContainer .player-card[style*="left: ${pointLeft}"][style*="top: ${pointTop}"]`);
+        
+        // Check if position is empty and allowed for this card
         if (!existingCard && isPositionAllowed(card, pos.allowedRoles)) {
             foundPosition = point;
             break;
