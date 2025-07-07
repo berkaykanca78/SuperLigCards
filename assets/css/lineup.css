@@ -428,11 +428,46 @@ body {
     pointer-events: none;
 }
 
+.delete-icon-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    background: rgba(220, 38, 38, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.9) translateY(5px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    backdrop-filter: blur(4px);
+}
+
+#cardContainer .player-card:hover .delete-icon-container,
+.manager-area:hover .delete-icon-container,
+.bench-slot:hover .player-card .delete-icon-container {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.delete-icon-container:hover {
+    background: rgba(220, 38, 38, 1);
+    transform: scale(1.1) translateY(0) !important;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
 .delete-icon {
     position: relative;
-    width: 16px;
-    height: 16px;
-    margin-top: 2px;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
 }
 
 .delete-icon::before,
@@ -441,9 +476,10 @@ body {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: white;
     top: 50%;
     left: 0;
+    transition: all 0.2s ease;
 }
 
 .delete-icon::before {
@@ -454,30 +490,50 @@ body {
     transform: rotate(-45deg);
 }
 
-.delete-icon-container {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 28px;
-    height: 28px;
-    background: rgba(255, 0, 0, 0.8);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.delete-icon-container:hover .delete-icon::before,
+.delete-icon-container:hover .delete-icon::after {
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.bench-slot .player-card .delete-icon-container {
     opacity: 0;
-    transition: opacity 0.2s ease;
-    z-index: 100;
+    background: rgba(220, 38, 38, 0.8);
+    transform: scale(0.9) translateY(5px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
 }
 
-#cardContainer .player-card:hover .delete-icon-container {
+.bench-slot:hover .player-card .delete-icon-container {
     opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
-.delete-icon-container:hover {
-    background: rgba(255, 0, 0, 1);
-    transform: scale(1.1);
+.bench-slot:hover .player-card .delete-icon-container:hover {
+    background: rgba(220, 38, 38, 1);
+    transform: scale(1.1) translateY(0) !important;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .bench-slot .player-card .delete-icon-container {
+        top: 4px;
+        right: 4px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .bench-slot .player-card .delete-icon {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 .team-selector, .formation-controls {
@@ -904,6 +960,164 @@ body {
         width: 40%;
         height: 10%;
     }
+
+    /* Mobilde gereksiz elementleri gizle */
+    .manager-area,
+    #managerArea {
+        display: none !important;
+    }
+
+    #cardContainer .player-card {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        position: absolute !important;
+        transform-origin: center !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+        overflow: visible !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+        border: 2px solid rgba(255, 255, 255, 0.8) !important;
+    }
+
+    #cardContainer .player-card .player-image-container,
+    #cardContainer .player-card .player-stats,
+    #cardContainer .player-card .player-details,
+    #cardContainer .player-card .card-shine,
+    #cardContainer .player-card .card-glow,
+    #cardContainer .player-card .country-flag,
+    #cardContainer .player-card .position-badge,
+    #cardContainer .player-card .rating-type {
+        display: none !important;
+    }
+
+    #cardContainer .player-card .player-info {
+        padding: 6px;
+        position: relative;
+        z-index: 2;
+        background: none !important;
+        border-radius: 0 0 12px 12px;
+    }
+
+    #cardContainer .player-card .captain-badge {
+        display: none !important;
+    }
+
+    #cardContainer .player-card .delete-button {
+        display: none !important;
+    }
+
+    #cardContainer .player-card .rating-badge {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+    }
+
+    #cardContainer .player-card .rating-number {
+        font-size: 20px !important;
+        font-weight: 800 !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        color: #fff !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    #cardContainer .player-card .player-name {
+        position: absolute !important;
+        bottom: -16px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        font-size: 9px !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        color: #fff !important;
+        white-space: nowrap !important;
+        max-width: none !important;
+        width: auto !important;
+        z-index: 5 !important;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    #cardContainer .player-card .player-number {
+        position: absolute !important;
+        top: -10px !important;
+        right: -10px !important;
+        width: 16px !important;
+        height: 16px !important;
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        color: #fff !important;
+        background: rgba(0, 0, 0, 0.7) !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 5 !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    }
+
+    .formation-point {
+        width: 32px !important;
+        height: 32px !important;
+        background: rgba(255, 255, 255, 0.15) !important;
+        border: 2px dashed rgba(255, 255, 255, 0.4) !important;
+        font-size: 10px !important;
+    }
+
+    .formation-point.occupied {
+        background: rgba(76, 175, 80, 0.2) !important;
+        border: 2px solid rgba(76, 175, 80, 0.6) !important;
+    }
+
+    .formation-point.highlight {
+        background: rgba(255, 255, 255, 0.3) !important;
+        border: 2px solid rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .delete-icon-container {
+        top: 4px;
+        right: 4px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .delete-icon {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Takım renkleri - mobil için */
+    #cardContainer .player-card.galatasaray { background: linear-gradient(135deg, #E30613 0%, #FDB912 100%) !important; }
+    #cardContainer .player-card.fenerbahce { background: linear-gradient(135deg, #FFED00 0%, #001E87 100%) !important; }
+    #cardContainer .player-card.besiktas { background: linear-gradient(135deg, #000000 0%, #FFFFFF 100%) !important; }
+    #cardContainer .player-card.trabzonspor { background: linear-gradient(135deg, #7B1FA2 0%, #90CAF9 100%) !important; }
+    #cardContainer .player-card.basaksehir { background: linear-gradient(135deg, #FF6B00 0%, #1A237E 100%) !important; }
+    #cardContainer .player-card.antalyaspor { background: linear-gradient(135deg, #E53935 0%, #FFFFFF 100%) !important; }
+    #cardContainer .player-card.konyaspor { background: linear-gradient(135deg, #43A047 0%, #FFFFFF 100%) !important; }
+    #cardContainer .player-card.alanyaspor { background: linear-gradient(135deg, #FF6F00 0%, #1B5E20 100%) !important; }
+    #cardContainer .player-card.kayserispor { background: linear-gradient(135deg, #FFD700 0%, #B71C1C 100%) !important; }
+    #cardContainer .player-card.kasimpasa { background: linear-gradient(135deg, #0D47A1 0%, #FFFFFF 100%) !important; }
+    #cardContainer .player-card.karagumruk { background: linear-gradient(135deg, #B71C1C 0%, #000000 100%) !important; }
+    #cardContainer .player-card.gaziantep { background: linear-gradient(135deg, #B71C1C 0%, #000000 100%) !important; }
+    #cardContainer .player-card.rizespor { background: linear-gradient(135deg, #1B5E20 0%, #0D47A1 100%) !important; }
+    #cardContainer .player-card.samsunspor { background: linear-gradient(135deg, #B71C1C 0%, #FFFFFF 100%) !important; }
+    #cardContainer .player-card.kocaelispor { background: linear-gradient(135deg, #43A047 0%, #000000 100%) !important; }
+    #cardContainer .player-card.eyupspor { background: linear-gradient(135deg, #795548 0%, #FFFFFF 100%) !important; }
 }
 
 @media (max-width: 480px) {
@@ -1494,6 +1708,27 @@ body {
     border-color: rgba(255, 255, 255, 0.8);
 }
 
+.manager-area .delete-icon-container {
+    opacity: 0;
+    background: rgba(220, 38, 38, 0.8);
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.manager-area:hover .delete-icon-container {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.manager-area .delete-icon-container:hover {
+    background: rgba(220, 38, 38, 1);
+    transform: scale(1.1) !important;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
 .captain-badge {
     position: absolute;
     top: 32px;
@@ -1797,4 +2032,39 @@ body {
     .delete-button:hover {
         background-color: #ff4444;
     }
+}
+
+.bench-slot.drag-over .player-card .delete-icon-container {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.bench-slot.drag-over:hover .player-card .delete-icon-container {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: scale(1) translateY(0);
+}
+
+.bench-positions .bench-slot.drag-over .player-card button.delete-button {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.bench-positions .bench-slot.drag-over:hover .player-card button.delete-button {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: scale(1);
+}
+
+.bench-positions .bench-slot.drag-over:hover .player-card button.delete-button:hover {
+    background-color: #ff3333;
+    transform: scale(1.1);
 }

@@ -210,6 +210,13 @@ field.addEventListener('drop', (e) => {
         const pointIndex = parseInt(closestPoint.dataset.index);
         const allowedRoles = formations[currentFormation].positions[pointIndex].allowedRoles;
 
+        // Check if the position is already occupied by this specific point
+        const existingCard = document.querySelector(`#cardContainer .player-card[style*="left: ${closestPoint.style.left}"][style*="top: ${closestPoint.style.top}"]`);
+        if (existingCard) {
+            alert('Bu pozisyon dolu!');
+            return;
+        }
+
         // Check if the card already exists on the bench
         const cardId = draggedCard.id;
         const existingBenchCard = document.querySelector(`.bench-slot .player-card[id="${cardId}"]`);
@@ -227,6 +234,8 @@ field.addEventListener('drop', (e) => {
                 return;
             }
             existingFieldCard.remove();
+            const oldPoint = document.querySelector(`.formation-point[style*="left: ${existingFieldCard.style.left}"][style*="top: ${existingFieldCard.style.top}"]`);
+            if (oldPoint) oldPoint.classList.remove('occupied');
         } else if (!isPositionAllowed(draggedCard, allowedRoles)) {
             // If it's a new card, check if the position is allowed
             alert('Bu oyuncu bu pozisyonda oynayamaz!');
@@ -234,12 +243,6 @@ field.addEventListener('drop', (e) => {
         }
 
         const fieldCard = draggedCard.cloneNode(true);
-        // Preserve captain badge if it exists
-        const captainBadge = draggedCard.querySelector('.captain-badge');
-        if (captainBadge) {
-            const newCaptainBadge = captainBadge.cloneNode(true);
-            fieldCard.appendChild(newCaptainBadge);
-        }
         
         fieldCard.style.position = 'absolute';
         fieldCard.style.left = closestPoint.style.left;
@@ -274,6 +277,9 @@ field.addEventListener('drop', (e) => {
         document.getElementById('cardContainer').appendChild(fieldCard);
         closestPoint.classList.add('occupied');
         points.forEach(p => p.classList.remove('highlight'));
+
+        // Make the field card draggable
+        makeDraggable(fieldCard);
     }
 });
 
@@ -625,7 +631,28 @@ function isPositionAllowed(card, allowedRoles) {
         return false; // Managers can only be placed in the manager area
     }
 
-    return allowedRoles.includes(cardType);
+    // Genişletilmiş pozisyon eşleştirmeleri
+    const positionMappings = {
+        'ST': ['ST', 'CF'],
+        'CF': ['ST', 'CF'],
+        'LW': ['LW', 'LM'],
+        'RW': ['RW', 'RM'],
+        'LM': ['LM', 'LW'],
+        'RM': ['RM', 'RW'],
+        'CAM': ['CAM', 'CM'],
+        'CM': ['CM', 'CAM', 'CDM'],
+        'CDM': ['CDM', 'CM'],
+        'LB': ['LB', 'LWB'],
+        'RB': ['RB', 'RWB'],
+        'CB': ['CB', 'SW'],
+        'GK': ['GK']
+    };
+
+    // Kartın pozisyonuna uygun tüm olası pozisyonları al
+    const possiblePositions = positionMappings[cardType] || [];
+
+    // Pozisyonlardan herhangi biri izin verilen roller içinde mi kontrol et
+    return possiblePositions.some(pos => allowedRoles.includes(pos));
 }
 
 const managerArea = document.getElementById('managerArea');
@@ -645,37 +672,34 @@ managerArea.addEventListener('dragleave', () => {
 managerArea.addEventListener('drop', (e) => {
     e.preventDefault();
     const draggingCard = document.querySelector('.dragging');
-    if (draggingCard && draggingCard.dataset.position === 'MAN') {
-        const existingManager = managerArea.querySelector('.player-card');
-        if (existingManager) {
-            existingManager.remove();
-        }
-        managerArea.innerHTML = '';
-        const cardClone = draggingCard.cloneNode(true);
-        cardClone.classList.remove('dragging');
-
-        // Remove existing add button if any
-        const addButton = cardClone.querySelector('.add-button');
-        if (addButton) {
-            addButton.remove();
-        }
-
-        // Add delete button
-        const deleteButton = document.createElement('button');
-        deleteButton.className = 'delete-button';
-        deleteButton.innerHTML = '×';
-        deleteButton.onclick = () => {
-            cardClone.remove();
-            managerArea.innerHTML = '<div class="manager-placeholder">Teknik Direktör</div>';
-        };
-        cardClone.appendChild(deleteButton);
-
-        cardClone.style.position = 'relative';
-        cardClone.style.transform = 'scale(1)';
-        cardClone.style.margin = '0';
-        managerArea.appendChild(cardClone);
+    
+    if (!draggingCard || draggingCard.dataset.position !== 'MAN') {
+        alert('Bu alana sadece teknik direktör yerleştirilebilir!');
+        return;
     }
+
+    // Teknik direktör kartını yerleştir
+    const cardClone = draggingCard.cloneNode(true);
+    managerArea.innerHTML = '';
+    managerArea.appendChild(cardClone);
+    managerArea.classList.add('occupied');
     managerArea.classList.remove('drag-over');
+
+    // Delete butonu ekle
+    const deleteIconContainer = document.createElement('div');
+    deleteIconContainer.className = 'delete-icon-container';
+    const deleteIcon = document.createElement('div');
+    deleteIcon.className = 'delete-icon';
+    deleteIconContainer.appendChild(deleteIcon);
+
+    deleteIconContainer.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        managerArea.innerHTML = '<div class="manager-placeholder">Teknik Direktör</div>';
+        managerArea.classList.remove('occupied');
+    };
+
+    cardClone.appendChild(deleteIconContainer);
 });
 
 async function loadAllTeamCards(position = '') {
