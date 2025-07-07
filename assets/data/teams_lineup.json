@@ -1,0 +1,76 @@
+{
+    "teams": [
+        {
+            "value": "all",
+            "name": "Tüm Takımlar"
+        },
+        {
+            "value": "galatasaray",
+            "name": "Galatasaray"
+        },
+        {
+            "value": "fenerbahce",
+            "name": "Fenerbahçe"
+        },
+        {
+            "value": "besiktas",
+            "name": "Beşiktaş"
+        },
+        {
+            "value": "trabzonspor",
+            "name": "Trabzonspor"
+        },
+        {
+            "value": "basaksehir",
+            "name": "Başakşehir"
+        },
+        {
+            "value": "antalyaspor",
+            "name": "Antalyaspor"
+        },
+        {
+            "value": "konyaspor",
+            "name": "Konyaspor"
+        },
+        {
+            "value": "alanyaspor",
+            "name": "Alanyaspor"
+        },
+        {
+            "value": "kayserispor",
+            "name": "Kayserispor"
+        },
+        {
+            "value": "gaziantep",
+            "name": "Gaziantep FK"
+        },
+        {
+            "value": "kocaelispor",
+            "name": "Kocaelispor"
+        },
+        {
+            "value": "genclerbirligi",
+            "name": "Gençlerbirliği"
+        },
+        {
+            "value": "karagumruk",
+            "name": "Karagümrük"
+        },
+        {
+            "value": "rizespor",
+            "name": "Rizespor"
+        },
+        {
+            "value": "goztepe",
+            "name": "Göztepe"
+        },
+        {
+            "value": "samsunspor",
+            "name": "Samsunspor"
+        },
+        {
+            "value": "eyupspor",
+            "name": "Eyüpspor"
+        }
+    ]
+} 

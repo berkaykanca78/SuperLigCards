@@ -9,136 +9,23 @@
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23E60012' stroke='%23FFFFFF' stroke-width='3'/><polygon points='50,20 60,35 75,35 65,50 70,65 50,55 30,65 35,50 25,35 40,35' fill='%23FFFFFF'/></svg>"
         type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/lineup.css">
-    <style>
-        .add-button {
-            display: none; /* Varsayılan olarak gizli */
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            width: 24px;
-            height: 24px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 18px;
-            line-height: 24px;
-            cursor: pointer;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .delete-button {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            width: 24px;
-            height: 24px;
-            background-color: #ff4444;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 18px;
-            line-height: 24px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .add-button:active, .delete-button:active {
-            transform: scale(0.95);
-        }
-
-        .add-button:active {
-            background-color: #45a049;
-        }
-
-        .delete-button:active {
-            background-color: #ff3333;
-        }
-
-        .player-card {
-            position: relative;
-        }
-
-        /* Mobil cihazlarda + butonunu göster */
-        @media (max-width: 768px) {
-            .add-button {
-                display: flex;
-            }
-
-            /* Mobilde X butonu + butonunun solunda olsun */
-            .delete-button {
-                right: 34px; /* + butonunun genişliği + biraz boşluk */
-            }
-        }
-
-        /* Dokunmatik cihazlarda hover efektini kaldır */
-        @media (hover: none) {
-            .add-button:hover, .delete-button:hover {
-                transform: none;
-            }
-            .add-button:hover {
-                background-color: #4CAF50;
-            }
-            .delete-button:hover {
-                background-color: #ff4444;
-            }
-        }
-    </style>
 </head>
 
 <body>
     <a href="index.html" class="home-button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="home-icon">
-            <path d="M12 2.1L1 12h3v9h6v-6h4v6h6v-9h3L12 2.1z"/>
+            <path d="M12 2.1L1 12h3v9h6v-6h4v6h6v-9h3L12 2.1z" />
         </svg>
         <span>Anasayfa</span>
     </a>
     <div class="container">
         <div class="left-panel">
             <div class="team-selector">
-                <select id="teamSelect">
-                    <option value="all">Tüm Takımlar</option>
-                    <option value="galatasaray">Galatasaray</option>
-                    <option value="fenerbahce">Fenerbahçe</option>
-                    <option value="besiktas">Beşiktaş</option>
-                    <option value="trabzonspor">Trabzonspor</option>
-                    <option value="basaksehir">Başakşehir</option>
-                    <option value="antalyaspor">Antalyaspor</option>
-                    <option value="konyaspor">Konyaspor</option>
-                    <option value="alanyaspor">Alanyaspor</option>
-                    <option value="kayserispor">Kayserispor</option>
-                    <option value="gaziantep">Gaziantep FK</option>
-                    <option value="kocaelispor">Kocaelispor</option>
-                    <option value="genclerbirligi">Gençlerbirliği</option>
-                    <option value="karagumruk">Karagümrük</option>
-                    <option value="rizespor">Rizespor</option>
-                    <option value="goztepe">Göztepe</option>
-                    <option value="samsunspor">Samsunspor</option>
-                    <option value="eyupspor">Eyüpspor</option>
-                </select>
-                <select id="positionFilter">
-                    <option value="">Tüm Pozisyonlar</option>
-                    <option value="GK">Kaleci</option>
-                    <option value="DEF">Defans</option>
-                    <option value="MID">Orta Saha</option>
-                    <option value="FW">Forvet</option>
-                    <option value="MAN">Teknik Direktör</option>
-                </select>
+                <select id="teamSelect"></select>
+                <select id="positionFilter"></select>
             </div>
             <div class="formation-controls">
-                <select class="formation-select" id="formation">
-                    <option value="4-4-2">4-4-2 Klasik</option>
-                    <option value="4-3-3">4-3-3 Hücum</option>
-                    <option value="3-5-2">3-5-2 Kanat</option>
-                    <option value="4-2-3-1">4-2-3-1 Modern</option>
-                </select>
+                <select class="formation-select" id="formation"></select>
                 <button class="clear-btn" onclick="clearField()">Temizle</button>
             </div>
             <div class="cards-container" id="cardsContainer">
@@ -224,4 +111,4 @@
 
 </body>
 
-</html> 
+</html>

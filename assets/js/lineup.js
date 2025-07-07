@@ -1049,3 +1049,41 @@ function autoPlaceCard(card) {
         alert('Bu oyuncu için uygun pozisyon bulunamadı!');
     }
 }
+
+// Dropdown verilerini yükle ve doldur
+async function loadDropdownData() {
+    try {
+        // Takımları yükle
+        const teamsResponse = await fetch('assets/data/teams_lineup.json');
+        const teamsData = await teamsResponse.json();
+        populateDropdown('teamSelect', teamsData.teams);
+
+        // Pozisyonları yükle
+        const positionsResponse = await fetch('assets/data/positions.json');
+        const positionsData = await positionsResponse.json();
+        populateDropdown('positionFilter', positionsData.positions);
+
+        // Formasyonları yükle
+        const formationsResponse = await fetch('assets/data/formations.json');
+        const formationsData = await formationsResponse.json();
+        populateDropdown('formation', formationsData.formations);
+    } catch (error) {
+        console.error('Dropdown verileri yüklenirken hata oluştu:', error);
+    }
+}
+
+// Dropdown'ları doldur
+function populateDropdown(selectId, data) {
+    const select = document.getElementById(selectId);
+    select.innerHTML = ''; // Mevcut seçenekleri temizle
+    
+    data.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item.value;
+        option.textContent = item.name;
+        select.appendChild(option);
+    });
+}
+
+// Sayfa yüklendiğinde dropdown verilerini yükle
+document.addEventListener('DOMContentLoaded', loadDropdownData);

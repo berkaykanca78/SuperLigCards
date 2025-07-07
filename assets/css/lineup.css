@@ -1717,3 +1717,84 @@ body {
         margin: 0 auto;
     }
 }
+
+.add-button {
+    display: none; /* Varsayılan olarak gizli */
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.add-button:active, .delete-button:active {
+    transform: scale(0.95);
+}
+
+.add-button:active {
+    background-color: #45a049;
+}
+
+.delete-button:active {
+    background-color: #ff3333;
+}
+
+.player-card {
+    position: relative;
+}
+
+/* Mobil cihazlarda + butonunu göster */
+@media (max-width: 768px) {
+    .add-button {
+        display: flex;
+    }
+
+    /* Mobilde X butonu + butonunun solunda olsun */
+    .delete-button {
+        right: 34px; /* + butonunun genişliği + biraz boşluk */
+    }
+}
+
+/* Dokunmatik cihazlarda hover efektini kaldır */
+@media (hover: none) {
+    .add-button:hover, .delete-button:hover {
+        transform: none;
+    }
+    .add-button:hover {
+        background-color: #4CAF50;
+    }
+    .delete-button:hover {
+        background-color: #ff4444;
+    }
+}
