@@ -530,16 +530,149 @@ body {
 }
 
 @media (max-width: 768px) {
-    .bench-slot .player-card .delete-icon-container {
-        top: 4px;
-        right: 4px;
-        width: 20px;
-        height: 20px;
+    .bench-slot .player-card {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 80px !important;
+        height: 80px !important;
+        transform: none;
+        margin: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background: linear-gradient(145deg, #f3f4f6 0%, #e5e7eb 100%);
     }
 
-    .bench-slot .player-card .delete-icon {
-        width: 10px;
-        height: 10px;
+    .bench-slot .player-card .player-image-container,
+    .bench-slot .player-card .player-image {
+        display: none;
+    }
+
+    .bench-slot .player-card .player-info {
+        background: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bench-slot .player-card .player-info .player-name {
+        position: absolute !important;
+        bottom: 8px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        color: #1a1a1a !important;
+        white-space: nowrap !important;
+        max-width: 90% !important;
+        width: auto !important;
+        z-index: 5 !important;
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.8) !important;
+        background: rgba(255, 255, 255, 0.8) !important;
+        padding: 2px 6px !important;
+        border-radius: 10px !important;
+        letter-spacing: -0.2px !important;
+    }
+
+    .bench-slot .player-card .rating-badge {
+        transform: scale(0.8);
+        top: 8px;
+        left: 8px;
+        z-index: 3;
+        position: absolute;
+    }
+
+    .bench-slot .player-card .position-badge,
+    .bench-slot .player-card .player-stats,
+    .bench-slot .player-card .player-details,
+    .bench-slot .player-card .captain-badge,
+    .bench-slot .player-card .add-button {
+        display: none;
+    }
+
+    .bench-slot .player-card .delete-button {
+        transform: scale(0.8);
+        top: 8px;
+        right: 8px;
+        z-index: 3;
+        position: absolute;
+    }
+
+    .bench-slot {
+        width: 80px !important;
+        height: 80px !important;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .bench-positions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bench-slot .player-card,
+    .bench-slot {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    .bench-slot .player-card .player-info .player-name {
+        font-size: 10px !important;
+        bottom: 6px !important;
+        padding: 1px 4px !important;
+    }
+
+    .bench-slot .player-card .rating-badge {
+        transform: scale(0.7);
+        top: 6px;
+        left: 6px;
+    }
+
+    .bench-slot .player-card .delete-button {
+        transform: scale(0.7);
+        top: 6px;
+        right: 6px;
+    }
+}
+
+@media (max-width: 360px) {
+    .bench-slot .player-card,
+    .bench-slot {
+        width: 65px !important;
+        height: 65px !important;
+    }
+
+    .bench-slot .player-card .player-info .player-name {
+        font-size: 9px !important;
+        bottom: 4px !important;
+    }
+
+    .bench-slot .player-card .rating-badge {
+        transform: scale(0.6);
+        top: 4px;
+        left: 4px;
+    }
+
+    .bench-slot .player-card .delete-button {
+        transform: scale(0.6);
+        top: 4px;
+        right: 4px;
     }
 }
 

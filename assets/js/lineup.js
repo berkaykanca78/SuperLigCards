@@ -1132,7 +1132,48 @@ function autoPlaceCard(card) {
         cardContainer.appendChild(fieldCard);
         makeDraggable(fieldCard);
     } else {
-        alert('Bu oyuncu için uygun pozisyon bulunamadı!');
+        // Try to place on bench if no position found on field
+        const benchSlots = document.querySelectorAll('.bench-slot');
+        let benchPlaced = false;
+
+        for (const slot of benchSlots) {
+            const slotPosition = slot.getAttribute('data-position');
+            
+            // Check if slot is empty and position is valid
+            if (!slot.querySelector('.player-card') && isValidBenchPosition(cardPosition, slotPosition)) {
+                const benchCard = card.cloneNode(true);
+                
+                // Remove add button
+                const addButton = benchCard.querySelector('.add-button');
+                if (addButton) {
+                    addButton.remove();
+                }
+
+                // Add delete button
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'delete-button';
+                deleteButton.innerHTML = '×';
+                deleteButton.onclick = () => {
+                    benchCard.remove();
+                    slot.querySelector('.bench-placeholder').style.display = 'block';
+                };
+                benchCard.appendChild(deleteButton);
+
+                // Hide placeholder and add card
+                slot.querySelector('.bench-placeholder').style.display = 'none';
+                benchCard.style.position = 'relative';
+                benchCard.style.transform = 'none';
+                benchCard.style.margin = '0';
+                slot.appendChild(benchCard);
+                
+                benchPlaced = true;
+                break;
+            }
+        }
+
+        if (!benchPlaced) {
+            alert('Bu oyuncu için ne sahada ne de yedek kulübesinde uygun pozisyon bulunamadı!');
+        }
     }
 }
 
