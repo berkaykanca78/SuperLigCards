@@ -259,6 +259,7 @@ field.addEventListener('drop', (e) => {
         // Create delete icon
         const deleteIcon = document.createElement('div');
         deleteIcon.className = 'delete-icon';
+        deleteIcon.innerHTML = '×';
 
         // Add click handler
         deleteIconContainer.onclick = (e) => {
@@ -690,6 +691,7 @@ managerArea.addEventListener('drop', (e) => {
     deleteIconContainer.className = 'delete-icon-container';
     const deleteIcon = document.createElement('div');
     deleteIcon.className = 'delete-icon';
+    deleteIcon.innerHTML = '×';
     deleteIconContainer.appendChild(deleteIcon);
 
     deleteIconContainer.onclick = (e) => {

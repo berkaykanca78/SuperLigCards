@@ -458,26 +458,39 @@ body {
 }
 
 .delete-icon {
-    position: relative;
-    width: 14px;
-    height: 14px;
-    margin-top: 1px;
-}
-
-.delete-icon::before,
-.delete-icon::after {
-    content: '';
-    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
     width: 100%;
-    height: 2px;
-    background-color: white;
-    top: 50%;
-    left: 0;
-    transition: all 0.2s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .delete-icon::before {
-    transform: rotate(45deg);
+    content: "×";
+    display: block;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .delete-icon-container {
+        opacity: 1;
+        transform: none;
+        width: 18px;
+        height: 18px;
+        top: -6px;
+        right: -6px;
+        background: #ff3b3b;
+        border: 1.5px solid #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .delete-icon {
+        font-size: 12px;
+    }
 }
 
 .delete-icon::after {
@@ -1008,7 +1021,20 @@ body {
     }
 
     #cardContainer .player-card .delete-button {
-        display: none !important;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 16px;
+        height: 16px;
+        background-color: #ff4444;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 100;
+        border: 1px solid white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     }
 
     #cardContainer .player-card .rating-badge {
@@ -1278,7 +1304,20 @@ body {
     }
 
     .mobile-manager-section .manager-area .player-card .delete-button {
-        display: none !important;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 16px;
+        height: 16px;
+        background-color: #ff4444;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 100;
+        border: 1px solid white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     }
 
     .mobile-manager-section .manager-area .player-card .player-image-container {
