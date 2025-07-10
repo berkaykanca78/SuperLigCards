@@ -549,7 +549,7 @@ function displayCards(cards, teamName) {
 
             <div class="player-image-container">
                 <div class="player-image">
-                    <img src="${player.image}" alt="${player.name}" onerror="this.style.display='none'">
+                    <img src="${player.image}" alt="${player.name}" onerror="this.src='${isManager ? 'https://cdn-icons-png.flaticon.com/512/4206/4206265.png' : 'https://cdn-icons-png.flaticon.com/512/607/607445.png'}'">
                 </div>
             </div>
 
@@ -839,7 +839,7 @@ function displayAllCards(cards) {
 
             <div class="player-image-container">
                 <div class="player-image">
-                    <img src="${card.image}" alt="${card.name}" onerror="this.style.display='none'">
+                    <img src="${card.image}" alt="${card.name}" onerror="this.src='${card.position === 'MAN' ? 'https://cdn-icons-png.flaticon.com/512/4206/4206265.png' : 'https://cdn-icons-png.flaticon.com/512/607/607445.png'}'">
                 </div>
             </div>
 

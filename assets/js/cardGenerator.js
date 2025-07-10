@@ -81,7 +81,7 @@ function generateTeamCards(data) {
 
                 <div class="player-image-container">
                     <div class="player-image">
-                        <img src="${data.manager.image}" alt="${data.manager.name}">
+                        <img src="${data.manager.image}" alt="${data.manager.name}" onerror="this.src='https://cdn-icons-png.flaticon.com/512/4206/4206265.png'">
                     </div>
                 </div>
 
@@ -129,7 +129,7 @@ function generateTeamCards(data) {
 
                     <div class="player-image-container">
                         <div class="player-image">
-                            <img src="${player.image}" alt="${player.name}" onerror="this.style.display='none'">
+                            <img src="${player.image}" alt="${player.name}" onerror="this.src='${player.position === 'MAN' ? 'https://cdn-icons-png.flaticon.com/512/4206/4206265.png' : 'https://cdn-icons-png.flaticon.com/512/607/607445.png'}'">
                         </div>
                     </div>
 
@@ -414,7 +414,7 @@ function createPlayerCard(player) {
     const img = document.createElement('img');
     img.src = player.image;
     img.alt = player.name;
-    img.onerror = function() { this.style.display = 'none'; };
+    img.onerror = function() { this.src = player.position === 'MAN' ? 'https://cdn-icons-png.flaticon.com/512/4206/4206265.png' : 'https://cdn-icons-png.flaticon.com/512/607/607445.png'; };
     
     playerImage.appendChild(img);
     imageContainer.appendChild(playerImage);
