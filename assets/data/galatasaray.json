@@ -238,6 +238,258 @@
                 "DRİB": 82,
                 "PAS": 80
             }
+        },
+        {
+            "name": "NICOLÒ ZANIOLO",
+            "position": "CAM",
+            "rating": 83,
+            "ratingPosition": "ON NUMARA",
+            "image": "assets/players/zaniolo.png",
+            "nationality": {
+                "name": "ITA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/75.png"
+            },
+            "age": 24,
+            "number": 22,
+            "stats": {
+                "DRİB": 85,
+                "ŞUT": 83,
+                "PAS": 82
+            }
+        },
+        {
+            "name": "VICTOR NELSSON",
+            "position": "CB",
+            "rating": 81,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/nelsson.png",
+            "nationality": {
+                "name": "DEN",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/39.png"
+            },
+            "age": 25,
+            "number": 25,
+            "stats": {
+                "DEF": 83,
+                "FİZ": 82,
+                "HIZ": 78
+            }
+        },
+        {
+            "name": "DERRICK KÖHN",
+            "position": "LB",
+            "rating": 80,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/kohn.png",
+            "nationality": {
+                "name": "GER",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/40.png"
+            },
+            "age": 25,
+            "number": 3,
+            "stats": {
+                "HIZ": 85,
+                "PAS": 79,
+                "DEF": 80
+            }
+        },
+        {
+            "name": "PRZEMYSLAW FRANKOWSKI",
+            "position": "RB",
+            "rating": 81,
+            "ratingPosition": "SAĞ BEK",
+            "image": "assets/players/frankowski.png",
+            "nationality": {
+                "name": "POL",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/135.png"
+            },
+            "age": 29,
+            "number": 21,
+            "stats": {
+                "HIZ": 84,
+                "DEF": 80,
+                "PAS": 81
+            }
+        },
+        {
+            "name": "ISMAIL JAKOBS",
+            "position": "LB",
+            "rating": 80,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/jakobs.png",
+            "nationality": {
+                "name": "SEN",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/149.png"
+            },
+            "age": 24,
+            "number": 15,
+            "stats": {
+                "HIZ": 86,
+                "DEF": 79,
+                "PAS": 78
+            }
+        },
+        {
+            "name": "BERKAN KUTLU",
+            "position": "CM",
+            "rating": 79,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/berkan.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 25,
+            "number": 28,
+            "stats": {
+                "PAS": 80,
+                "DEF": 79,
+                "FİZ": 81
+            }
+        },
+        {
+            "name": "YUSUF DEMİR",
+            "position": "RW",
+            "rating": 78,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/yusuf.png",
+            "nationality": {
+                "name": "AUT",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg"
+            },
+            "age": 20,
+            "number": 14,
+            "stats": {
+                "DRİB": 82,
+                "HIZ": 80,
+                "PAS": 77
+            }
+        },
+        {
+            "name": "CARLOS CUESTA",
+            "position": "CB",
+            "rating": 79,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/cuesta.png",
+            "nationality": {
+                "name": "COL",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1024px-Flag_of_Colombia.svg.png"
+            },
+            "age": 24,
+            "number": 4,
+            "stats": {
+                "DEF": 80,
+                "HIZ": 81,
+                "FİZ": 78
+            }
+        },
+        {
+            "name": "AHMED KUTUCU",
+            "position": "ST",
+            "rating": 77,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/kutucu.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 23,
+            "number": 29,
+            "stats": {
+                "ŞUT": 79,
+                "HIZ": 80,
+                "BİT": 78
+            }
+        },
+        {
+            "name": "ELIAS JELERT",
+            "position": "RB",
+            "rating": 78,
+            "ratingPosition": "SAĞ BEK",
+            "image": "assets/players/jelert.png",
+            "nationality": {
+                "name": "DEN",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/39.png"
+            },
+            "age": 19,
+            "number": 2,
+            "stats": {
+                "HIZ": 83,
+                "DEF": 77,
+                "PAS": 76
+            }
+        },
+        {
+            "name": "BATUHAN ŞEN",
+            "position": "GK",
+            "rating": 76,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/batuhan.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 18,
+            "number": 77,
+            "stats": {
+                "REF": 77,
+                "DIV": 76,
+                "POS": 75
+            }
+        },
+        {
+            "name": "METEHAN BALTACI",
+            "position": "CB",
+            "rating": 75,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/baltaci.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 21,
+            "number": 35,
+            "stats": {
+                "DEF": 76,
+                "FİZ": 75,
+                "HIZ": 74
+            }
+        },
+        {
+            "name": "ÁLVARO MORATA",
+            "position": "ST",
+            "rating": 85,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/morata.png",
+            "nationality": {
+                "name": "ESP",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg"
+            },
+            "age": 31,
+            "number": 19,
+            "stats": {
+                "ŞUT": 86,
+                "BİT": 85,
+                "HIZ": 83
+            }
+        },
+        {
+            "name": "KAZIMCAN KARATAŞ",
+            "position": "LB",
+            "rating": 77,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/karatas.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 20,
+            "number": 93,
+            "stats": {
+                "HIZ": 81,
+                "DEF": 76,
+                "PAS": 75
+            }
         }
     ],
     "manager": {

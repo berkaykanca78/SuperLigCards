@@ -1,3 +1,7 @@
+// Pagination state
+let currentPage = 1;
+const cardsPerPage = 14;
+
 // Kart oluşturma fonksiyonu
 function generateTeamCards(data) {
     // Get the currently selected league
@@ -14,6 +18,20 @@ function generateTeamCards(data) {
         europaleague: 'assets/tournaments/uel.png',
         conferenceleague: 'assets/tournaments/uecl.png'
     };
+
+    // Calculate pagination for players
+    let paginatedPlayers;
+    if (currentPage === 1) {
+        // İlk sayfa: İlk 13 oyuncu
+        paginatedPlayers = data.players.slice(0, 13);
+    } else {
+        // Sonraki sayfalar: Kalan oyuncular (13. oyuncudan sonrası)
+        paginatedPlayers = data.players.slice(13);
+    }
+    
+    // Toplam sayfa sayısı hesaplama
+    const remainingPlayers = data.players.length - 13; // İlk sayfadan sonra kalan oyuncular
+    const totalPages = remainingPlayers > 0 ? 2 : 1; // 13'ten fazla oyuncu varsa 2 sayfa, yoksa 1 sayfa
 
     return `
         <div class="header">
@@ -48,50 +66,7 @@ function generateTeamCards(data) {
         </div>
 
         <div class="cards-grid theme-${selectedLeague}">
-            ${data.players.map(player => `
-                <div class="player-card ${data.cardTeamName}">
-                    <div class="card-glow"></div>
-                    <div class="card-shine"></div>
-                    ${player.isCaptain ? '<div class="captain-badge">C</div>' : ''}
-                    <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}'); ${selectedLeague === 'default' ? 'display: none;' : ''}"></div>
-
-                    <div class="rating-badge">
-                        <div class="rating-number">${player.rating}</div>
-                        <div class="rating-type">${player.position}</div>
-                    </div>
-
-                    <div class="position-badge">${player.ratingPosition}</div>
-
-                    <div class="player-image-container">
-                        <div class="player-image">
-                            <img src="${player.image}" alt="${player.name}" onerror="this.style.display='none'">
-                        </div>
-                    </div>
-
-                    <div class="player-info">
-                        <div class="player-name">${player.name}</div>
-
-                        <div class="player-stats">
-                            ${Object.entries(player.stats).map(([stat, value]) => `
-                            <div class="stat">
-                                <div class="stat-value">${value}</div>
-                                <div class="stat-label">${stat}</div>
-                            </div>
-                            `).join('')}
-                        </div>
-
-                        <div class="player-details">
-                            <div>
-                                <img src="${player.nationality.flag}" alt="${player.nationality.name}" class="country-flag">
-                                ${player.nationality.name} • ${player.age} yaş
-                            </div>
-                            <div># ${player.number}</div>
-                        </div>
-                    </div>
-                </div>
-            `).join('')}
-
-            ${data.manager ? `
+            ${currentPage === 1 && data.manager ? `
             <div class="player-card ${data.cardTeamName}" draggable="true" data-position="MAN">
                 <div class="card-glow"></div>
                 <div class="card-shine"></div>
@@ -138,8 +113,104 @@ function generateTeamCards(data) {
                 </div>
             </div>
             ` : ''}
+            ${paginatedPlayers.map(player => `
+                <div class="player-card ${data.cardTeamName}">
+                    <div class="card-glow"></div>
+                    <div class="card-shine"></div>
+                    ${player.isCaptain ? '<div class="captain-badge">C</div>' : ''}
+                    <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}'); ${selectedLeague === 'default' ? 'display: none;' : ''}"></div>
+
+                    <div class="rating-badge">
+                        <div class="rating-number">${player.rating}</div>
+                        <div class="rating-type">${player.position}</div>
+                    </div>
+
+                    <div class="position-badge">${player.ratingPosition}</div>
+
+                    <div class="player-image-container">
+                        <div class="player-image">
+                            <img src="${player.image}" alt="${player.name}" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+
+                    <div class="player-info">
+                        <div class="player-name">${player.name}</div>
+
+                        <div class="player-stats">
+                            ${Object.entries(player.stats).map(([stat, value]) => `
+                            <div class="stat">
+                                <div class="stat-value">${value}</div>
+                                <div class="stat-label">${stat}</div>
+                            </div>
+                            `).join('')}
+                        </div>
+
+                        <div class="player-details">
+                            <div>
+                                <img src="${player.nationality.flag}" alt="${player.nationality.name}" class="country-flag">
+                                ${player.nationality.name} • ${player.age} yaş
+                            </div>
+                            <div># ${player.number}</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('')}
+        </div>
+
+        <div class="pagination">
+            <button onclick="changePage(1)" class="pagination-button ${currentPage === 1 ? 'active' : ''}" ${currentPage === 1 ? 'disabled' : ''}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"/>
+                </svg>
+            </button>
+            <button onclick="changePage(${currentPage - 1})" class="pagination-button" ${currentPage === 1 ? 'disabled' : ''}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            ${generatePageNumbers(currentPage, totalPages)}
+            <button onclick="changePage(${currentPage + 1})" class="pagination-button" ${currentPage === totalPages ? 'disabled' : ''}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/>
+                </svg>
+            </button>
+            <button onclick="changePage(${totalPages})" class="pagination-button ${currentPage === totalPages ? 'active' : ''}" ${currentPage === totalPages ? 'disabled' : ''}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z"/>
+                </svg>
+            </button>
         </div>
     `;
+}
+
+// Generate page numbers for pagination
+function generatePageNumbers(currentPage, totalPages) {
+    let pages = '';
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    if (endPage - startPage + 1 < maxVisiblePages) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+        pages += `<button onclick="changePage(${i})" class="pagination-button ${currentPage === i ? 'active' : ''}">${i}</button>`;
+    }
+
+    return pages;
+}
+
+// Change page function
+function changePage(page) {
+    currentPage = page;
+    const activeTeamButton = document.querySelector('.team-button.active');
+    if (activeTeamButton) {
+        loadAndGenerateTeamCards(activeTeamButton.dataset.team)
+            .then(html => {
+                document.querySelector('.main-content').innerHTML = html;
+            });
+    }
 }
 
 // League change handler function

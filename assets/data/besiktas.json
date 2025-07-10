@@ -238,6 +238,258 @@
                 "FİZ": 83,
                 "PAS": 81
             }
+        },
+        {
+            "name": "ERSİN DESTANOĞLU",
+            "position": "GK",
+            "rating": 80,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/ersin.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 23,
+            "number": 30,
+            "stats": {
+                "REF": 81,
+                "DIV": 80,
+                "POS": 79
+            }
+        },
+        {
+            "name": "FELIX UDUOKHAI",
+            "position": "CB",
+            "rating": 81,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/uduokhai.png",
+            "nationality": {
+                "name": "GER",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/40.png"
+            },
+            "age": 26,
+            "number": 4,
+            "stats": {
+                "DEF": 82,
+                "FİZ": 81,
+                "HIZ": 80
+            }
+        },
+        {
+            "name": "AMIR HADZIAHMETOVIC",
+            "position": "CDM",
+            "rating": 80,
+            "ratingPosition": "ÖN LİBERO",
+            "image": "assets/players/amir.png",
+            "nationality": {
+                "name": "BIH",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg"
+            },
+            "age": 26,
+            "number": 6,
+            "stats": {
+                "DEF": 81,
+                "PAS": 80,
+                "FİZ": 79
+            }
+        },
+        {
+            "name": "JEAN ONANA",
+            "position": "CDM",
+            "rating": 79,
+            "ratingPosition": "ÖN LİBERO",
+            "image": "assets/players/onana.png",
+            "nationality": {
+                "name": "CMR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/31.png"
+            },
+            "age": 24,
+            "number": 8,
+            "stats": {
+                "FİZ": 82,
+                "DEF": 79,
+                "PAS": 78
+            }
+        },
+        {
+            "name": "EGE TIKNAZ",
+            "position": "CM",
+            "rating": 77,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/tiknaz.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 19,
+            "number": 66,
+            "stats": {
+                "PAS": 78,
+                "DRİB": 77,
+                "FİZ": 76
+            }
+        },
+        {
+            "name": "ALEX OXLADE-CHAMBERLAIN",
+            "position": "CM",
+            "rating": 81,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/oxlade.png",
+            "nationality": {
+                "name": "ENG",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/189.png"
+            },
+            "age": 30,
+            "number": 21,
+            "stats": {
+                "HIZ": 83,
+                "DRİB": 82,
+                "PAS": 81
+            }
+        },
+        {
+            "name": "SALİH UÇAN",
+            "position": "CM",
+            "rating": 79,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/salih.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 30,
+            "number": 48,
+            "stats": {
+                "PAS": 81,
+                "DRİB": 78,
+                "ŞUT": 79
+            }
+        },
+        {
+            "name": "TAYFUR BİNGÖL",
+            "position": "CM",
+            "rating": 78,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/tayfur.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 31,
+            "number": 14,
+            "stats": {
+                "PAS": 79,
+                "DRİB": 78,
+                "HIZ": 77
+            }
+        },
+        {
+            "name": "KENY ARROYO",
+            "position": "RW",
+            "rating": 78,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/arroyo.png",
+            "nationality": {
+                "name": "ECU",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg"
+            },
+            "age": 24,
+            "number": 17,
+            "stats": {
+                "HIZ": 82,
+                "DRİB": 79,
+                "PAS": 77
+            }
+        },
+        {
+            "name": "CAN KELEŞ",
+            "position": "RW",
+            "rating": 76,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/keles.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 19,
+            "number": 77,
+            "stats": {
+                "HIZ": 80,
+                "DRİB": 77,
+                "PAS": 75
+            }
+        },
+        {
+            "name": "MUSTAFA HEKİMOĞLU",
+            "position": "ST",
+            "rating": 77,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/hekimoglu.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 20,
+            "number": 99,
+            "stats": {
+                "ŞUT": 78,
+                "HIZ": 79,
+                "FİZ": 76
+            }
+        },
+        {
+            "name": "NECİP UYSAL",
+            "position": "CB",
+            "rating": 78,
+            "ratingPosition": "STOPER",
+            "image": "assets/players/necip.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 33,
+            "number": 20,
+            "stats": {
+                "DEF": 79,
+                "FİZ": 78,
+                "PAS": 77
+            }
+        },
+        {
+            "name": "BAKHTIYOR ZAYNUTDINOV",
+            "position": "LB",
+            "rating": 79,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/zaynutdinov.png",
+            "nationality": {
+                "name": "KAZ",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/81.png"
+            },
+            "age": 25,
+            "number": 5,
+            "stats": {
+                "HIZ": 81,
+                "DEF": 79,
+                "PAS": 78
+            }
+        },
+        {
+            "name": "ÉLAN RICARDO",
+            "position": "CM",
+            "rating": 80,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/ricardo.png",
+            "nationality": {
+                "name": "COL",
+                "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+            },
+            "age": 24,
+            "number": 25,
+            "stats": {
+                "PAS": 81,
+                "DRİB": 80,
+                "HIZ": 79
+            }
         }
     ],
     "manager": {
