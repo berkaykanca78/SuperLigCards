@@ -208,6 +208,7 @@
             "rating": 78,
             "ratingPosition": "ÖN LİBERO",
             "image": "assets/players/taras_stepanenko.png",
+            "isCaptain": true,
             "nationality": {
                 "name": "UKR",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/180.png"
@@ -460,7 +461,6 @@
             "rating": 81,
             "ratingPosition": "SANTRAFOR",
             "image": "assets/players/mame_thiam.png",
-            "isCaptain": true,
             "nationality": {
                 "name": "SEN",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/154.png"
