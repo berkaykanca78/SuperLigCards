@@ -711,20 +711,20 @@ async function loadAllTeamCards(position = '') {
             'fenerbahce', 
             'besiktas', 
             'trabzonspor',
-            'antalyaspor',
-            'kocaelispor',
-            'genclerbirligi',
+            'basaksehir',
+            'samsunspor',
+            'eyupspor',
             'goztepe',
-            'karagumruk',
+            'antalyaspor',
             'gaziantep',
             'kayserispor',
             'alanyaspor',
             'konyaspor',
             'kasimpasa',
             'rizespor',
-            'eyupspor',
-            'samsunspor',
-            'basaksehir'
+            'kocaelispor',
+            'genclerbirligi',
+            'karagumruk'
         ];
         let allCards = [];
         let failedTeams = [];

@@ -21,14 +21,14 @@
             "logo": "https://sortitoutsi.b-cdn.net/uploads/team/1879.png"
         },
         {
-            "id": "samsunspor",
-            "name": "Samsunspor",
-            "logo": "https://tmssl.akamaized.net/images/wappen/head/152.png"
-        },
-        {
             "id": "basaksehir",
             "name": "İ. Başakşehir FK",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/6890.png"
+        },
+        {
+            "id": "samsunspor",
+            "name": "Samsunspor",
+            "logo": "https://tmssl.akamaized.net/images/wappen/head/152.png"
         },
         {
             "id": "eyupspor",
