@@ -490,6 +490,24 @@
                 "HIZ": 83,
                 "ŞUT": 81
             }
+        },
+        {
+            "name": "DAVIE SELKE",
+            "position": "ST",
+            "rating": 79,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/selke.png",
+            "nationality": {
+                "name": "GER",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/40.png"
+            },
+            "age": 30,
+            "number": 19,
+            "stats": {
+                "BİT": 81,
+                "HIZ": 77,
+                "ŞUT": 80
+            }
         }
     ],
     "manager": {

@@ -21,17 +21,26 @@ function generateTeamCards(data) {
 
     // Calculate pagination for players
     let paginatedPlayers;
+    let totalCards = data.players.length;
+    
+    // If manager exists and we're on first page, account for manager card
+    const managerOnFirstPage = currentPage === 1 && data.manager;
+    const playersPerPage = managerOnFirstPage ? cardsPerPage - 1 : cardsPerPage;
+    
     if (currentPage === 1) {
-        // İlk sayfa: İlk 13 oyuncu
-        paginatedPlayers = data.players.slice(0, 13);
+        // İlk sayfa: Manager varsa manager + (cardsPerPage - 1) oyuncu, yoksa cardsPerPage oyuncu
+        paginatedPlayers = data.players.slice(0, playersPerPage);
     } else {
-        // Sonraki sayfalar: Kalan oyuncular (13. oyuncudan sonrası)
-        paginatedPlayers = data.players.slice(13);
+        // Sonraki sayfalar: Geçmiş sayfalardan sonra kalan oyuncular
+        const firstPagePlayers = data.manager ? cardsPerPage - 1 : cardsPerPage;
+        const startIndex = firstPagePlayers + ((currentPage - 2) * cardsPerPage);
+        const endIndex = startIndex + cardsPerPage;
+        paginatedPlayers = data.players.slice(startIndex, endIndex);
     }
     
     // Toplam sayfa sayısı hesaplama
-    const remainingPlayers = data.players.length - 13; // İlk sayfadan sonra kalan oyuncular
-    const totalPages = remainingPlayers > 0 ? 2 : 1; // 13'ten fazla oyuncu varsa 2 sayfa, yoksa 1 sayfa
+    const totalCardsIncludingManager = totalCards + (data.manager ? 1 : 0);
+    const totalPages = Math.ceil(totalCardsIncludingManager / cardsPerPage);
 
     return `
         <div class="header">

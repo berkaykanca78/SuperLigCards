@@ -330,6 +330,24 @@
             }
         },
         {
+            "name": "ORKUN KÖKÇÜ",
+            "position": "CM",
+            "rating": 83,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/kokcu.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 24,
+            "number": 10,
+            "stats": {
+                "PAS": 85,
+                "DRİB": 82,
+                "ŞUT": 84
+            }
+        },
+        {
             "name": "JOÃO MÁRIO",
             "position": "CAM",
             "rating": 82,
