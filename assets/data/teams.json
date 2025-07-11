@@ -2,52 +2,52 @@
     "teams": [
         {
             "id": "galatasaray",
-            "name": "Galatasaray SK",
+            "name": "Galatasaray A.Ş.",
             "logo": "https://images.seeklogo.com/logo-png/61/2/galatasaray-spor-kulubu-5-yildizli-arma-logo-png_seeklogo-618786.png"
         },
         {
             "id": "fenerbahce",
-            "name": "Fenerbahçe SK",
+            "name": "Fenerbahçe A.Ş.",
             "logo": "https://www.freepnglogos.com/uploads/fenerbahce-logo-png/fenerbahce-super-lig-takimi-logo-9.png"
         },
         {
             "id": "besiktas",
-            "name": "Beşiktaş JK",
+            "name": "Beşiktaş A.Ş.",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/BesiktasJK-Logo.svg/250px-BesiktasJK-Logo.svg.png"
         },
         {
             "id": "trabzonspor",
-            "name": "Trabzonspor",
+            "name": "Trabzonspor A.Ş.",
             "logo": "https://sortitoutsi.b-cdn.net/uploads/team/1879.png"
         },
         {
             "id": "basaksehir",
-            "name": "İ. Başakşehir FK",
+            "name": "R. Başakşehir F.K.",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/6890.png"
         },
         {
             "id": "samsunspor",
-            "name": "Samsunspor",
+            "name": "Samsunspor A.Ş.",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/152.png"
         },
         {
             "id": "eyupspor",
-            "name": "Eyüpspor",
+            "name": "İ. Eyüpspor",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/7160.png"
         },
         {
             "id": "goztepe",
-            "name": "Göztepe",
+            "name": "Göztepe A.Ş.",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/1467.png"
         },
         {
             "id": "rizespor",
-            "name": "Ç. Rizespor",
+            "name": "Ç. Rizespor A.Ş.",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/126.png"
         },
         {
             "id": "kasimpasa",
-            "name": "Kasımpaşa",
+            "name": "Kasımpaşa A.Ş.",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/10484.png"
         },
         {
@@ -57,22 +57,22 @@
         },
         {
             "id": "alanyaspor",
-            "name": "Alanyaspor",
+            "name": "C. Alanyaspor",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/11282.png"
         },
         {
             "id": "kayserispor",
-            "name": "Kayserispor",
+            "name": "Kayserispor F.A.Ş.",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/3205.png"
         },
         {
             "id": "gaziantep",
-            "name": "Gaziantep FK",
+            "name": "Gaziantep F.K. A.Ş.",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/2832.png"
         },
         {
             "id": "antalyaspor",
-            "name": "Antalyaspor",
+            "name": "Antalyaspor A.Ş.",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/589.png"
         },
         {
@@ -82,12 +82,12 @@
         },
         {
             "id": "genclerbirligi",
-            "name": "Gençlerbirliği SK",
+            "name": "Gençlerbirliği",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/820.png"
         },
         {
             "id": "karagumruk",
-            "name": "F. Karagümrük",
+            "name": "F. Karagümrük A.Ş.",
             "logo": "https://tmssl.akamaized.net/images/wappen/head/6646.png"
         }
     ]

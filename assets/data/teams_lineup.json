@@ -22,7 +22,7 @@
         },
         {
             "value": "basaksehir",
-            "name": "Başakşehir"
+            "name": "R. Başakşehir F.K."
         },
         {
             "value": "samsunspor",
@@ -30,15 +30,19 @@
         },
         {
             "value": "eyupspor",
-            "name": "Eyüpspor"
+            "name": "İ. Eyüpspor"
         },
         {
             "value": "goztepe",
             "name": "Göztepe"
         },
         {
-            "value": "antalyaspor",
-            "name": "Antalyaspor"
+            "value": "rizespor",
+            "name": "Ç. Rizespor"
+        },
+        {
+            "value": "kasimpasa",
+            "name": "Kasımpaşa"
         },
         {
             "value": "konyaspor",
@@ -46,7 +50,7 @@
         },
         {
             "value": "alanyaspor",
-            "name": "Alanyaspor"
+            "name": "C. Alanyaspor"
         },
         {
             "value": "kayserispor",
@@ -57,8 +61,8 @@
             "name": "Gaziantep FK"
         },
         {
-            "value": "rizespor",
-            "name": "Rizespor"
+            "value": "antalyaspor",
+            "name": "Antalyaspor"
         },
         {
             "value": "kocaelispor",
@@ -70,7 +74,7 @@
         },
         {
             "value": "karagumruk",
-            "name": "Karagümrük"
+            "name": "F. Karagümrük"
         }
     ]
 } 
