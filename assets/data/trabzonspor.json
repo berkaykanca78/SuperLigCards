@@ -42,24 +42,6 @@
             }
         },
         {
-            "name": "TAHA TEPE",
-            "position": "GK",
-            "rating": 73,
-            "ratingPosition": "KALECİ",
-            "image": "assets/players/taha.png",
-            "nationality": {
-                "name": "TUR",
-                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
-            },
-            "age": 24,
-            "number": 54,
-            "stats": {
-                "REF": 74,
-                "DIV": 73,
-                "POS": 72
-            }
-        },
-        {
             "name": "AHMET YILDIRIM",
             "position": "GK",
             "rating": 70,
@@ -487,6 +469,24 @@
             "number": 70,
             "stats": {
                 "BİT": 79,
+                "FİZ": 78,
+                "ŞUT": 77
+            }
+        },
+        {
+            "name": "FELIPE AUGUSTO",
+            "position": "ST",
+            "rating": 79,
+            "ratingPosition": "SANTRAFOR",
+            "image": "assets/players/felipe.png",
+            "nationality": {
+                "name": "BRA",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/26.png"
+            },
+            "age": 25,
+            "number": 5,
+            "stats": {
+                "BİT": 80,
                 "FİZ": 78,
                 "ŞUT": 77
             }

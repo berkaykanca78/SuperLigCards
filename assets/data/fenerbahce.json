@@ -41,6 +41,24 @@
             }
         },
         {
+            "name": "TARIK ÇETİN",
+            "position": "GK",
+            "rating": 77,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/tarik.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 22,
+            "number": 12,
+            "stats": {
+                "REF": 78,
+                "DIV": 77,
+                "POS": 76
+            }
+        },
+        {
             "name": "ALEXANDER DJIKU",
             "position": "CB",
             "rating": 82,
@@ -128,6 +146,24 @@
                 "DEF": 78,
                 "FİZ": 77,
                 "HIZ": 76
+            }
+        },
+        {
+            "name": "ARCHIE BROWN",
+            "position": "LB",
+            "rating": 80,
+            "ratingPosition": "SOL BEK",
+            "image": "assets/players/archie.png",
+            "nationality": {
+                "name": "ENG",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/189.png"
+            },
+            "age": 22,
+            "number": 27,
+            "stats": {
+                "HIZ": 82,
+                "DEF": 79,
+                "PAS": 78
             }
         },
         {

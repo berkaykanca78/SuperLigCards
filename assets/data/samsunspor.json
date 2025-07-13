@@ -438,6 +438,24 @@
             }
         },
         {
+            "name": "ANTHONY MUSABA",
+            "position": "RW",
+            "rating": 76,
+            "ratingPosition": "SAĞ KANAT",
+            "image": "assets/players/musaba.png",
+            "nationality": {
+                "name": "NED",
+                "flag": "https://tmssl.akamaized.net//images/flagge/verysmall/122.png"
+            },
+            "age": 23,
+            "number": 29,
+            "stats": {
+                "HIZ": 78,
+                "DRİB": 76,
+                "ŞUT": 74
+            }
+        },
+        {
             "name": "MARIUS MOUANDILMADJI",
             "position": "ST",
             "rating": 78,
