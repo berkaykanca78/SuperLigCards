@@ -172,6 +172,7 @@
             "rating": 77,
             "ratingPosition": "SOL BEK",
             "image": "assets/players/casper_hojer.png",
+            "isCaptain": true,
             "nationality": {
                 "name": "DEN",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/39.png"

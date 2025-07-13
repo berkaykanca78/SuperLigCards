@@ -41,24 +41,6 @@
             }
         },
         {
-            "name": "ARDA ÖZÇİMEN",
-            "position": "GK",
-            "rating": 71,
-            "ratingPosition": "KALECİ",
-            "image": "assets/players/arda_ozcimen.png",
-            "nationality": {
-                "name": "TUR",
-                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
-            },
-            "age": 23,
-            "number": 4,
-            "stats": {
-                "REF": 72,
-                "POZ": 70,
-                "FİZ": 71
-            }
-        },
-        {
             "name": "TAHA ALTIKARDEŞ",
             "position": "CB",
             "rating": 85,
