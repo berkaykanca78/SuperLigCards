@@ -27,7 +27,7 @@
             "position": "GK",
             "rating": 76,
             "ratingPosition": "KALECİ",
-            "image": "assets/players/batuhan.png",
+            "image": "assets/players/batuhansen.png",
             "nationality": {
                 "name": "TUR",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
@@ -38,6 +38,24 @@
                 "REF": 77,
                 "DIV": 76,
                 "POS": 75
+            }
+        },
+        {
+            "name": "JANKAT YILMAZ",
+            "position": "GK",
+            "rating": 72,
+            "ratingPosition": "KALECİ",
+            "image": "assets/players/jankat.png",
+            "nationality": {
+                "name": "TUR",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
+            },
+            "age": 20,
+            "number": 50,
+            "stats": {
+                "REF": 73,
+                "DIV": 72,
+                "POS": 71
             }
         },
         {
@@ -117,7 +135,7 @@
             "position": "CB",
             "rating": 75,
             "ratingPosition": "STOPER",
-            "image": "assets/players/baltaci.png",
+            "image": "assets/players/metehan.png",
             "nationality": {
                 "name": "TUR",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
@@ -189,7 +207,7 @@
             "position": "LB",
             "rating": 77,
             "ratingPosition": "SOL BEK",
-            "image": "assets/players/karatas.png",
+            "image": "assets/players/kazimcan.png",
             "nationality": {
                 "name": "TUR",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
@@ -387,7 +405,7 @@
             "position": "RW",
             "rating": 78,
             "ratingPosition": "SAĞ KANAT",
-            "image": "assets/players/yusuf.png",
+            "image": "assets/players/yusufdemir.png",
             "nationality": {
                 "name": "AUT",
                 "flag": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg"
