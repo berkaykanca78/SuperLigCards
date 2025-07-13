@@ -705,6 +705,9 @@ body {
     outline: none;
     flex: 1;
     transition: all 0.3s ease;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .team-selector select:hover,
@@ -1073,6 +1076,8 @@ body {
     .position-filter select,
     .formation-select {
         width: 100%;
+        min-width: 0;
+        flex-shrink: 1;
     }
 
     .bench-section {
@@ -1490,6 +1495,19 @@ body {
 
     .left-panel {
         padding: 10px;
+    }
+
+    .team-selector,
+    .formation-controls {
+        padding: 8px;
+        gap: 6px;
+    }
+
+    .team-selector select,
+    .position-filter select,
+    .formation-select {
+        font-size: 12px;
+        padding: 6px 8px;
     }
 
     .bench-positions {

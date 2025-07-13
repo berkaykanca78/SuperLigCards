@@ -36,7 +36,7 @@ SuperLigCards is an interactive football card game featuring players and staff f
   - Drag-and-drop functionality
   - Formation customization
   - Player card collection management
-  - Filter options ("Tüm Takımlar", "Tüm Pozisyonlar")
+  - Filter options ("Hepsi", "Hepsi")
   - "Temizle" (Clear) button for reset
 
 ### Example Players Featured
@@ -95,7 +95,7 @@ SuperLigCards, Türkiye Süper Ligi'ndeki futbolcuları ve teknik ekipleri içer
   - Sürükle-bırak işlevselliği
   - Diziliş özelleştirme
   - Oyuncu kart koleksiyonu yönetimi
-  - Filtreleme seçenekleri ("Tüm Takımlar", "Tüm Pozisyonlar")
+  - Filtreleme seçenekleri ("Hepsi", "Hepsi")
   - "Temizle" butonu ile sıfırlama
 
 ### Örnek Oyuncular
