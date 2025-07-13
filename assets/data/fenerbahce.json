@@ -45,7 +45,7 @@
             "position": "GK",
             "rating": 77,
             "ratingPosition": "KALECİ",
-            "image": "assets/players/tarik.png",
+            "image": "assets/players/tarikcetin.png",
             "nationality": {
                 "name": "TUR",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
@@ -153,7 +153,7 @@
             "position": "LB",
             "rating": 80,
             "ratingPosition": "SOL BEK",
-            "image": "assets/players/archie.png",
+            "image": "assets/players/brown.png",
             "nationality": {
                 "name": "ENG",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/189.png"
