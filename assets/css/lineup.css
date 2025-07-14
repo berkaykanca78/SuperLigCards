@@ -422,7 +422,7 @@ body {
     pointer-events: none;
 }
 
-.delete-icon-container {
+.delete-button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -441,42 +441,28 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 100;
     backdrop-filter: blur(4px);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
 }
 
-#cardContainer .player-card:hover .delete-icon-container,
-.manager-area:hover .delete-icon-container,
-.bench-slot:hover .player-card .delete-icon-container {
+#cardContainer .player-card:hover .delete-button,
+.manager-area:hover .delete-button,
+.bench-slot:hover .player-card .delete-button {
     opacity: 1;
     transform: scale(1) translateY(0);
 }
 
-.delete-icon-container:hover {
+.delete-button:hover {
     background: rgba(220, 38, 38, 1);
     transform: scale(1.1) translateY(0) !important;
     border-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-.delete-icon {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.delete-icon::before {
-    content: "×";
-    display: block;
-    transform: translateY(-1px);
-}
-
 @media (max-width: 768px) {
-    .delete-icon-container {
+    .delete-button {
         opacity: 1;
         transform: none;
         width: 18px;
@@ -486,24 +472,11 @@ body {
         background: #ff3b3b;
         border: 1.5px solid #fff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    .delete-icon {
         font-size: 12px;
     }
 }
 
-.delete-icon::after {
-    transform: rotate(-45deg);
-}
-
-.delete-icon-container:hover .delete-icon::before,
-.delete-icon-container:hover .delete-icon::after {
-    background-color: white;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-}
-
-.bench-slot .player-card .delete-icon-container {
+.bench-slot .player-card .delete-button {
     opacity: 0;
     background: rgba(220, 38, 38, 0.8);
     transform: scale(0.9) translateY(5px);
@@ -517,12 +490,12 @@ body {
     height: 24px;
 }
 
-.bench-slot:hover .player-card .delete-icon-container {
+.bench-slot:hover .player-card .delete-button {
     opacity: 1;
     transform: scale(1) translateY(0);
 }
 
-.bench-slot:hover .player-card .delete-icon-container:hover {
+.bench-slot:hover .player-card .delete-button:hover {
     background: rgba(220, 38, 38, 1);
     transform: scale(1.1) translateY(0) !important;
     border-color: rgba(255, 255, 255, 0.4);
@@ -1253,16 +1226,12 @@ body {
         border: 2px solid rgba(255, 255, 255, 0.8) !important;
     }
 
-    .delete-icon-container {
+    .delete-button {
         top: 4px;
         right: 4px;
         width: 20px;
         height: 20px;
-    }
-
-    .delete-icon {
-        width: 10px;
-        height: 10px;
+        font-size: 12px;
     }
 
     /* Takım renkleri - mobil için */
@@ -2096,7 +2065,7 @@ body {
     border-color: rgba(255, 255, 255, 0.8);
 }
 
-.manager-area .delete-icon-container {
+.manager-area .delete-button {
     opacity: 0;
     background: rgba(220, 38, 38, 0.8);
     transform: scale(0.9);
@@ -2105,12 +2074,12 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.manager-area:hover .delete-icon-container {
+.manager-area:hover .delete-button {
     opacity: 1;
     transform: scale(1);
 }
 
-.manager-area .delete-icon-container:hover {
+.manager-area .delete-button:hover {
     background: rgba(220, 38, 38, 1);
     transform: scale(1.1) !important;
     border-color: rgba(255, 255, 255, 0.4);
@@ -2429,14 +2398,14 @@ body {
     }
 }
 
-.bench-slot.drag-over .player-card .delete-icon-container {
+.bench-slot.drag-over .player-card .delete-button {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
 }
 
-.bench-slot.drag-over:hover .player-card .delete-icon-container {
+.bench-slot.drag-over:hover .player-card .delete-button {
     display: flex !important;
     opacity: 1 !important;
     visibility: visible !important;

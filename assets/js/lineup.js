@@ -252,17 +252,11 @@ field.addEventListener('drop', (e) => {
         fieldCard.style.cursor = 'move';
         fieldCard.style.pointerEvents = 'all';
 
-        // Create delete icon container
-        const deleteIconContainer = document.createElement('div');
-        deleteIconContainer.className = 'delete-icon-container';
-
-        // Create delete icon
-        const deleteIcon = document.createElement('div');
-        deleteIcon.className = 'delete-icon';
-        deleteIcon.innerHTML = '×';
-
-        // Add click handler
-        deleteIconContainer.onclick = (e) => {
+        // Create delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'delete-button';
+        deleteButton.innerHTML = '×';
+        deleteButton.onclick = (e) => {
             e.preventDefault();
             e.stopPropagation();
             fieldCard.remove();
@@ -270,9 +264,7 @@ field.addEventListener('drop', (e) => {
             closestPoint.classList.remove('highlight');
         };
 
-        // Append delete icon to container and container to card
-        deleteIconContainer.appendChild(deleteIcon);
-        fieldCard.appendChild(deleteIconContainer);
+        fieldCard.appendChild(deleteButton);
 
         // Add the card to the field
         document.getElementById('cardContainer').appendChild(fieldCard);
@@ -687,21 +679,17 @@ managerArea.addEventListener('drop', (e) => {
     managerArea.classList.remove('drag-over');
 
     // Delete butonu ekle
-    const deleteIconContainer = document.createElement('div');
-    deleteIconContainer.className = 'delete-icon-container';
-    const deleteIcon = document.createElement('div');
-    deleteIcon.className = 'delete-icon';
-    deleteIcon.innerHTML = '×';
-    deleteIconContainer.appendChild(deleteIcon);
-
-    deleteIconContainer.onclick = (e) => {
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'delete-button';
+    deleteButton.innerHTML = '×';
+    deleteButton.onclick = (e) => {
         e.preventDefault();
         e.stopPropagation();
         managerArea.innerHTML = '<div class="manager-placeholder">Teknik Direktör</div>';
         managerArea.classList.remove('occupied');
     };
 
-    cardClone.appendChild(deleteIconContainer);
+    cardClone.appendChild(deleteButton);
 });
 
 async function loadAllTeamCards(position = '') {

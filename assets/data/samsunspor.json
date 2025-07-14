@@ -23,24 +23,6 @@
             }
         },
         {
-            "name": "TAHA TOSUN",
-            "position": "GK",
-            "rating": 72,
-            "ratingPosition": "KALECİ",
-            "image": "assets/players/tosun.png",
-            "nationality": {
-                "name": "TUR",
-                "flag": "https://tmssl.akamaized.net//images/flagge/verysmall/174.png"
-            },
-            "age": 20,
-            "number": 64,
-            "stats": {
-                "REF": 73,
-                "DIV": 72,
-                "POS": 71
-            }
-        },
-        {
             "name": "EFE BERAT TÖRÜZ",
             "position": "GK",
             "rating": 71,

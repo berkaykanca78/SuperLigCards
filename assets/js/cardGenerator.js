@@ -538,12 +538,10 @@ function createPlayerCard(player) {
             }
 
             // Add delete functionality to the cloned card
-            const deleteIcon = document.createElement('div');
-            deleteIcon.className = 'delete-icon-container';
-            deleteIcon.innerHTML = '<div class="delete-icon"></div>';
-            cardClone.appendChild(deleteIcon);
-
-            deleteIcon.addEventListener('click', (e) => {
+            const deleteButton = document.createElement('button');
+            deleteButton.className = 'delete-button';
+            deleteButton.innerHTML = '×';
+            deleteButton.addEventListener('click', (e) => {
                 e.stopPropagation();
                 if (player.position === 'MAN') {
                     const managerArea = document.querySelector('.manager-area');
@@ -554,6 +552,7 @@ function createPlayerCard(player) {
                     firstValidPoint.classList.remove('occupied');
                 }
             });
+            cardClone.appendChild(deleteButton);
         } else {
             alert('Bu pozisyon için uygun boş alan bulunamadı!');
         }
