@@ -27,7 +27,7 @@
             "position": "GK",
             "rating": 79,
             "ratingPosition": "KALECİ",
-            "image": "assets/players/egribayat.png",
+            "image": "assets/players/ircancanegribayat.png",
             "nationality": {
                 "name": "TUR",
                 "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/174.png"
@@ -381,6 +381,24 @@
                 "PAS": 82,
                 "DRİB": 79,
                 "ŞUT": 80
+            }
+        },
+        {
+            "name": "ABDOU AZIZ FALL",
+            "position": "CM",
+            "rating": 75,
+            "ratingPosition": "ORTA SAHA",
+            "image": "assets/players/azizfall.png",
+            "nationality": {
+                "name": "SEN",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/149.png"
+            },
+            "age": 18,
+            "number": 25,
+            "stats": {
+                "PAS": 76,
+                "DRİB": 75,
+                "FİZ": 74
             }
         },
         {
