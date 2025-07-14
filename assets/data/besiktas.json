@@ -150,9 +150,27 @@
             }
         },
         {
+            "name": "KYLE WALKER-PETERS",
+            "position": "RB",
+            "rating": 83,
+            "ratingPosition": "SAĞ BEK",
+            "image": "assets/players/walkerpeters.png",
+            "nationality": {
+                "name": "ENG",
+                "flag": "https://tmssl.akamaized.net/images/flagge/verysmall/189.png"
+            },
+            "age": 28,
+            "number": 12,
+            "stats": {
+                "HIZ": 85,
+                "DEF": 82,
+                "PAS": 79
+            }
+        },
+        {
             "name": "JONAS SVENNSON",
             "position": "RB",
-            "rating": 81,
+            "rating": 78,
             "ratingPosition": "SAĞ BEK",
             "image": "assets/players/svennson.png",
             "nationality": {

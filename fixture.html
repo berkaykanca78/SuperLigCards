@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendyol Süper Lig Fikstürü</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23E60012' stroke='%23FFFFFF' stroke-width='3'/><polygon points='50,20 60,35 75,35 65,50 70,65 50,55 30,65 35,50 25,35 40,35' fill='%23FFFFFF'/></svg>"
+        type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.98));
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            z-index: 1000;
+            padding: 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+            padding: 0 30px;
+            position: relative;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-brand:hover {
+            transform: translateY(-2px);
+        }
+
+        .navbar-brand::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #3B82F6, #60A5FA);
+            transition: width 0.3s ease;
+        }
+
+        .navbar-brand:hover::after {
+            width: 100%;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 3px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            padding: 3px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item {
+            margin: 0;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            padding: 6px 14px;
+            display: block;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-link:hover::before {
+            left: 100%;
+        }
+
+        .nav-link:hover {
+            color: white;
+            background: rgba(59, 130, 246, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+
+        .nav-link.active {
+            color: white;
+            background: linear-gradient(135deg, #3B82F6, #60A5FA);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active:hover {
+            background: linear-gradient(135deg, #60A5FA, #3B82F6);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Adjust main content for navbar */
+        .container {
+            margin-top: 40px;
+            height: calc(100vh - 40px);
+            overflow: hidden;
+        }
+
+        .sidebar {
+            top: 40px;
+            height: calc(100vh - 40px);
+            z-index: 999;
+        }
+
+        .teams-list {
+            height: calc(100vh - 110px);
+            /* 70px header + 40px navbar */
+        }
+
+        .team-item {
+            height: calc((100vh - 110px) / 18);
+        }
+
+        .fixture-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+            height: calc(100vh - 70px);
+            overflow-y: auto;
+        }
+
+        .fixture-header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .fixture-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #E60012, #FF6B6B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .fixture-header p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .week-selector {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .week-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            min-width: 50px;
+            font-size: 0.9rem;
+        }
+
+        .week-button:hover {
+            background: rgba(230, 0, 18, 0.3);
+            border-color: #E60012;
+            transform: translateY(-2px);
+        }
+
+        .week-button.active {
+            background: #E60012;
+            border-color: #E60012;
+            box-shadow: 0 4px 15px rgba(230, 0, 18, 0.3);
+        }
+
+        .week-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .fixture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .match-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .match-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(230, 0, 18, 0.3);
+        }
+
+        .match-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #E60012, #FF6B6B);
+        }
+
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .match-number {
+            background: #E60012;
+            color: white;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .match-date {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+        }
+
+        .teams-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .team {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .team.home {
+            justify-content: flex-start;
+        }
+
+        .team.away {
+            justify-content: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .team-logo {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .team-name {
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+            flex: 1;
+        }
+
+        .vs {
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 700;
+            font-size: 1rem;
+            margin: 0 12px;
+        }
+
+        .match-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+        }
+
+        .stadium {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .time {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .nav-button {
+            background: rgba(230, 0, 18, 0.2);
+            border: 1px solid rgba(230, 0, 18, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+
+        .nav-button:hover {
+            background: rgba(230, 0, 18, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .season-info {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+        }
+
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.1rem;
+            padding: 30px;
+        }
+
+        .no-matches {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            font-size: 1rem;
+        }
+
+        /* Disable team buttons */
+        .team-button {
+            pointer-events: none !important;
+            opacity: 0.7;
+        }
+
+        .team-button:hover {
+            background: rgba(255, 255, 255, 0.05) !important;
+            transform: none !important;
+        }
+
+        /* Mobile responsive navbar */
+        @media (max-width: 1024px) {
+            .navbar-container {
+                padding: 0 20px;
+            }
+
+            .navbar-brand {
+                font-size: 0.95rem;
+            }
+
+            .nav-link {
+                padding: 5px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                height: 35px;
+            }
+
+            .navbar-container {
+                height: 35px;
+                padding: 0 15px;
+            }
+
+            .navbar-brand {
+                font-size: 0.9rem;
+                gap: 8px;
+            }
+
+            .navbar-nav {
+                gap: 2px;
+                padding: 2px;
+            }
+
+            .nav-link {
+                padding: 4px 10px;
+                font-size: 0.75rem;
+            }
+
+            .container {
+                margin-top: 35px;
+                height: calc(100vh - 35px);
+            }
+
+            .sidebar {
+                top: 35px;
+                height: calc(100vh - 35px);
+            }
+
+            .teams-list {
+                height: calc(100vh - 105px);
+            }
+
+            .team-item {
+                height: calc((100vh - 105px) / 18);
+            }
+
+            .fixture-container {
+                padding: 10px;
+                height: calc(100vh - 45px);
+            }
+
+            .fixture-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .week-selector {
+                gap: 8px;
+            }
+
+            .week-button {
+                padding: 6px 10px;
+                min-width: 45px;
+                font-size: 0.8rem;
+            }
+
+            .fixture-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .match-card {
+                padding: 12px;
+            }
+
+            .team-logo {
+                width: 25px;
+                height: 25px;
+            }
+
+            .team-name {
+                font-size: 0.8rem;
+            }
+
+            .vs {
+                font-size: 0.9rem;
+                margin: 0 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-container {
+                padding: 0 10px;
+            }
+
+            .navbar-brand {
+                font-size: 0.8rem;
+                gap: 6px;
+            }
+
+            .navbar-nav {
+                gap: 1px;
+                padding: 1px;
+            }
+
+            .nav-link {
+                padding: 3px 8px;
+                font-size: 0.7rem;
+            }
+
+            .fixture-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .week-selector {
+                gap: 6px;
+            }
+
+            .week-button {
+                padding: 5px 8px;
+                min-width: 40px;
+                font-size: 0.75rem;
+            }
+
+            .match-card {
+                padding: 10px;
+            }
+
+            .team-logo {
+                width: 22px;
+                height: 22px;
+            }
+
+            .team-name {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <span>Trendyol Süper Lig</span>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="lineup.html" class="nav-link">Lineup</a>
+                </li>
+                <li class="nav-item">
+                    <a href="fixture.html" class="nav-link active">Fixture</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <button class="menu-toggle">☰</button>
+    <div class="container">
+        <div class="sidebar">
+            <div class="league-header">
+                <img src="https://www.tff.org/Resources/TFF/Images/0000000015/TFF/TFF-Logolar/2024-2025/trendyol-super-lig-dikey-logo.png"
+                    alt="Trendyol Süper Lig" class="league-logo">
+                <h1>TRENDYOL SÜPER LİG</h1>
+            </div>
+            <ul class="teams-list">
+                <!-- Teams will be dynamically loaded here -->
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="fixture-container">
+                <div class="fixture-header">
+                    <h1>2025-2026 Süper Lig Fikstürü</h1>
+                    <p>38 haftalık sezon programı</p>
+                </div>
+
+                <div class="season-info">
+                    <p>Sezon: 2025-2026 | Toplam Hafta: 38 | Toplam Maç: 342</p>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="nav-button" id="prevWeek" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Önceki Hafta
+                    </button>
+                    <button class="nav-button" id="nextWeek">
+                        Sonraki Hafta
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="week-selector" id="weekSelector">
+                    <!-- Week buttons will be generated here -->
+                </div>
+
+                <div id="fixtureGrid" class="fixture-grid">
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        Fikstür yükleniyor...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/leagueTeamGenerator.js" defer></script>
+    <script>
+        // Turkish Süper Lig teams from JSON data
+        let teams = [];
+
+        // Stadiums
+        const stadiums = [
+            "NEF Arena", "Ülker Stadyumu", "Vodafone Park", "Şenol Güneş Spor Kompleksi",
+            "Başakşehir Fatih Terim Stadyumu", "Antalya Stadyumu", "Konya Büyükşehir Belediye Stadyumu",
+            "Bahçeşehir Okulları Stadyumu", "Kadir Has Şehir Stadyumu", "Gaziantep Stadyumu",
+            "Kocaeli Stadyumu", "Ankara 19 Mayıs Stadyumu", "Vefa Stadyumu", "Recep Tayyip Erdoğan Stadyumu",
+            "Çotanak Spor Kompleksi", "Gürsel Aksel Stadyumu", "19 Mayıs Stadyumu", "Eyüp Stadyumu"
+        ];
+
+        let currentWeek = 1;
+        const totalWeeks = 38;
+        let fixtureData = [];
+
+        // Load teams from JSON and generate fixture
+        async function loadTeamsAndGenerateFixture() {
+            try {
+                const response = await fetch('assets/data/teams.json');
+                const data = await response.json();
+                teams = data.teams;
+
+                // Generate fixture data
+                fixtureData = generateFixture();
+
+                // Initialize the page
+                generateWeekSelector();
+                showWeek(1);
+
+            } catch (error) {
+                console.error('Error loading teams:', error);
+                document.getElementById('fixtureGrid').innerHTML =
+                    '<div class="no-matches">Takım verileri yüklenirken hata oluştu.</div>';
+            }
+        }
+
+        // Generate fixture data
+        function generateFixture() {
+            const fixture = [];
+
+            // Generate all weeks
+            for (let week = 1; week <= totalWeeks; week++) {
+                const weekMatches = [];
+                const usedTeams = new Set();
+
+                // Generate 9 matches per week (18 teams)
+                for (let match = 1; match <= 9; match++) {
+                    let homeTeam, awayTeam;
+
+                    do {
+                        homeTeam = Math.floor(Math.random() * teams.length);
+                        awayTeam = Math.floor(Math.random() * teams.length);
+                    } while (homeTeam === awayTeam ||
+                    usedTeams.has(homeTeam) ||
+                        usedTeams.has(awayTeam));
+
+                    usedTeams.add(homeTeam);
+                    usedTeams.add(awayTeam);
+
+                    // Generate random date for the week
+                    const weekStartDate = new Date(2024, 7, 18); // August 18, 2024
+                    const matchDate = new Date(weekStartDate);
+                    matchDate.setDate(weekStartDate.getDate() + (week - 1) * 7 + Math.floor(Math.random() * 7));
+
+                    weekMatches.push({
+                        week: week,
+                        matchNumber: match,
+                        homeTeam: teams[homeTeam],
+                        awayTeam: teams[awayTeam],
+                        date: matchDate,
+                        time: `${Math.floor(Math.random() * 3) + 19}:${Math.random() > 0.5 ? '00' : '30'}`,
+                        stadium: stadiums[Math.floor(Math.random() * stadiums.length)]
+                    });
+                }
+
+                fixture.push(weekMatches);
+            }
+
+            return fixture;
+        }
+
+        // Generate week selector buttons
+        function generateWeekSelector() {
+            const weekSelector = document.getElementById('weekSelector');
+            weekSelector.innerHTML = '';
+
+            for (let week = 1; week <= totalWeeks; week++) {
+                const button = document.createElement('button');
+                button.className = 'week-button';
+                button.textContent = week;
+                button.onclick = () => showWeek(week);
+                weekSelector.appendChild(button);
+            }
+        }
+
+        // Show matches for a specific week
+        function showWeek(week) {
+            currentWeek = week;
+
+            // Update active week button
+            document.querySelectorAll('.week-button').forEach((btn, index) => {
+                btn.classList.toggle('active', index + 1 === week);
+            });
+
+            // Update navigation buttons
+            document.getElementById('prevWeek').disabled = week === 1;
+            document.getElementById('nextWeek').disabled = week === totalWeeks;
+
+            // Display matches
+            displayMatches(fixtureData[week - 1]);
+        }
+
+        // Display matches
+        function displayMatches(matches) {
+            const fixtureGrid = document.getElementById('fixtureGrid');
+
+            if (!matches || matches.length === 0) {
+                fixtureGrid.innerHTML = '<div class="no-matches">Bu hafta için maç bulunamadı.</div>';
+                return;
+            }
+
+            fixtureGrid.innerHTML = matches.map(match => `
+                <div class="match-card">
+                    <div class="match-header">
+                        <span class="match-number">Maç ${match.matchNumber}</span>
+                        <span class="match-date">${match.date.toLocaleDateString('tr-TR', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            })}</span>
+                    </div>
+                    
+                    <div class="teams-container">
+                        <div class="team home">
+                            <img src="${match.homeTeam.logo}" alt="${match.homeTeam.name}" class="team-logo">
+                            <div class="team-name">${match.homeTeam.name}</div>
+                        </div>
+                        
+                        <div class="vs">VS</div>
+                        
+                        <div class="team away">
+                            <img src="${match.awayTeam.logo}" alt="${match.awayTeam.name}" class="team-logo">
+                            <div class="team-name">${match.awayTeam.name}</div>
+                        </div>
+                    </div>
+                    
+                    <div class="match-info">
+                        <div class="stadium">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>${match.stadium}</span>
+                        </div>
+                        <div class="time">
+                            <i class="fas fa-clock"></i>
+                            <span>${match.time}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Navigation event listeners
+        document.getElementById('prevWeek').addEventListener('click', () => {
+            if (currentWeek > 1) {
+                showWeek(currentWeek - 1);
+            }
+        });
+
+        document.getElementById('nextWeek').addEventListener('click', () => {
+            if (currentWeek < totalWeeks) {
+                showWeek(currentWeek + 1);
+            }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTeamsAndGenerateFixture();
+        });
+    </script>
+</body>
+
+</html>
