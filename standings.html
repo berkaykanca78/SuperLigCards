@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendyol Süper Lig Puan Durumu</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23E60012' stroke='%23FFFFFF' stroke-width='3'/><polygon points='50,20 60,35 75,35 65,50 70,65 50,55 30,65 35,50 25,35 40,35' fill='%23FFFFFF'/></svg>"
+        type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/standings.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <span>Trendyol Süper Lig</span>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="lineup.html" class="nav-link">Lineup</a>
+                </li>
+                <li class="nav-item">
+                    <a href="fixture.html" class="nav-link">Fixture</a>
+                </li>
+                <li class="nav-item">
+                    <a href="stats.html" class="nav-link">Stats</a>
+                </li>
+                <li class="nav-item">
+                    <a href="standings.html" class="nav-link active">Standings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="results.html" class="nav-link">Results</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">News</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <button class="menu-toggle">☰</button>
+    <div class="container">
+        <div class="sidebar">
+            <div class="league-header">
+                <img src="https://www.tff.org/Resources/TFF/Images/0000000015/TFF/TFF-Logolar/2024-2025/trendyol-super-lig-dikey-logo.png"
+                    alt="Trendyol Süper Lig" class="league-logo">
+                <h1>TRENDYOL SÜPER LİG</h1>
+            </div>
+            <ul class="teams-list">
+                <!-- Teams will be dynamically loaded here -->
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="standings-container">
+                <div class="standings-header">
+                    <h1>2025-2026 Süper Lig Puan Durumu</h1>
+                    <p>Güncel sıralama ve puan durumu</p>
+                </div>
+
+                <div class="standings-info">
+                    <div class="info-card">
+                        <i class="fas fa-calendar"></i>
+                        <span>Son Güncelleme: <span id="lastUpdate">15 Mart 2025</span></span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Oynanan Maç: <span id="playedMatches">306/306</span></span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-trophy"></i>
+                        <span>Sezon: 2025-2026</span>
+                    </div>
+                </div>
+
+                <div class="standings-filters">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="champions">Şampiyonlar Ligi</button>
+                    <button class="filter-btn" data-filter="europa">Avrupa Ligi</button>
+                    <button class="filter-btn" data-filter="relegation">Küme Düşme</button>
+                </div>
+
+                <div class="standings-table-container">
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Sıra</th>
+                                <th>Takım</th>
+                                <th>O</th>
+                                <th>G</th>
+                                <th>B</th>
+                                <th>M</th>
+                                <th>A</th>
+                                <th>Y</th>
+                                <th>Av</th>
+                                <th>P</th>
+                                <th>Form</th>
+                            </tr>
+                        </thead>
+                        <tbody id="standingsBody">
+                            <!-- Standings will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="standings-legend">
+                    <div class="legend-item">
+                        <div class="legend-color champions"></div>
+                        <span>Şampiyonlar Ligi</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color europa"></div>
+                        <span>Avrupa Ligi</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color conference"></div>
+                        <span>Konferans Ligi</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color relegation"></div>
+                        <span>Küme Düşme</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/standings.js" defer></script>
+</body>
+
+</html> 

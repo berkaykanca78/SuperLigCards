@@ -2127,3 +2127,69 @@ body {
         padding: 6px 0;
     }
 }
+
+/* Info Button Styles */
+.info-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #E60012 0%, #cc0010 100%);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: scale(0.8);
+    box-shadow: 0 2px 8px rgba(230, 0, 18, 0.3);
+    z-index: 10;
+}
+
+.info-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(230, 0, 18, 0.5);
+    background: linear-gradient(135deg, #ff0014 0%, #E60012 100%);
+}
+
+.player-card:hover .info-button {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.info-button i {
+    font-size: 10px;
+}
+
+/* Responsive Info Button */
+@media (max-width: 768px) {
+    .info-button {
+        width: 28px;
+        height: 28px;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .info-button i {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-button {
+        width: 24px;
+        height: 24px;
+        top: 6px;
+        right: 6px;
+    }
+    
+    .info-button i {
+        font-size: 7px;
+    }
+}

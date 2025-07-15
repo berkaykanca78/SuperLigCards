@@ -75,6 +75,10 @@ function generateTeamCards(data) {
                 <div class="card-shine"></div>
                 <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}'); ${selectedLeague === 'default' ? 'display: none;' : ''}"></div>
 
+                <button class="info-button" onclick="window.location.href='player.html?player=${encodeURIComponent(data.manager.name)}&team=${encodeURIComponent(data.name)}&type=manager'" title="Teknik Direktör Detayları">
+                    <i class="fas fa-info"></i>
+                </button>
+
                 <div class="rating-badge" style="background: linear-gradient(145deg, #C0C0C0 0%, #A0A0A0 100%)">
                     <div class="rating-number" style="color: #000000">${data.manager.rating}</div>
                     <div class="rating-type" style="color: #000000">MAN</div>
@@ -122,6 +126,10 @@ function generateTeamCards(data) {
                     <div class="card-shine"></div>
                     ${player.isCaptain ? '<div class="captain-badge">C</div>' : ''}
                     <div class="league-indicator" style="background-image: url('${leagueLogos[selectedLeague]}'); ${selectedLeague === 'default' ? 'display: none;' : ''}"></div>
+
+                    <button class="info-button" onclick="window.location.href='player.html?player=${encodeURIComponent(player.name)}&team=${encodeURIComponent(data.name)}'" title="Oyuncu Detayları">
+                        <i class="fas fa-info"></i>
+                    </button>
 
                     <div class="rating-badge">
                         <div class="rating-number">${player.rating}</div>
