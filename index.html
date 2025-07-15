@@ -153,6 +153,14 @@
             height: calc((100vh - 110px) / 18);
         }
 
+        /* Pagination container styles */
+        .pagination-container {
+            margin-top: auto;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
         /* Mobile responsive navbar */
         @media (max-width: 1024px) {
             .navbar-container {
@@ -197,6 +205,7 @@
             .container {
                 margin-top: 35px;
                 height: calc(100vh - 35px);
+                overflow: auto;
             }
 
             .sidebar {
@@ -210,6 +219,78 @@
 
             .team-item {
                 height: calc((100vh - 105px) / 18);
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                max-width: 100vw;
+                padding: 10px;
+                height: auto;
+                min-height: calc(100vh - 35px);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                padding: 15px;
+                position: relative;
+                background: transparent;
+            }
+
+            .logo-container {
+                justify-content: center;
+            }
+
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .header-actions {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .lineup-button {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .cards-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 15px;
+                padding: 10px;
+                flex: 1;
+                min-height: 0;
+            }
+
+            .player-card {
+                min-height: 200px;
+            }
+
+            /* Ensure pagination is at bottom */
+            .pagination {
+                margin-top: auto;
+                padding: 15px 0;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .pagination-button {
+                min-width: 35px;
+                height: 35px;
+                font-size: 0.8rem;
+            }
+
+            .pagination-container {
+                margin-top: auto;
+                padding: 15px 0;
+                order: 3;
             }
         }
 
@@ -231,6 +312,46 @@
             .nav-link {
                 padding: 3px 8px;
                 font-size: 0.7rem;
+            }
+
+            .main-content {
+                padding: 8px;
+            }
+
+            .header {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .header-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 8px;
+            }
+
+            .player-card {
+                min-height: 180px;
+            }
+
+            .lineup-button {
+                max-width: 200px;
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+
+            .pagination {
+                padding: 10px 0;
+                gap: 6px;
+            }
+
+            .pagination-button {
+                min-width: 30px;
+                height: 30px;
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -282,6 +403,10 @@
 
             <div class="cards-grid">
                 <!-- Cards will be loaded here -->
+            </div>
+
+            <div class="pagination-container">
+                <!-- Pagination will be dynamically loaded here -->
             </div>
         </div>
     </div>

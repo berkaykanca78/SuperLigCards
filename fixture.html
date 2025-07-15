@@ -301,10 +301,11 @@
         }
 
         .team-logo {
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+            flex-shrink: 0;
         }
 
         .team-name {
@@ -507,6 +508,18 @@
                 font-size: 0.9rem;
                 margin: 0 8px;
             }
+
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .nav-button {
+                width: 100%;
+                max-width: 200px;
+                justify-content: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -554,6 +567,32 @@
 
             .team-name {
                 font-size: 0.75rem;
+            }
+
+            .match-header {
+                flex-direction: column;
+                gap: 5px;
+                align-items: flex-start;
+            }
+
+            .teams-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .team {
+                justify-content: center !important;
+                flex-direction: row !important;
+            }
+
+            .vs {
+                display: none;
+            }
+
+            .match-info {
+                flex-direction: column;
+                gap: 5px;
+                align-items: flex-start;
             }
         }
     </style>
@@ -647,6 +686,34 @@
         let currentWeek = 1;
         const totalWeeks = 38;
         let fixtureData = [];
+
+        // Override team button functionality for fixture page
+        function attachFixtureTeamButtonListeners() {
+            document.querySelectorAll('.team-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.team-button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // For fixture page, we don't need to load team cards
+                    // Just keep the fixture content visible
+                    console.log('Team selected:', this.dataset.team);
+                });
+            });
+
+            // Select Galatasaray by default
+            const galatasarayButton = document.querySelector('[data-team="galatasaray"]');
+            if (galatasarayButton) {
+                galatasarayButton.click();
+            }
+        }
+
+        // Override the default attachTeamButtonListeners for fixture page
+        window.attachTeamButtonListeners = attachFixtureTeamButtonListeners;
 
         // Load teams from JSON and generate fixture
         async function loadTeamsAndGenerateFixture() {
@@ -805,11 +872,6 @@
             if (currentWeek < totalWeeks) {
                 showWeek(currentWeek + 1);
             }
-        });
-
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('.sidebar').classList.toggle('active');
         });
 
         // Initialize when DOM is loaded
